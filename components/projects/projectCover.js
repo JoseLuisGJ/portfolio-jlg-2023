@@ -4,15 +4,9 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-import 'splitting/dist/splitting.css'
-import 'splitting/dist/splitting-cells.css'
-import Splitting from 'splitting'
-
 export default function ProjectCover(props) {
 
-   // state for the array of lines found after running Splitting
-   const [lines, setLines] = useState([])
- 
+
 
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -31,24 +25,7 @@ export default function ProjectCover(props) {
 
   }, []);
 
-  // should fire anytime splitRef is changed (onload splitRef won't exist)
-  useEffect(() => {
-    splitTheWords()
-  }, [titleRef])
 
-  const splitTheWords = () => {
-    // double checking we actually have a reference (and the value is not null)
-    if (titleRef) {
-      // run the SplittingJS magic here, using 'lines' as the splitting technique
-      let split_res = Splitting({
-        by: 'chars',  
-      })
-      // finding the first block of text and its lines - then assigning it to our state defined above
-      setLines(split_res[0].words)
-      console.log(`Split text into ${lines} lines`)
-      console.log(split_res)
-    }
-  }
 
   const animateUI = () => {
     const duration = 0.5;
@@ -65,21 +42,14 @@ export default function ProjectCover(props) {
     tl.from(urlRef.current, {y: 50, opacity:0},overlap);
     tl.from(imageRef.current, {y: 50, opacity:0, duration:0.6},">-0.6");
 
-    gsap.from(".text-4xl .char", { 
-      duration: 2, 
-      delay: 0,
-      opacity: 0,
-      stagger: 0.02, 
-      y: 20, 
-      ease:"power2.out"
-    });
+
   }
 
   return (
     <div className='relative flex justify-center'>
       <div className='relative flex flex-col-reverse md:flex-row h-screen p-8 lg:p-0 justify-center z-[2] max-w-6xl'>
         <div className='basis-2/6 flex flex-col justify-center'>
-          <h1 ref={titleRef}  data-splitting='true' className='text-4xl font-bold'>{props.title}</h1>
+          <h1 ref={titleRef}  className='text-4xl font-bold'>{props.title}</h1>
           <h2 ref={subtitleRef} className='text-2xl font-light mb-9'>{props.subtitle}</h2>
           <h3 ref={roleTitleRef} className='font-bold text-lg'>Role</h3>
           <span ref={roleRef} className='text-lg font-light mb-3'>{props.role}</span>

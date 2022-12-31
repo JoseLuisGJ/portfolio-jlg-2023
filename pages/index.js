@@ -8,15 +8,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from '../styles/Home.module.css';
 import { useEffect, useRef, useState } from 'react';
 
-import 'splitting/dist/splitting.css'
-import 'splitting/dist/splitting-cells.css'
-import Splitting from 'splitting' 
-
-
 export default function Home() {
 
-  // state for the array of lines found after running Splitting
-  const [lines, setLines] = useState([])
+
 
   const h1Ref = useRef(null);
   const h1SpanRef = useRef(null);
@@ -34,12 +28,6 @@ export default function Home() {
 
   }, []);
 
-  // should fire anytime splitRef is changed (onload splitRef won't exist)
-  useEffect(() => {
-    let split_res = Splitting({
-      by: 'chars'
-    })
-  }, [h2Ref])
 
  
 
@@ -110,23 +98,7 @@ export default function Home() {
       });
     })
 
-    gsap.from(".text-6xl .word .char", { 
-      duration: 1,
-      delay: .9,
-      opacity: 0,
-      stagger: 0.02,
-      y: 20,
-      ease: "power2.out"
-    });
 
-    gsap.from(".text-3xl .word .char", { 
-      duration: 1,
-      delay: 1.5,  
-      opacity: 0,
-      stagger: 0.02,
-      y: 20,
-      ease: "power2.out"
-    });
   }
 
   return (
@@ -139,7 +111,7 @@ export default function Home() {
         </Head>
 
         <div className={styles.main}>
-          <h1 ref={h1Ref}  data-splitting='true' className='text-6xl font-thin' >
+          <h1 ref={h1Ref}  className='text-6xl font-thin' >
             <span className='block' ref={h1SpanRef}> Hello! I'm{" "}
               <span className='font-normal' id="text-shuffle">José Luis González </span></span>
           </h1>
@@ -148,7 +120,7 @@ export default function Home() {
           <div ref={glitchBoyRef} className={`${styles.glitchBoyRef} fixed z-[2] h-screen w-screen`}>
             <GlitchBoy />
           </div>
-          <h2 ref={h2Ref} data-splitting='true' className='text-3xl font-thin'>Product designer & Code lover
+          <h2 ref={h2Ref}  className='text-3xl font-thin'>Product designer & Code lover
           </h2>
         </div>
         <div className='about absolute h-screen w-screen flex z-[6] justify-center'>
