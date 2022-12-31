@@ -1,0 +1,10 @@
+.header{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+}
+
+/* nav ul li{
+    margin-right: 20px;
+} */
