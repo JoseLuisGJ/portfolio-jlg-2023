@@ -1,0 +1,3 @@
+.footer { 
+    width: calc(100vw - var(--scrollbar-width)); 
+}

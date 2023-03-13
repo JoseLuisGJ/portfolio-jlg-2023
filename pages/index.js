@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import Image from 'next/image';
 import GlitchBoy from '../components/home/glichBoy';
 // import { motion } from "framer-motion";
@@ -104,11 +104,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <Head>
-          <title>José Luis González | Portfolio</title>
-          <meta name="description" content="José Luis González portfolio, product designer & code lover" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      
 
         <div className={styles.main}>
           <h1 ref={h1Ref}  className='text-6xl font-thin' >
