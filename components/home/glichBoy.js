@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useRef, useEffect } from 'react';
 import * as THREE from "three";
 import {gsap} from "gsap";
@@ -47,7 +48,7 @@ export default function GlitchBoy() {
         camera = new THREE.PerspectiveCamera(100, width / height, 0.1, 10000);
         renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-        geometry = new THREE.IcosahedronGeometry(190, 5);
+        geometry = new THREE.IcosahedronGeometry(190, 10);
 
         pos = geometry.attributes.position;
         for (let i = 0; i < pos.count; i++) {
@@ -59,20 +60,23 @@ export default function GlitchBoy() {
 
 
         material = new THREE.MeshPhongMaterial({
-            emissive: 0xee7a56,
+            emissive: 0x9B817C,
             emissiveIntensity: 0.4,
-            shininess: 0
+            shininess: 0,
+            
         });
         material2 = new THREE.MeshBasicMaterial({
             wireframe: true,
-            color: 0x9d553f
+            color: 0x9B817C,
+            roughness: 0.288,
+            metalness:0.529
         });
 
         ball = new THREE.Mesh(geometry, material);
         // Lights
-        light = new THREE.DirectionalLight(0xee7a56, 0.5);
+        light = new THREE.DirectionalLight(0x3228B0, 0.2);
         light2 = light.clone();
-        light3 = new THREE.HemisphereLight(0xffab5b, 0x0c056d, 0.2);
+        light3 = new THREE.HemisphereLight(0xffab5b, 0x0c056d, 0.3);
         light.position.set(200, 300, 400);
         light2.position.set(-200, 300, 400);
         light3.position.set(200, 300, 400);
@@ -87,10 +91,10 @@ export default function GlitchBoy() {
             color: 0xffffff
         });
         let sprite = new THREE.Sprite(spriteMaterial);
-        sprite.scale.set(100, 100, 1);
+        sprite.scale.set(135, 90, 1);
         scene.add(sprite);
         sprite.position.x = 0;
-        sprite.position.y = -10;
+        sprite.position.y = -15;
         sprite.position.z = 250;
         // Ball
         scene.add(ball);
@@ -105,7 +109,6 @@ export default function GlitchBoy() {
         renderer.setClearColor(0x000000, 0);
 
         mouse = new THREE.Vector2(0.8, 0.5);
-
         mountRef.current.appendChild(renderer.domElement);
 
         start();
@@ -151,52 +154,12 @@ export default function GlitchBoy() {
             blendFunction: BlendFunction.COLOR_DODGE
         });
         noiseEffect.blendMode.opacity.value = 0.1;
-        // const bloomEffect = new SelectiveBloomEffect(scene, camera, {
-		// 	blendFunction: BlendFunction.ADD,
-		// 	mipmapBlur: true,
-		// 	luminanceThreshold: 0.2,
-		// 	luminanceSmoothing: 0.6,
-		// 	intensity: 0.7
-		// });
-        // bloomEffect.inverted = true;
-        // const depthOfFieldEffect = new DepthOfFieldEffect(camera, {
-		// 	focusDistance: 0.0,
-		// 	focalLength: 0.02,
-		// 	bokehScale: 2.0,
-		// 	height: 480
-		// });
-
-		// const depthEffect = new DepthEffect({
-		// 	blendFunction: BlendFunction.SKIP
-		// });
-
-		// const vignetteEffect = new VignetteEffect({
-		// 	eskil: false,
-		// 	offset: 0.35,
-		// 	darkness: 0.5
-		// });
-
-		// const cocTextureEffect = new TextureEffect({
-		// 	blendFunction: BlendFunction.SKIP,
-		// 	texture: depthOfFieldEffect.renderTargetCoC.texture
-		// });
-
-		// const DOFeffectPass = new EffectPass(
-		// 	camera,
-		// 	depthOfFieldEffect,
-		// 	vignetteEffect,
-		// 	cocTextureEffect,
-		// 	depthEffect
-		// );
 
         const glitchPass = new EffectPass(camera, glitchEffect, noiseEffect);
         const chromaticAberrationPass = new EffectPass(camera, chromaticAberrationEffect);
-		// const bloomEffectPass = new EffectPass(camera, bloomEffect);
 		
         composer.addPass(glitchPass);
         composer.addPass(chromaticAberrationPass);
-        // composer.addPass(bloomEffectPass);
-        // composer.addPass(DOFeffectPass);
 
     }
 
@@ -210,8 +173,6 @@ export default function GlitchBoy() {
         camera.lookAt(scene.position);
         composer.setSize(window.innerWidth, window.innerHeight);
     }
-
-
 
     const startGlitch = () => {
         setTimeout(stopGlitch, 600);
@@ -229,11 +190,9 @@ export default function GlitchBoy() {
         glitchEffect.mode = 0;
     }
 
-
-
     const updateVertices = (timestamp) => {
         let t = clock.getElapsedTime() * .25;
-        let amount = 50 + (mouse.x*100);
+        let amount = 10 + (mouse.x*100);
         geometry.userData.nPos.forEach((p, idx) => {
             let ns = noise.noise(p.x + t, p.y + t, p.z + t);
             v3.copy(p).multiplyScalar(radius).addScaledVector(p, ns * amount);
@@ -241,8 +200,8 @@ export default function GlitchBoy() {
         })
 
         pos.needsUpdate = true;
-        // facetado
-        geometry.computeVertexNormals();
+        // faceted matterial
+        // geometry.computeVertexNormals();
 
     }
 

@@ -8,7 +8,7 @@
     z-index: 0;
     top: 0;
     left: 0;
-  background: radial-gradient(circle, #ee7a56 0%, #ffab5b 100%) fixed;
+  background: radial-gradient(circle, #9B817C 0%, #473941 100%) fixed;
 }
 
 .main {
@@ -25,7 +25,7 @@
 .main h1 {
   position: absolute;
   top: 44%;
-  padding-left: 69px;
+  padding-left: 15px;
   /* transform: translateX(-190px) translateY(-50%); */
   height: 285px;
   width: 345px;
@@ -37,9 +37,9 @@
 
 .main h2 {
   position: absolute;
-  top: 77%;
+  top: 85%;
   padding-right: 59px;
-  transform: translateX(260px) translateY(-50%);
+  transform: translateX(295px) translateY(-50%);
   height: 256px;
   width: 300px;
   color: #fff;

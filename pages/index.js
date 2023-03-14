@@ -122,31 +122,31 @@ export default function Home() {
         <div className='about absolute h-screen w-screen flex z-[6] justify-center'>
           <div className='flex justify-center flex-col content-center center max-w-4xl'>
             <h1 className='text-center text-6xl py-5 reveal'>About me</h1>
-            <h3 className='text-center text-3xl font-extralight py-5 reveal'>I've <b>19 years</b> of professional digital experience, based in <b>Valencia</b>. Nowadays I work as a <b>Senior Product Designer</b> at <a href='http://www.newrelic.com' target="_blank">New Relic</a>, making a better internet for the love of software! </h3>
-            <p className='text-center text-xl py-5 font-extralight reveal'>Formerly <a href='http://www.qatium.com' target="_blank">Qatium</a>, <a href='http://www.idrica.com' target="_blank">Idrica</a>, <a href='http://www.globalomnium.com' target="_blank">Global Omnium</a>, <a href='http://www.nectarestudio.com' target="_blank">Nectar Estudio</a> among others.</p>
+            <h3 className='text-center text-3xl font-extralight py-5 reveal'>I've <b>20 years</b> of professional experience, based in <b>Valencia</b>. Nowadays I work as a <b>Senior UX Designer/Engineer</b> at <a href='http://www.elastic.cco' target="_blank" rel="noreferrer">Elastic</a>, making delightful develover tools.</h3>
+            <p className='text-center text-xl py-5 font-extralight reveal'>Formerly <a href='http://www.newrelic.com' target="_blank" rel="noreferrer">New Relic</a>, <a href='http://www.qatium.com' target="_blank" rel="noreferrer">Qatium</a>, <a href='http://www.idrica.com' target="_blank" rel="noreferrer">Idrica</a>, <a href='http://www.globalomnium.com' target="_blank" rel="noreferrer">Global Omnium</a>, <a href='http://www.nectarestudio.com' target="_blank" rel="noreferrer">Nectar Estudio</a> among others.</p>
             <div className="grid grid-cols-2 gap-4 text-lg font-extralight py-5 reveal">
-              <div>I cofounded and worked at <a href='http://www.nectarestudio.com' target="_blank">Nectar Estudio</a> during 8 years. Since then I was collaborating with agencies and companies like <a href='https://www.serviceplan.es/' target="_blank">Publips</a>, <a href='https://marketing4ecommerce.net/la-historica-agencia-shackleton-pasa-a-ser-accenture-song/' target="_blank">Shackleton Digital</a>, <a href='http://www.avantio.com' target="_blank">Avantio</a>, <a href='http://www.energysystem.com' target="_blank">Energy System</a>. Obteining some awards and recognitions by <a href='https://www.awwwards.com/' target="_blank">AWWWARDS</a>, <a href='https://www.thefwa.com/' target="_blank">FWA</a>, <a href='https://premiosadcv.com/' target="_blank">ADCV</a>, <a href='https://www.adg-fad.org/' target="_blank">Laus</a> and <a href='https://festivallalluna.com/' target="_blank">La Lluna</a>.</div>
-              <div>Teaching was also and important part of my career. I led the <a href='https://www.esat.es/estudios/postgrado-especializado-en-diseno-y-desarrollo-web-front-end/' target="_blank">ID3 post degree</a> in <a href='http://www.esat.es' target="_blank">ESAT</a>. Where I also taught UX//UI and web frontend development in the New Media Arts 2.0 degree during 12 years. Sharing knowledgement with the future generations.</div>
+              <div>I cofounded and worked at <a href='http://www.nectarestudio.com' target="_blank" rel="noreferrer">Nectar Estudio</a> during 8 years. Since then I was collaborating with agencies and companies like <a href='https://www.serviceplan.es/' target="_blank" rel="noreferrer">Publips</a>, <a href='https://marketing4ecommerce.net/la-historica-agencia-shackleton-pasa-a-ser-accenture-song/' target="_blank" rel="noreferrer">Shackleton Digital</a>, <a href='http://www.avantio.com' target="_blank" rel="noreferrer">Avantio</a>, <a href='http://www.energysystem.com' target="_blank" rel="noreferrer">Energy System</a>. Obteining some awards and recognitions by <a href='https://www.awwwards.com/' target="_blank" rel="noreferrer">AWWWARDS</a>, <a href='https://www.thefwa.com/' target="_blank" rel="noreferrer">FWA</a>, <a href='https://premiosadcv.com/' target="_blank" rel="noreferrer">ADCV</a>, <a href='https://www.adg-fad.org/' target="_blank" rel="noreferrer">Laus</a> and <a href='https://festivallalluna.com/' target="_blank" rel="noreferrer">La Lluna</a>.</div>
+              <div>Teaching was also and important part of my career. I led the <a href='https://www.esat.es/estudios/postgrado-especializado-en-diseno-y-desarrollo-web-front-end/' target="_blank" rel="noreferrer">ID3 post degree</a> in <a href='http://www.esat.es' target="_blank" rel="noreferrer">ESAT</a>. Where I also taught UX//UI and web frontend development in the New Media Arts 2.0 degree during 12 years. Sharing knowledgement with the future generations.</div>
             </div>
             <div>
               <ul className="flex justify-center py-5">
                 <li className="mr-6">
-                  <a href='mailto:hola@joseluis.design' target="_blank">
+                  <a href='mailto:hola@joseluis.design' target="_blank" rel="noreferrer">
                     <Image className='' src="/assets/email-icon.svg" width={29} height={21} alt="email" />
                   </a>
                 </li>
                 <li className="mr-6">
-                  <a href='https://www.linkedin.com/in/joseluisgj/' target="_blank">
+                  <a href='https://www.linkedin.com/in/joseluisgj/' target="_blank" rel="noreferrer">
                     <Image className='' src="/assets/linkdin-icon.svg" width={21} height={21} alt="Linkdin" />
                   </a>
                 </li>
                 <li className="mr-6">
-                  <a href='https://twitter.com/jose_luis_gj' target="_blank">
+                  <a href='https://twitter.com/jose_luis_gj' target="_blank" rel="noreferrer">
                     <Image className='' src="/assets/twitter-icon.svg" width={21} height={21} alt="Twitter" />
                   </a>
                 </li>
                 <li className="mr-6">
-                  <a href='https://github.com/ergum' target="_blank">
+                  <a href='https://github.com/ergum' target="_blank" rel="noreferrer">
                     <Image className='' src="/assets/github-icon.svg" width={21} height={21} alt="Github" />
                   </a>
                 </li>
