@@ -18,36 +18,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  
-
 }
-
-.main h1 {
-  position: absolute;
-  top: 44%;
-  padding-left: 15px;
-  /* transform: translateX(-190px) translateY(-50%); */
-  height: 285px;
-  width: 345px;
-  color: #fff;
-  margin: 0;
-  z-index: 3;
-
-}
-
-.main h2 {
-  position: absolute;
-  top: 85%;
-  padding-right: 59px;
-  transform: translateX(295px) translateY(-50%);
-  height: 256px;
-  width: 300px;
-  color: #fff;
-  margin: 0;
-  z-index: 1;
-
-}
-
 
 .chico {
   width: 100%;
