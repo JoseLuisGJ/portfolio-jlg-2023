@@ -17,6 +17,8 @@ function MyApp({ Component, pageProps }) {
   const [menuOpened, setMenuOpened] = useState(false);
   // const [shouldRenderMenu, setShouldRenderMenu] = useState(false);
   const prevShouldRenderMenu = useRef();
+  const childRef = useRef(null);
+  const [menuItemActive, setMenuItemActive] = useState(0);
 
 
   const animateUnmountMenu = () => {
@@ -30,6 +32,15 @@ function MyApp({ Component, pageProps }) {
     console.log('current:' + menuOpened);
   }, [menuOpened]);
 
+  const siblingFunction = () => {
+    console.log("Sibling function called!");
+    if (childRef.current) {
+      childRef.current.unmountMenuFromIcon();
+    }
+
+  };
+
+
 
   return (
     <>
@@ -41,9 +52,9 @@ function MyApp({ Component, pageProps }) {
       <main className={poppins.className}>
         {/* <div className='absolute z-50'>Now: {menuOpened}, before: {prevShouldRenderMenu.current}</div> */}
       
-        <MainHeader menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+        <MainHeader menuOpened={menuOpened} setMenuOpened={setMenuOpened} siblingFunction={siblingFunction} />
         {
-          menuOpened && <ProjectsMenu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+          menuOpened && <ProjectsMenu ref={childRef} menuOpened={menuOpened} setMenuOpened={setMenuOpened}  menuItemActive={menuItemActive} setMenuItemActive={setMenuItemActive}/>
         }
         <AppWrapper>
           <Component {...pageProps} />

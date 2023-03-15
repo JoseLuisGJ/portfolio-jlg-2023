@@ -12,6 +12,7 @@ export default function Figmap() {
 
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
+    window.scrollTo(0, 0);
     animateUI();
     return () => {
 

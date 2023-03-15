@@ -8,15 +8,21 @@ export default function MainHeader(props) {
   const toggleClickMenu = () => {
     if(props.menuOpened == false){
       props.setMenuOpened(true);
+    }else{
+      
+      props.siblingFunction();
+      
+
+
 
     }
   }
   return (
     <nav className='fixed top-6 left-7 z-20 w-full' >
       {/* logo */}
-      <Link onClick={() => props.setMenuOpened(false)} className='absolute left-0' href="/">
+      {/* <Link onClick={() => props.setMenuOpened(false)} className='absolute left-0' href="/">
         <Image className='' src="/assets/logo-jl.svg" width={29} height={36} alt="Logo" />
-      </Link>
+      </Link> */}
       {/* Hambuerguer menu */}
       <a className='absolute right-16' href='#' onClick={ toggleClickMenu }>
         <div className=" space-y-2 ">

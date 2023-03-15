@@ -2,22 +2,26 @@ import Image from 'next/image';
 import Link from 'next/link'
 import gsap from "gsap";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react';
 
-export default function ProjectsMenu(props) {
+const ProjectsMenu = (props,ref) => {
 
     const imageBackground0 = useRef(null);
     const imageBackground1 = useRef(null);
     const imageBackground2 = useRef(null);
     const imageBackground3 = useRef(null);
+  
 
     const router = useRouter();
     const [isTransitioning, setIsTransitioning] = useState(false);
    
-    let menuItemActive = null;
+    let menuItemHovered = null;
+   
+   
     
+    // When the route changes
     useEffect(() => {
-
+       // When start unmounting animation
         const transitionAnimationStart = async () => {
             console.log('transitionAnimationStart');
             setIsTransitioning(true);
@@ -28,13 +32,14 @@ export default function ProjectsMenu(props) {
                 ease: "Expo.easeInOut",
                 stagger: 0.1,
             });
-            gsap.killTweensOf(menuItemActive)
-            gsap.to(menuItemActive, {
+            gsap.killTweensOf(menuItemHovered)
+            gsap.to(menuItemHovered, {
                 scale: 1,
                 opacity: 1,
                 duration: 0.3
             });
         };
+        // When finish unmounting animation
         const transitionAnimationEnd = () => {
             console.log('transitionAnimationEnd');
             gsap.to('.menuWrapper', {
@@ -59,6 +64,8 @@ export default function ProjectsMenu(props) {
     }, [router]);
 
 
+
+
     useEffect(() => {
         mountAnimatedUI();
         return () => {
@@ -66,7 +73,38 @@ export default function ProjectsMenu(props) {
         }
     }, []);
 
+    // called once menu is opened and mounted clicking on the menu icon
+    const unmountMenuFromIcon = () => {
+        gsap.to(".menuItem", {
+            y: 20,
+            opacity: 0,
+            duration: 0.3,
+            ease: "Expo.easeInOut",
+            stagger: 0.1,
+        });
+        gsap.killTweensOf(menuItemHovered)
+        gsap.to(menuItemHovered, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.3
+        });
+        gsap.to('.menuWrapper', {
+            opacity: 0,
+            duration: 0.4,
+            delay: 0.3,
+            onComplete: () => {
+                props.setMenuOpened(false);
+            }
+        });
+    }
+    useImperativeHandle(ref, () => ({
+        unmountMenuFromIcon,
+      }));
+
+
+
     const mountAnimatedUI = () => {
+        // Mount animations
         gsap.from(".menuWrapper", {
             opacity: 0,
             duration: 0.3
@@ -81,15 +119,15 @@ export default function ProjectsMenu(props) {
 
     const showBackground = (elem) => {
        
-        menuItemActive = elem;
+        menuItemHovered = elem;
         if (!isTransitioning) {
-            gsap.fromTo(menuItemActive, {
+            gsap.fromTo(menuItemHovered, {
                 opacity: 0
             }, {
                 duration: 0.3,
                 opacity: 1,
             });
-            gsap.fromTo(menuItemActive, {
+            gsap.fromTo(menuItemHovered, {
                 scale: 1.2
             }, {
                 scale: 1,
@@ -108,17 +146,20 @@ export default function ProjectsMenu(props) {
     }
 
     return (
-        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen bg-gradient-to-tr from-yellow-700 via-yellow-600 to-yellow-300 z-10'>
+        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen bg-gradient-to-tr from-[#9B817C]  to-[#473941] z-10'>
             <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-[10]'>
                 <ul className='space-y-4 text-6xl'>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} className='no-underline opacity-80 hover:opacity-100' href="/projects/qatium">Qatium</Link>
+                        <Link className={`no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} onClick={() => props.setMenuItemActive(0)} href="/">Home</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} className='no-underline opacity-80 hover:opacity-100' href="/projects/goaigua">GoAigua</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} onClick={() => props.setMenuItemActive(1)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 1 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/qatium">Qatium</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} className='no-underline opacity-80 hover:opacity-100' href="/projects/figmap">Figmap</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} onClick={() => props.setMenuItemActive(2)}  className={`no-underline hover:opacity-100 ${props.menuItemActive == 2 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/goaigua">GoAigua</Link>
+                    </li>
+                    <li className='menuItem'>
+                        <Link onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} onClick={() => props.setMenuItemActive(3)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 3 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
                     </li>
                 </ul>
             </div>
@@ -129,3 +170,5 @@ export default function ProjectsMenu(props) {
         </div>
     );
 }
+
+export default forwardRef(ProjectsMenu);

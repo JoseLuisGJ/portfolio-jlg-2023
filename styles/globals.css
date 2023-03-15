@@ -11,6 +11,7 @@ body {
     margin: 0;
     color: #fff;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     --scrollbar-width: calc(100vw - 100%);
     
 }
