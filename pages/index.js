@@ -34,6 +34,7 @@ export default function Home() {
 
   const animateUI = () => {
     // Sets
+
     gsap.set(backgroundRef.current, {
       filter: "brightness(1)",
     });
@@ -47,8 +48,16 @@ export default function Home() {
     // });
     // Init animations
 
-    // gsap.from(h1Ref.current, { duration: 0.8, opacity: 0, x: -90, delay: 0.7 });
-    // gsap.from(h2Ref.current, { duration: 0.8, opacity: 0, x: 120, delay: 1.2 });
+    gsap.fromTo(
+      h1Ref.current,
+      { duration: 0.8, opacity: 0, x: 90 },
+      { opacity: 1, x: 0, delay: 0.7 }
+    );
+    gsap.fromTo(
+      h2Ref.current,
+      { duration: 0.8, opacity: 0, x: -90 },
+      { opacity: 1, x: 0, delay: 1.2 }
+    );
 
     // gsap.to(arrowRef.current, { duration: 1.5, opacity: 1, delay: 2 });
     // Scroll animations
@@ -73,6 +82,7 @@ export default function Home() {
         markers: false
       }
     });
+    // Parallel animations with H1
     // gsap.to(h1SpanRef.current, { 
     //   y: -210,
     //   scrollTrigger: {
@@ -84,7 +94,7 @@ export default function Home() {
     //   }
     // });
     gsap.to(arrowRef.current, { 
-      opacity: 0,
+      autoAlpha: 0,
       scrollTrigger: {
         trigger: ".about", 
         start: "top bottom",
@@ -120,7 +130,7 @@ export default function Home() {
       
 
         <div className={styles.main}>
-          <h1 ref={h1Ref}  className='absolute top-8 md:top-[35%] left-6 md:left-[40%] md:-translate-x-56 z-[3] text-5xl md:text-5xl lg:text-6xl font-thin' >
+          <h1 ref={h1Ref}  className='absolute top-8 md:top-[35%] left-6 md:left-[calc(40%-14rem)] z-[3] text-5xl md:text-5xl lg:text-6xl font-thin' >
             <span className='block' ref={h1SpanRef}> Hello! I&apos;m{" "}<br/>
               <span className='font-normal' id="text-shuffle">José Luis<br/>González </span></span>
           </h1>
@@ -129,7 +139,7 @@ export default function Home() {
           <div ref={glitchBoyRef} className={`${styles.glitchBoyRef} fixed z-[2] h-screen w-screen`}>
             <GlitchBoy />
           </div>
-          <h2 ref={h2Ref} className='absolute bottom-6 md:top-[70%] left-6 md:left-[50%] md:translate-x-24 lg:translate-x-32 text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
+          <h2 ref={h2Ref} className='absolute bottom-6 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
           </h2>
           <a ref={arrowRef} href='#about' className='absolute z-[8] bottom-5 left-1/2 transform -translate-x-1/2' ><Image className='' src="/assets/down-arrow.svg" width={31} height={31} alt="Down arrow" /></a>
         </div>
