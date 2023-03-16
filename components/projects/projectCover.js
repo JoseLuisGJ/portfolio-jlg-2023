@@ -6,8 +6,6 @@ import Image from 'next/image';
 
 export default function ProjectCover(props) {
 
-
-
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const roleTitleRef = useRef(null);
@@ -22,10 +20,7 @@ export default function ProjectCover(props) {
     return () => {
 
     }
-
   }, []);
-
-
 
   const animateUI = () => {
     const duration = 0.5;
@@ -41,13 +36,11 @@ export default function ProjectCover(props) {
     tl.from(clientRef.current, {y: 50, opacity:0},overlap);
     tl.from(urlRef.current, {y: 50, opacity:0},overlap);
     tl.from(imageRef.current, {y: 50, opacity:0, duration:0.6},">-0.6");
-
-
   }
 
   return (
     <div className='relative flex justify-center'>
-      <div className='relative flex flex-col-reverse md:flex-row h-screen p-8 xl:p-0 justify-center z-[2] max-w-6xl'>
+      <div className='relative flex flex-col-reverse md:flex-row h-screen p-8 xl:p-0 justify-center z-[2] max-w-5xl'>
         <div className='basis-2/6 flex flex-col justify-center'>
           <h1 ref={titleRef}  className='text-4xl font-bold'>{props.title}</h1>
           <h2 ref={subtitleRef} className='text-2xl font-light mb-9'>{props.subtitle}</h2>
@@ -55,7 +48,7 @@ export default function ProjectCover(props) {
           <span ref={roleRef} className='text-lg font-light mb-3'>{props.role}</span>
           <h3 ref={clientTitleRef} className='font-bold text-lg'>Client</h3>
           <span ref={clientRef} className='text-lg font-light mb-9'>{props.client}</span>
-          <a ref={urlRef} href={`http://${props.url}`} target='_blank'>{props.url}</a>
+          <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
         </div>
         <div ref={imageRef} className='basis-4/6 flex flex-col justify-center'>
           <Image  className='' alt='Project hero image' src={`/assets/${props.heroImage}`} width={780} height={512} />
