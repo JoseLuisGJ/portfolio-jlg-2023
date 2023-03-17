@@ -20,7 +20,8 @@ export default function ProjectBlock(props) {
       ${props.pushBottom ? "pb-28" : " "}
       ${props.offsetLeft ? "justify-start" : ""}
       ${props.offsetRight ? "justify-end" : ""}
-      ${(!props.offsetLeft&&!props.offsetRight) ? "justify-center" : ""}
+      ${!props.offsetLeft && !props.offsetRight ? "justify-center " : " "}
+      ${props.invertTextColor ? "text-gray-900 " : "text-white "}
       `}
       style={{ backgroundColor: props.backgroundColor }}
     >
@@ -31,19 +32,23 @@ export default function ProjectBlock(props) {
           // Image
           case 1:
             return (
-              <div className="max-w-5xl p-8 xl:p-0">
+              <div
+                className={`max-w-5xl p-8 xl:p-0`}
+              >
                 <h3 className="text-lg reveal">{props.texts[0]}</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 reveal">
                   <p className="text-base font-extralight">{props.texts[1]}</p>
                   <p className="text-base font-extralight">{props.texts[2]}</p>
                 </div>
-                <Image
-                  className="mx-auto relative z-10 top-24 -mt-16 reveal"
-                  alt="Image project 1"
-                  src={`/assets/${props.images[0]}`}
-                  width={650}
-                  height={501}
-                />
+                {props.images && (
+                  <Image
+                    className="mx-auto relative z-10 top-24 -mt-16 reveal"
+                    alt="Image project 1"
+                    src={`/assets/${props.images[0]}`}
+                    width={650}
+                    height={501}
+                  />
+                )}
               </div>
             );
           case 2:
@@ -70,14 +75,14 @@ export default function ProjectBlock(props) {
                       props.reverse ? "order-last" : ""
                     }`}
                   >
-                    <h3 className="text-lg reveal py-5">{props.texts[0]}</h3>
+                    <h3 className="text-lg py-5">{props.texts[0]}</h3>
                     <p className="text-base font-extralight">
                       {props.texts[1]}
                     </p>
                   </div>
 
                   <Image
-                    className="relative mx-auto reveal"
+                    className="relative mx-auto"
                     alt="Image project 1"
                     src={`/assets/${props.images[0]}`}
                     width={600}
@@ -113,9 +118,13 @@ export default function ProjectBlock(props) {
                 <div className="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full max-w-5xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Empty column */}
-                    
-                    <div className={`${props.offsetLeft ? "col-start-2" : ""}`}>
-                      <h3 className="text-lg reveal py-5">{props.texts[0]}</h3>
+
+                    <div
+                      className={`reveal ${
+                        props.offsetLeft ? "col-start-2" : ""
+                      }`}
+                    >
+                      <h3 className="text-lg py-5">{props.texts[0]}</h3>
                       <p className="text-base font-extralight">
                         {props.texts[1]}
                       </p>
