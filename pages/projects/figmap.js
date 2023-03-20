@@ -14,7 +14,7 @@ export default function Figmap(props) {
     animateUI();
     return () => {};
   }, []);
-  
+
   const animateUI = () => {
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {
@@ -44,7 +44,7 @@ export default function Figmap(props) {
           backgroundImage="figmap-cover-background.jpg"
           url="www.figmap.com"
         />
-          <ProjectBlock
+        <ProjectBlock
           type={1}
           invertTextColor
           backgroundColor="#DFE4EB"
@@ -64,32 +64,83 @@ export default function Figmap(props) {
           images={["figmap-logos-comp.png"]}
           texts={[
             "Challenges sought",
-            "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this article.",
+            "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
         />
         <ProjectBlock
-          type={2}
-          backgroundColor="#22222E"
-          images={["qatium-mockup-2.png"]}
-        />
-        <ProjectBlock
-          pushBottom
-          type={2}
-          backgroundColor="#22222E"
-          images={["qatium-mockup-3.png"]}
-        />
-        <ProjectBlock
-          type={3}
-          backgroundColor="#3C3B59"
-          images={["qatium-illustration-2.png"]}
+          type={6}
+          backgroundColor="#6A9BB1"
           texts={[
-            "Title",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales at leo id finibus. Etiam ac ligula tellus. In faucibus a dolor sed tincidunt. Proin mattis nisi sit amet tortor molestie, a sodales nulla rhoncus. Ut maximus congue elit sit amet lacinia. Vestibulum ut purus vel ",
+            "Challenges sought",
+            "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
+          images={["figmap-community-list.png"]}
         />
+        {/* Custom Figmap block  */}
+        <div
+          className={`relative flex justify-center`}
+          style={{ backgroundColor: "#6A9BB1" }}
+        >
+          <div className="max-w-5xl px-8 xl:px-0 flex flex-col items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-12 md:py-28 max-w-4xl reveal">
+              <div className="flex flex-col items-center text-white">
+                <Image
+                  className="pb-8"
+                  src={`/assets/figmap-icon-figma.png`}
+                  alt="Like icon"
+                  width={54}
+                  height={54}
+                />
+                <h4 className="text-2xl md:text-4xl font-bold">Works on</h4>
+                <h6 className="text-lg md:text-2xl font-regular">Figma & FigJam</h6>
+              </div>
+              <div className="flex flex-col items-center text-white">
+                <Image
+                  className="pb-8"
+                  src={`/assets/figmap-icon-like.png`}
+                  alt="Like icon"
+                  width={54}
+                  height={54}
+                />
+                <h4 className="text-2xl md:text-4xl font-bold">201</h4>
+                <h6 className="text-lg md:text-2xl font-regular">Likes</h6>
+              </div>
+              <div className="flex flex-col items-center text-white">
+                <Image
+                  className="pb-8"
+                  src={`/assets/figmap-icon-installs.png`}
+                  alt="Like icon"
+                  width={54}
+                  height={54}
+                />
+                <h4 className="text-2xl md:text-4xl font-bold">30.5k</h4>
+                <h6 className="text-lg md:text-2xl font-regular">Installations</h6>
+              </div>
+              <div className="flex flex-col items-center text-white">
+                <Image
+                  className="pb-8"
+                  src={`/assets/figmap-icon-mau.png`}
+                  alt="Like icon"
+                  width={54}
+                  height={54}
+                />
+                <h4 className="text-2xl md:text-4xl font-bold">12k</h4>
+                <h6 className="text-lg md:text-2xl font-regular">MAU</h6>
+              </div>
+            </div>
+
+            <Image
+              className="mx-auto relative   reveal"
+              alt="Image project 1"
+              src={`/assets/figmap-community-list.png`}
+              width={1111}
+              height={586}
+            />
+          </div>
+        </div>
       </div>
       <ProjectFooter
-       {...props}
+        {...props}
         idProject="1"
         backgroundColor="#22222E"
         backgroundImage="qatium-cover-background.jpg"

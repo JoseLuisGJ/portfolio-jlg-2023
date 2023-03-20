@@ -76,8 +76,8 @@ export default function ProjectBlock(props) {
                     }`}
                   >
                     <h3 className="text-lg py-5">{props.texts[0]}</h3>
-                    <p className="text-base font-extralight">
-                      {props.texts[1]}
+                    <p className="text-base font-extralight" dangerouslySetInnerHTML={{ __html: props.texts[1] }}>
+                      
                     </p>
                   </div>
 

@@ -1,7 +1,5 @@
-import styles from '../../styles/Projects.module.css';
-import Link from 'next/link'
 import gsap from "gsap";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export default function ProjectCover(props) {
