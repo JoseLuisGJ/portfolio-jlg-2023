@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import Image from "next/image";
+import Head from "next/head";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
@@ -34,6 +35,16 @@ export default function Figmap(props) {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href="/assets/figmap-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/figmap-logos-comp.png" as="image" />
+        <link rel="preload" href="/assets/figmap-community-list.png" as="image" />
+        <link rel="preload" href="/assets/figmap-icon-figma.png" as="image" />
+        <link rel="preload" href="/assets/figmap-icon-like.png" as="image" />
+        <link rel="preload" href="/assets/figmap-icon-installs.png" as="image" />
+        <link rel="preload" href="/assets/figmap-icon-mau.png" as="image" />
+      </Head>
       <div className={`mb-48`}>
         <ProjectCover
           title="Figma Plugin"

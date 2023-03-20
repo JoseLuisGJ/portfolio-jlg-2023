@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import Image from "next/image";
+import Head from "next/head";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
@@ -35,6 +36,18 @@ export default function Qatium(props) {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href="/assets/qatium-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/qatium-illustration-1.png" as="image" />
+        <link rel="preload" href="/assets/qatium-illustration-2.png" as="image" />
+        <link rel="preload" href="/assets/qatium-mockup-1.png" as="image" />
+        <link rel="preload" href="/assets/qatium-mockup-2.png" as="image" />
+        <link rel="preload" href="/assets/qatium-mockup-3.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-tokens.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-components.png" as="image" />
+        <link rel="preload" href="/assets/qatium-roadmap.png" as="image" />
+      </Head>
       <div className={`mb-48 `}>
         <ProjectCover
           title="Product Design"

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import Image from "next/image";
+import Head from "next/head";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
@@ -34,6 +34,15 @@ export default function GoAigua(props) {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href="/assets/goaigua-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/goaigua-mockup-desktop-mobil.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-mockups-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-mockups-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-mockups-3.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-mockups-4.png" as="image" />
+      </Head>
       <div className={`mb-48`}>
         <ProjectCover
           title="Product Design"

@@ -150,16 +150,16 @@ const ProjectsMenu = (props,ref) => {
             <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-40'>
                 <ul className='space-y-4 text-6xl -translate-y-6'>
                     <li className='menuItem mb-12'>
-                        <Link prefetch={false} className={`text-2xl no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} onClick={() => props.setMenuItemActive(0)} href="/">Home</Link>
+                        <Link className={`text-2xl no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} onClick={() => props.setMenuItemActive(0)} href="/">Home</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link prefetch={false} onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} onClick={() => props.setMenuItemActive(1)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 1 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/qatium">Qatium</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} onClick={() => props.setMenuItemActive(1)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 1 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/qatium">Qatium</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link prefetch={false} onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} onClick={() => props.setMenuItemActive(2)}  className={`no-underline hover:opacity-100 ${props.menuItemActive == 2 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/goaigua">GoAigua</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} onClick={() => props.setMenuItemActive(2)}  className={`no-underline hover:opacity-100 ${props.menuItemActive == 2 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/goaigua">GoAigua</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link prefetch={false} onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} onClick={() => props.setMenuItemActive(3)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 3 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} onClick={() => props.setMenuItemActive(3)} className={`no-underline hover:opacity-100 ${props.menuItemActive == 3 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
                     </li>
                 </ul>
             </div>

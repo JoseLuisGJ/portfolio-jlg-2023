@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import GlitchBoy from '../components/home/glichBoy';
-// import { motion } from "framer-motion";
+import Head from 'next/head';
 import gsap from "gsap";
 // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -126,9 +126,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
+      </Head>
       <div className="w-full overflow-x-hidden">
-      
-
         <div className="relative h-screen w-full flex items-end justify-center">
           <h1 ref={h1Ref}  className='absolute top-8 md:top-[35%] left-6 md:left-[calc(40%-14rem)] z-[3] text-5xl md:text-5xl lg:text-6xl font-thin' >
             <span className='block' ref={h1SpanRef}> Hello! I&apos;m{" "}<br/>
