@@ -15,7 +15,7 @@ export default function ProjectBlock(props) {
   const animateUI = () => {};
   return (
     <div
-      className={`relative flex py-10  
+      className={`relative flex py-10
       ${props.pushTop ? "pt-28" : " "} 
       ${props.pushBottom ? "pb-28" : " "}
       ${props.offsetLeft ? "justify-start" : ""}

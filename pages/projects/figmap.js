@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 
 import Image from "next/image";
-import styles from "../../styles/Qatium.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
@@ -35,7 +34,7 @@ export default function Figmap() {
 
   return (
     <>
-      <div className={`${styles.main} `}>
+      <div className={`mb-48`}>
         <ProjectCover
           title="Figma Plugin"
           subtitle="Figmap"
@@ -91,9 +90,9 @@ export default function Figmap() {
       </div>
       <ProjectFooter
         backgroundColor="#22222E"
-        backgroundImage="idrica-cover-background.jpg"
-        title="GoAigua"
-        url="goaigua"
+        backgroundImage="qatium-cover-background.jpg"
+        title="Qatium"
+        url="qatium"
       />
     </>
   );

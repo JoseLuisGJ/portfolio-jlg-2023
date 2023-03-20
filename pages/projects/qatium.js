@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 
 import Image from "next/image";
-import styles from "../../styles/Qatium.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
@@ -35,7 +34,7 @@ export default function Qatium() {
 
   return (
     <>
-      <div className={`${styles.main} `}>
+      <div className={`mb-48 `}>
         <ProjectCover
           title="Product Design"
           subtitle="Qatium"
@@ -122,7 +121,7 @@ export default function Qatium() {
       </div>
       <ProjectFooter
         backgroundColor="#22222E"
-        backgroundImage="idrica-cover-background.jpg"
+        backgroundImage="goaigua-cover-background.jpg"
         title="GoAigua"
         url="goaigua"
       />
