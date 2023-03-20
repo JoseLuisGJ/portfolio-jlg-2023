@@ -146,8 +146,8 @@ const ProjectsMenu = (props,ref) => {
     }
 
     return (
-        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen bg-gradient-to-tr from-[#9B817C]  to-[#473941] z-10'>
-            <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-[10]'>
+        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen z-20 bg-gradient-to-tr from-[#9B817C]  to-[#473941]'>
+            <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-40'>
                 <ul className='space-y-4 text-6xl'>
                     <li className='menuItem'>
                         <Link className={`no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} onClick={() => props.setMenuItemActive(0)} href="/">Home</Link>
@@ -165,7 +165,7 @@ const ProjectsMenu = (props,ref) => {
             </div>
 
             <Image fill className='imageBackground1 object-cover opacity-0 z-[1]' src={`/assets/qatium-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/idrica-cover-background.jpg`} alt='Project background image' />
+            <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/goaigua-cover-background.jpg`} alt='Project background image' />
             <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/figmap-cover-background.jpg`} alt='Project background image' />
         </div>
     );

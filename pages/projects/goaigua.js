@@ -7,7 +7,7 @@ import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 
-export default function GoAigua() {
+export default function GoAigua(props) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -100,6 +100,8 @@ export default function GoAigua() {
         />
       </div>
       <ProjectFooter
+       {...props}
+        idProject="3"
         backgroundColor="#22222E"
         backgroundImage="figmap-cover-background.jpg"
         title="Figmap"

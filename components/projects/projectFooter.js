@@ -9,6 +9,7 @@ export default function ProjectFooter(props) {
   const handleClick = (e) => {
     e.preventDefault();
     setIsTransitioning(true);
+    props.setMenuItemActive(props.idProject);
     // get href from the clicked link element and push it to the router with a delayed call of 1 second
     setTimeout(() => {
       router.push(`/projects/${props.url}`);

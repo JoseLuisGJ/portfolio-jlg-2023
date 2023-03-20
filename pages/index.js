@@ -126,24 +126,24 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className="w-full overflow-x-hidden">
       
 
-        <div className={styles.main}>
+        <div className="relative h-screen w-full flex items-end justify-center">
           <h1 ref={h1Ref}  className='absolute top-8 md:top-[35%] left-6 md:left-[calc(40%-14rem)] z-[3] text-5xl md:text-5xl lg:text-6xl font-thin' >
             <span className='block' ref={h1SpanRef}> Hello! I&apos;m{" "}<br/>
               <span className='font-normal' id="text-shuffle">José Luis<br/>González </span></span>
           </h1>
           <div className=' absolute z-[5] h-screen w-screen'>
           </div>
-          <div ref={glitchBoyRef} className={`${styles.glitchBoyRef} fixed z-[2] h-screen w-screen`}>
+          <div ref={glitchBoyRef} className={`fixed z-[2] h-screen w-screen`}>
             <GlitchBoy />
           </div>
           <h2 ref={h2Ref} className='absolute bottom-6 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
           </h2>
           <a ref={arrowRef} href='#about' className='absolute z-[8] bottom-5 left-1/2 transform -translate-x-1/2' ><Image className='' src="/assets/down-arrow.svg" width={31} height={31} alt="Down arrow" /></a>
         </div>
-        <div id="about" className='about absolute h-auto min-h-screen w-screen flex z-[6] justify-center'>
+        <div id="about" className='about absolute h-screen w-full flex z-[6] justify-center'>
           <div className='flex justify-center flex-col content-center center max-w-4xl p-8'>
             <h1 className='text-center text-4xl lg:text-6xl py-2 md:py-5 reveal'>About me</h1>
             <h3 className='text-center text-2xl lg:text-3xl font-extralight py-5 reveal'>I&apos;ve <b>20 years</b> of professional experience, based in <b>Valencia</b>. Nowadays I work as a <b>Senior UX Designer/Engineer</b> at <a href='http://www.elastic.cco' target="_blank" rel="noreferrer">Elastic</a>, making delightful develover tools.</h3>

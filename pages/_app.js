@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
           menuOpened && <ProjectsMenu ref={childRef} menuOpened={menuOpened} setMenuOpened={setMenuOpened}  menuItemActive={menuItemActive} setMenuItemActive={setMenuItemActive}/>
         }
         <AppWrapper>
-          <Component {...pageProps} />
+          <Component setMenuItemActive={setMenuItemActive} {...pageProps} />
         </AppWrapper>
         
       </main>

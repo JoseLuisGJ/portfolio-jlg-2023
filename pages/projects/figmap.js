@@ -7,7 +7,7 @@ import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 
-export default function Figmap() {
+export default function Figmap(props) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -89,6 +89,8 @@ export default function Figmap() {
         />
       </div>
       <ProjectFooter
+       {...props}
+        idProject="1"
         backgroundColor="#22222E"
         backgroundImage="qatium-cover-background.jpg"
         title="Qatium"

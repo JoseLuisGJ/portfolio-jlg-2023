@@ -7,7 +7,7 @@ import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 
-export default function Qatium() {
+export default function Qatium(props) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     // scroll to top on page load
@@ -121,6 +121,8 @@ export default function Qatium() {
         />
       </div>
       <ProjectFooter
+        {...props}
+        idProject="2"
         backgroundColor="#22222E"
         backgroundImage="goaigua-cover-background.jpg"
         title="GoAigua"
