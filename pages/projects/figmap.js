@@ -154,9 +154,9 @@ export default function Figmap(props) {
         {...props}
         idProject="1"
         backgroundColor="#22222E"
-        backgroundImage="qatium-cover-background.jpg"
-        title="Qatium"
-        url="qatium"
+        backgroundImage="newrelic-cover-background.jpg"
+        title="New Relic"
+        url="newrelic"
       />
     </>
   );

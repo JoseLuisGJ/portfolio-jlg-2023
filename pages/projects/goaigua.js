@@ -110,7 +110,7 @@ export default function GoAigua(props) {
       </div>
       <ProjectFooter
        {...props}
-        idProject="3"
+        idProject="4"
         backgroundColor="#22222E"
         backgroundImage="figmap-cover-background.jpg"
         title="Figmap"

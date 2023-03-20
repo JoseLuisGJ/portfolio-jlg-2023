@@ -135,7 +135,7 @@ export default function Qatium(props) {
       </div>
       <ProjectFooter
         {...props}
-        idProject="2"
+        idProject="3"
         backgroundColor="#22222E"
         backgroundImage="goaigua-cover-background.jpg"
         title="GoAigua"

@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useRef, useEffect } from 'react';
+import React, {useRef, useEffect } from 'react';
 import * as THREE from "three";
 import {gsap} from "gsap";
 
 import portrait from './portraitImg';
 import ImprovedNoise from './improvedNoise';
-import { EffectComposer, SelectiveBloomEffect, GlitchEffect, RenderPass, ChromaticAberrationEffect, EffectPass, SMAAEffect, NoiseEffect, BlendFunction, DepthEffect, VignetteEffect, TextureEffect, DepthOfFieldEffect } from "postprocessing";
+import { EffectComposer, GlitchEffect, RenderPass, ChromaticAberrationEffect, EffectPass, NoiseEffect, BlendFunction } from "postprocessing";
 
 
 export default function GlitchBoy() {
