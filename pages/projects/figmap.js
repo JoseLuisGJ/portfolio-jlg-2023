@@ -102,7 +102,7 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">201</h4>
+                <h4 className="text-2xl md:text-4xl font-bold">222</h4>
                 <h6 className="text-lg md:text-2xl font-regular">Likes</h6>
               </div>
               <div className="flex flex-col items-center text-white">
@@ -113,8 +113,8 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">30.5k</h4>
-                <h6 className="text-lg md:text-2xl font-regular">Installations</h6>
+                <h4 className="text-2xl md:text-4xl font-bold">27k</h4>
+                <h6 className="text-lg md:text-2xl font-regular">Used by</h6>
               </div>
               <div className="flex flex-col items-center text-white">
                 <Image
