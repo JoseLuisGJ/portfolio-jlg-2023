@@ -141,7 +141,7 @@ export default function Figmap(props) {
             </div>
 
             <Image
-              className="mx-auto relative   reveal"
+              className="mx-auto relative reveal"
               alt="Image project 1"
               src={`/assets/figmap-community-list.png`}
               width={1111}
