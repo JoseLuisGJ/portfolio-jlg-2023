@@ -100,7 +100,7 @@ export default function Figmap(props) {
         />
         {/* Custom Figmap block  */}
         <div
-          className={`relative flex justify-center`}
+          className={`relative flex justify-center overflow-hidden`}
           style={{ backgroundColor: "#6A9BB1" }}
         >
           <div className="max-w-5xl px-8 xl:px-0 flex flex-col items-center">

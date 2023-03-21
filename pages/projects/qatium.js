@@ -17,6 +17,10 @@ import qatiumMockup2 from "../../public/assets/qatium-mockup-2.png";
 import qatiumMockup3 from "../../public/assets/qatium-mockup-3.png";
 import qatiumDsTokens from "../../public/assets/qatium-ds-tokens.png";
 import qatiumDsComponents from "../../public/assets/qatium-ds-components.png";
+import qatiumDsComponents1 from "../../public/assets/qatium-ds-components-1.png";
+import qatiumDsComponents2 from "../../public/assets/qatium-ds-components-2.png";
+import qatiumDsComponents3 from "../../public/assets/qatium-ds-components-3.png";
+import qatiumDsComponents4 from "../../public/assets/qatium-ds-components-4.png";
 import qatiumRoadmap from "../../public/assets/qatium-roadmap.png";
 import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
 
@@ -129,10 +133,15 @@ export default function Qatium(props) {
             "Definition and implementation of the Design System for design and dev teams managing documentation, design tokens, components, assets, layouts and typography. ",
           ]}
         />
-        <ProjectBlock
+        {/* <ProjectBlock
           type={2}
           backgroundColor="#22222E"
           images={[qatiumDsComponents]}
+        /> */}
+        <ProjectBlock
+          type={6}
+          backgroundColor="#22222E"
+          images={[qatiumDsComponents1,qatiumDsComponents2,qatiumDsComponents3,qatiumDsComponents4]}
         />
         <ProjectBlock
           pushTop

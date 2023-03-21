@@ -1,40 +1,36 @@
-
 import Image from 'next/image';
 import GlitchBoy from '../components/home/glichBoy';
 import Head from 'next/head';
 import gsap from "gsap";
-// import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { SmootherContext } from "../SmootherContext";
+import { useIsomorphicLayoutEffect } from "../useIsomorphicLayoutEffect";
 import styles from '../styles/Home.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
+
 
 export default function Home() {
-
-
-
   const h1Ref = useRef(null);
   const h1SpanRef = useRef(null);
   const h2Ref = useRef(null);
   const arrowRef = useRef(null);
   const glitchBoyRef = useRef(null);
   const backgroundRef = useRef(null);
+  const smoother = useContext(SmootherContext);
   gsap.registerPlugin(ScrollTrigger);
 
+  useIsomorphicLayoutEffect(() => {
+    smoother && smoother.effects("[data-speed], [data-lag]", {});
+  }, [smoother]);
+
   useEffect(() => {
+   
     animateUI();
     return () => {
-
     }
-
-
   }, []);
-
-
- 
-
   const animateUI = () => {
     // Sets
-
     gsap.set(backgroundRef.current, {
       filter: "brightness(1)",
     });

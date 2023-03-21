@@ -4,6 +4,11 @@ import { Poppins } from '@next/font/google';
 import MainHeader from '../components/mainHeader';
 import ProjectsMenu from '../components/projectsMenu';
 import {AppWrapper} from '../components/appContext';
+import gsap from "gsap";
+import {ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {ScrollSmoother } from "gsap/dist/ScrollSmoother.min.js";
+import { SmootherContext } from "../SmootherContext";
+import { useIsomorphicLayoutEffect } from "../useIsomorphicLayoutEffect";
 import { useState, useEffect, useRef } from 'react';
 
 const poppins = Poppins({
@@ -19,6 +24,21 @@ function MyApp({ Component, pageProps }) {
   const prevShouldRenderMenu = useRef();
   const childRef = useRef(null);
   const [menuItemActive, setMenuItemActive] = useState(0);
+
+  let [smoother, setSmoother] = useState();
+  useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    let smoother = ScrollSmoother.create({
+      smooth: 1,
+      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
+      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
+      effects: true,
+      preventDefault: true
+    });
+
+    setSmoother(smoother);
+  }, []);
 
 
   const animateUnmountMenu = () => {
@@ -56,9 +76,11 @@ function MyApp({ Component, pageProps }) {
         {
           menuOpened && <ProjectsMenu ref={childRef} menuOpened={menuOpened} setMenuOpened={setMenuOpened}  menuItemActive={menuItemActive} setMenuItemActive={setMenuItemActive}/>
         }
-        <AppWrapper>
-          <Component setMenuItemActive={setMenuItemActive} {...pageProps} />
-        </AppWrapper>
+        <SmootherContext.Provider value={smoother}>
+          <AppWrapper>
+            <Component setMenuItemActive={setMenuItemActive} {...pageProps} />
+          </AppWrapper>
+        </SmootherContext.Provider>
         
       </main>
     </>

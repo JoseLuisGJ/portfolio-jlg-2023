@@ -3,20 +3,26 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-
+import { useEffect, useRef, useContext } from "react";
+import { SmootherContext } from "../../SmootherContext";
+import { useIsomorphicLayoutEffect } from "../../useIsomorphicLayoutEffect";
 
 export default function ProjectBlock(props) {
   gsap.registerPlugin(ScrollTrigger);
+  const smoother = useContext(SmootherContext);
   useEffect(() => {
     // animateUI();
     return () => {};
   }, []);
 
+  useIsomorphicLayoutEffect(() => {
+    smoother && smoother.effects("[data-speed], [data-lag]", {});
+  }, [smoother]);
+
   const animateUI = () => {};
   return (
     <div
-      className={`relative flex 
+      className={`relative flex overflow-hidden
       ${props.pushTop ? "pt-8 md:pt-28" : " "} 
       ${props.pushBottom ? "pb-20 md:pb-28" : " "}
       ${props.offsetLeft ? "justify-start" : ""}
@@ -33,9 +39,7 @@ export default function ProjectBlock(props) {
           // Image
           case 1:
             return (
-              <div
-                className={`max-w-5xl p-8 xl:p-8`}
-              >
+              <div className={`max-w-5xl p-8 xl:p-8`}>
                 <h3 className="text-lg reveal">{props.texts[0]}</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-5 reveal">
                   <p className="text-base font-extralight">{props.texts[1]}</p>
@@ -73,9 +77,10 @@ export default function ProjectBlock(props) {
                     }`}
                   >
                     <h3 className="text-lg py-5">{props.texts[0]}</h3>
-                    <p className="text-base font-extralight" dangerouslySetInnerHTML={{ __html: props.texts[1] }}>
-                      
-                    </p>
+                    <p
+                      className="text-base font-extralight"
+                      dangerouslySetInnerHTML={{ __html: props.texts[1] }}
+                    ></p>
                   </div>
 
                   <Image
@@ -101,11 +106,11 @@ export default function ProjectBlock(props) {
             // Text + Image (offseted right)   // Image (offseted left) + Text
             return (
               <div className="md:w-[48%]">
-                  <Image
-                    className="h-auto w-full pb-8 md:pb-0"
-                    alt="Image project 1"
-                    src={props.images[0]}
-                  />
+                <Image
+                  className="h-auto w-full pb-8 md:pb-0"
+                  alt="Image project 1"
+                  src={props.images[0]}
+                />
                 <div className="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 px-8 md:px-0 w-full max-w-5xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
                     {/* Empty column */}
@@ -116,10 +121,45 @@ export default function ProjectBlock(props) {
                       }`}
                     >
                       <h3 className="text-lg py-5">{props.texts[0]}</h3>
-                      <p className="text-base font-extralight" dangerouslySetInnerHTML={{ __html: props.texts[1] }}>
-                      </p>
+                      <p
+                        className="text-base font-extralight"
+                        dangerouslySetInnerHTML={{ __html: props.texts[1] }}
+                      ></p>
                     </div>
                   </div>
+                </div>
+              </div>
+            );
+
+          case 6:
+            // Image only
+            return (
+              <div className="flex justify-center items-center w-full h-screen">
+                <div className="relative max-w-5xl w-full h-full py-8 md:py-12 xl:py-10">
+                <Image
+                  data-speed="1.3"
+                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[4]"
+                  alt="Image project 1"
+                  src={props.images[0]}
+                />
+                <Image
+                  data-speed="1.2"
+                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[3]"
+                  alt="Image project 1"
+                  src={props.images[1]}
+                />
+                <Image
+                  data-speed="1.1"
+                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[2]"
+                  alt="Image project 1"
+                  src={props.images[2]}
+                />
+                <Image
+                  data-speed="0"
+                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[1]"
+                  alt="Image project 1"
+                  src={props.images[3]}
+                />
                 </div>
               </div>
             );
