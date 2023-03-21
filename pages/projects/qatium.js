@@ -7,6 +7,20 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
+// Images import
+import qatiumCoverHero from "../../public/assets/qatium-cover-hero.png";
+import qatiumCoverBackground from "../../public/assets/qatium-cover-background.jpg";
+import qatiumIllustration1 from "../../public/assets/qatium-illustration-1.png";
+import qatiumIllustration2 from "../../public/assets/qatium-illustration-2.png";
+import qatiumMockup1 from "../../public/assets/qatium-mockup-1.png";
+import qatiumMockup2 from "../../public/assets/qatium-mockup-2.png";
+import qatiumMockup3 from "../../public/assets/qatium-mockup-3.png";
+import qatiumDsTokens from "../../public/assets/qatium-ds-tokens.png";
+import qatiumDsComponents from "../../public/assets/qatium-ds-components.png";
+import qatiumRoadmap from "../../public/assets/qatium-roadmap.png";
+import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
+
+
 
 export default function Qatium(props) {
   gsap.registerPlugin(ScrollTrigger);
@@ -54,14 +68,14 @@ export default function Qatium(props) {
           subtitle="Qatium"
           role="Head of design"
           client="Qatium"
-          heroImage="qatium-cover-hero.png"
-          backgroundImage="qatium-cover-background.jpg"
+          heroImage={qatiumCoverHero}
+          backgroundImage={qatiumCoverBackground}
           url="www.qatium.com"
         />
         <ProjectBlock
           type={1}
           backgroundColor="#3C3B59"
-          images={["qatium-illustration-1.png"]}
+          images={[qatiumIllustration1]}
           texts={[
             "The product",
             "Qatium is disruptive water management system which breaks the traditional workflows and ways to work in the industry. It democratises the access to that service to any kind of city, govern or management company no matter the data, knowledge or budget they have.",
@@ -72,7 +86,7 @@ export default function Qatium(props) {
           pushTop
           type={3}
           backgroundColor="#22222E"
-          images={["qatium-illustration-2.png"]}
+          images={[qatiumIllustration2]}
           texts={[
             "Startup mindset",
             "From creating different probe of concepts and MVPs either making designs or coding experiences being the first and unique Product Designer at the company to consolidating and leading a small product design team compound by UX Researchers, Product Designers and Frontend UI. Driving branding and product market fit definition and service design using Design Thinking, UX Lean and Agile methodologies.",
@@ -82,7 +96,7 @@ export default function Qatium(props) {
           pushTop
           type={2}
           backgroundColor="#22222E"
-          images={["qatium-mockup-1.png"]}
+          images={[qatiumMockup1]}
         />
         <ProjectBlock
           type={4}
@@ -95,13 +109,13 @@ export default function Qatium(props) {
         <ProjectBlock
           type={2}
           backgroundColor="#22222E"
-          images={["qatium-mockup-2.png"]}
+          images={[qatiumMockup2]}
         />
         <ProjectBlock
           pushBottom
           type={2}
           backgroundColor="#22222E"
-          images={["qatium-mockup-3.png"]}
+          images={[qatiumMockup3]}
         />
         <ProjectBlock
           pushTop
@@ -109,7 +123,7 @@ export default function Qatium(props) {
           offsetLeft
           type={5}
           backgroundColor="#3C3B59"
-          images={["qatium-ds-tokens.png"]}
+          images={[qatiumDsTokens]}
           texts={[
             "Qube Design System ",
             "Definition and implementation of the Design System for design and dev teams managing documentation, design tokens, components, assets, layouts and typography. ",
@@ -118,7 +132,7 @@ export default function Qatium(props) {
         <ProjectBlock
           type={2}
           backgroundColor="#22222E"
-          images={["qatium-ds-components.png"]}
+          images={[qatiumDsComponents]}
         />
         <ProjectBlock
           pushTop
@@ -126,7 +140,7 @@ export default function Qatium(props) {
           reverse
           type={3}
           backgroundColor="#3C3B59"
-          images={["qatium-roadmap.png"]}
+          images={[qatiumRoadmap]}
           texts={[
             "Public roadmap",
             "Public and collaborative product roadmap based on users and partners requests and company suggestions where users can vote and be part of it.",
@@ -137,7 +151,7 @@ export default function Qatium(props) {
         {...props}
         idProject="3"
         backgroundColor="#22222E"
-        backgroundImage="goaigua-cover-background.jpg"
+        backgroundImage={goaiguaCoverBackground}
         title="GoAigua"
         url="goaigua"
       />

@@ -24,7 +24,7 @@ export default function ProjectFooter(props) {
           <p className='text-lg font-light'>Next project</p>
         </div>
         <div className={`absolute pointer-events-none w-full h-12 bg-gradient-to-b from-neutral-900 z-[3] duration-500 ${isTransitioning ? "opacity-0" : "opacity-50"}`}></div>
-        <Image fill className={`object-cover ${isTransitioning ? "opacity-100 scale-100" : "opacity-0 hover:opacity-100 scale-125 hover:scale-100"} transition-all ease-out duration-[1000ms] z-[1]`} src={`/assets/${props.backgroundImage}`} alt='Project background image' />
+        <Image fill className={`object-cover ${isTransitioning ? "opacity-100 scale-100" : "opacity-0 hover:opacity-100 scale-125 hover:scale-100"} transition-all ease-out duration-[1000ms] z-[1]`} src={props.backgroundImage} alt='Project background image' />
       </div>
     </a>
   );

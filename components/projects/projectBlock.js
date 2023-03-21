@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
+
 export default function ProjectBlock(props) {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -44,9 +45,7 @@ export default function ProjectBlock(props) {
                   <Image
                     className="mx-auto relative z-10 top-24 -mt-16 reveal"
                     alt="Image project 1"
-                    src={`/assets/${props.images[0]}`}
-                    width={650}
-                    height={501}
+                    src={props.images[0]}
                   />
                 )}
               </div>
@@ -58,9 +57,7 @@ export default function ProjectBlock(props) {
                 <Image
                   className="mx-auto reveal"
                   alt="Image project 1"
-                  src={`/assets/${props.images[0]}`}
-                  width={1200}
-                  height={801}
+                  src={props.images[0]}
                 />
               </div>
             );
@@ -84,9 +81,7 @@ export default function ProjectBlock(props) {
                   <Image
                     className="relative mx-auto"
                     alt="Image project 1"
-                    src={`/assets/${props.images[0]}`}
-                    width={600}
-                    height={501}
+                    src={props.images[0]}
                   />
                 </div>
               </div>
@@ -105,16 +100,12 @@ export default function ProjectBlock(props) {
             // Title                           // Title
             // Text + Image (offseted right)   // Image (offseted left) + Text
             return (
-              <div className="">
-                <div className="relative h-auto md:h-screen w-auto">
+              <div className="w-1/2">
                   <Image
-                    className="relative h-auto md:h-full w-auto"
+                    className="h-auto w-full"
                     alt="Image project 1"
-                    src={`/assets/${props.images[0]}`}
-                    width={600}
-                    height={501}
+                    src={props.images[0]}
                   />
-                </div>
                 <div className="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full max-w-5xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Empty column */}

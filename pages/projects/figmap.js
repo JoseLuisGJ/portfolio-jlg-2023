@@ -7,6 +7,17 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
+// Images import
+import figmapCoverHero from "../../public/assets/figmap-cover-hero.png";
+import figmapCoverBackground from "../../public/assets/figmap-cover-background.jpg";
+import figmapLogosComp from "../../public/assets/figmap-logos-comp.png";
+import figmapCommunityList from "../../public/assets/figmap-community-list.png";
+import figmapIconFigma from "../../public/assets/figmap-icon-figma.png";
+import figmapIconLike from "../../public/assets/figmap-icon-like.png";
+import figmapIconInstalls from "../../public/assets/figmap-icon-installs.png";
+import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
+import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
+
 
 export default function Figmap(props) {
   gsap.registerPlugin(ScrollTrigger);
@@ -51,8 +62,8 @@ export default function Figmap(props) {
           subtitle="Figmap"
           role="UX Designer/Engineer"
           client="Side project"
-          heroImage="figmap-cover-hero.png"
-          backgroundImage="figmap-cover-background.jpg"
+          heroImage={figmapCoverHero}
+          backgroundImage={figmapCoverBackground}
           url="www.figmap.com"
         />
         <ProjectBlock
@@ -72,7 +83,7 @@ export default function Figmap(props) {
           reverse
           type={3}
           backgroundColor="#ffffff"
-          images={["figmap-logos-comp.png"]}
+          images={[figmapLogosComp]}
           texts={[
             "Challenges sought",
             "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
@@ -85,7 +96,7 @@ export default function Figmap(props) {
             "Challenges sought",
             "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
-          images={["figmap-community-list.png"]}
+          images={[figmapCommunityList]}
         />
         {/* Custom Figmap block  */}
         <div
@@ -97,7 +108,7 @@ export default function Figmap(props) {
               <div className="flex flex-col items-center text-white">
                 <Image
                   className="pb-8"
-                  src={`/assets/figmap-icon-figma.png`}
+                  src={figmapIconFigma}
                   alt="Like icon"
                   width={54}
                   height={54}
@@ -108,7 +119,7 @@ export default function Figmap(props) {
               <div className="flex flex-col items-center text-white">
                 <Image
                   className="pb-8"
-                  src={`/assets/figmap-icon-like.png`}
+                  src={figmapIconLike}
                   alt="Like icon"
                   width={54}
                   height={54}
@@ -119,7 +130,7 @@ export default function Figmap(props) {
               <div className="flex flex-col items-center text-white">
                 <Image
                   className="pb-8"
-                  src={`/assets/figmap-icon-installs.png`}
+                  src={figmapIconInstalls}
                   alt="Like icon"
                   width={54}
                   height={54}
@@ -130,7 +141,7 @@ export default function Figmap(props) {
               <div className="flex flex-col items-center text-white">
                 <Image
                   className="pb-8"
-                  src={`/assets/figmap-icon-mau.png`}
+                  src={figmapIconMau}
                   alt="Like icon"
                   width={54}
                   height={54}
@@ -143,7 +154,7 @@ export default function Figmap(props) {
             <Image
               className="mx-auto relative reveal"
               alt="Image project 1"
-              src={`/assets/figmap-community-list.png`}
+              src={figmapCommunityList}
               width={1111}
               height={586}
             />
@@ -154,7 +165,7 @@ export default function Figmap(props) {
         {...props}
         idProject="1"
         backgroundColor="#22222E"
-        backgroundImage="newrelic-cover-background.jpg"
+        backgroundImage={newrelicCoverBackground}
         title="New Relic"
         url="newrelic"
       />
