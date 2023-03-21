@@ -62,7 +62,7 @@ export default function Qatium(props) {
         <link rel="preload" href="/assets/qatium-ds-components.png" as="image" />
         <link rel="preload" href="/assets/qatium-roadmap.png" as="image" />
       </Head>
-      <div className={`mb-48 `}>
+      <div className={`mb-48 bg-[#22222E]`}>
         <ProjectCover
           title="Product Design"
           subtitle="Qatium"

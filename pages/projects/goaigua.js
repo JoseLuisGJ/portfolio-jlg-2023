@@ -53,7 +53,7 @@ export default function GoAigua(props) {
         <link rel="preload" href="/assets/goaigua-mockups-3.png" as="image" />
         <link rel="preload" href="/assets/goaigua-mockups-4.png" as="image" />
       </Head>
-      <div className={`mb-48`}>
+      <div className={`mb-48 bg-[#22222E]`}>
         <ProjectCover
           title="Product Design"
           subtitle="GoAigua"
