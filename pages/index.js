@@ -137,9 +137,8 @@ export default function Home() {
             <span className='block' ref={h1SpanRef}> Hello! I&apos;m{" "}<br/>
               <span className='font-normal' id="text-shuffle">José Luis<br/>González </span></span>
           </h1>
-          <div className=' absolute z-[5] h-screen w-screen'>
-          </div>
-          <div ref={glitchBoyRef} className={`fixed z-[2] h-screen w-screen`}>
+        
+          <div ref={glitchBoyRef} className={`fixed z-[2] h-full w-full`}>
             <GlitchBoy />
           </div>
           <h2 ref={h2Ref} className='absolute bottom-6 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover

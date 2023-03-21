@@ -53,7 +53,7 @@ export default function NewRelic(props) {
         <link rel="preload" href="/assets/newrelic-isomockups-4.png" as="image" />
         <link rel="preload" href="/assets/newrelic-figma-workflow.png" as="image" />
       </Head>
-      <div className={`mb-48 bg-[#22222E]`} >
+      <div className={`mb-48`} >
         <ProjectCover
           title="Product Design"
           subtitle="New Relic"

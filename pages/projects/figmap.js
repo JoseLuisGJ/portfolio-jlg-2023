@@ -56,7 +56,7 @@ export default function Figmap(props) {
         <link rel="preload" href="/assets/figmap-icon-installs.png" as="image" />
         <link rel="preload" href="/assets/figmap-icon-mau.png" as="image" />
       </Head>
-      <div className={`mb-48 bg-[#22222E]`}>
+      <div className={`mb-48`}>
         <ProjectCover
           title="Figma Plugin"
           subtitle="Figmap"
