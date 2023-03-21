@@ -141,9 +141,9 @@ export default function Home() {
           <div ref={glitchBoyRef} className={`fixed z-[2] h-full w-full`}>
             <GlitchBoy />
           </div>
-          <h2 ref={h2Ref} className='absolute bottom-6 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
+          <h2 ref={h2Ref} className='absolute bottom-20 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
           </h2>
-          <a ref={arrowRef} href='#about' className='absolute z-[8] bottom-5 left-1/2 transform -translate-x-1/2' ><Image className='' src="/assets/down-arrow.svg" width={31} height={31} alt="Down arrow" /></a>
+          <a ref={arrowRef} href='#about' className='absolute z-[8] bottom-20 md:bottom-6 left-1/2 transform -translate-x-1/2' ><Image className='' src="/assets/down-arrow.svg" width={31} height={31} alt="Down arrow" /></a>
         </div>
         <div id="about" className='about absolute h-auto md:h-screen w-full flex z-[6] justify-center'>
           <div className='flex justify-center flex-col content-center center max-w-4xl p-8'>
