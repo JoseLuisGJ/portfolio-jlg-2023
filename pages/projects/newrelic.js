@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import {ScrollSmoother} from "gsap/dist/ScrollSmoother.min.js";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -15,9 +16,7 @@ import newrelicIsomockups4 from "../../public/assets/newrelic-isomockups-4.png";
 import newrelicFigmaWorkflow from "../../public/assets/newrelic-figma-workflow.png";
 import qatiumCoverBackground from "../../public/assets/qatium-cover-background.jpg";
 
-
 export default function NewRelic(props) {
-  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     // scroll to top on page load
     window.scrollTo(0, 0);
@@ -26,6 +25,16 @@ export default function NewRelic(props) {
   }, []);
 
   const animateUI = () => {
+    // GSAP Scrollsmooth
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    let smoother = ScrollSmoother.create({
+      smooth: 1,
+      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
+      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
+      effects: true,
+      preventDefault: true
+    });
+    // Reveal objects on scroll
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {
         y: 50,
@@ -53,7 +62,7 @@ export default function NewRelic(props) {
         <link rel="preload" href="/assets/newrelic-isomockups-4.png" as="image" />
         <link rel="preload" href="/assets/newrelic-figma-workflow.png" as="image" />
       </Head>
-      <div className={`mb-48`} >
+      <div id="smooth-content" className={`mb-48`} >
         <ProjectCover
           title="Product Design"
           subtitle="New Relic"

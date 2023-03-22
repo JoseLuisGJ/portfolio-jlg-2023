@@ -2,11 +2,10 @@ import Image from 'next/image';
 import GlitchBoy from '../components/home/glichBoy';
 import Head from 'next/head';
 import gsap from "gsap";
-import {ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { SmootherContext } from "../SmootherContext";
-import { useIsomorphicLayoutEffect } from "../useIsomorphicLayoutEffect";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import {ScrollSmoother} from "gsap/dist/ScrollSmoother.min.js";
 import styles from '../styles/Home.module.css';
-import { useEffect, useRef, useState, useContext } from 'react';
+import { useEffect, useRef } from 'react';
 
 
 export default function Home() {
@@ -16,20 +15,22 @@ export default function Home() {
   const arrowRef = useRef(null);
   const glitchBoyRef = useRef(null);
   const backgroundRef = useRef(null);
-  const smoother = useContext(SmootherContext);
-  gsap.registerPlugin(ScrollTrigger);
-
-  useIsomorphicLayoutEffect(() => {
-    smoother && smoother.effects("[data-speed], [data-lag]", {});
-  }, [smoother]);
 
   useEffect(() => {
-   
     animateUI();
     return () => {
     }
   }, []);
   const animateUI = () => {
+    // GSAP Scrollsmooth
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    let smoother = ScrollSmoother.create({
+      smooth: 1,
+      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
+      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
+      effects: true,
+      preventDefault: true
+    });
     // Sets
     gsap.set(backgroundRef.current, {
       filter: "brightness(1)",
@@ -127,7 +128,7 @@ export default function Home() {
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
         <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
       </Head>
-      <div className="w-full overflow-x-hidden">
+      <div id="smooth-content" className="w-full overflow-x-hidden">
         <div className="relative h-screen w-full flex items-end justify-center">
           <h1 ref={h1Ref}  className='absolute top-8 md:top-[35%] left-6 md:left-[calc(40%-14rem)] z-[3] text-5xl md:text-5xl lg:text-6xl font-thin' >
             <span className='block' ref={h1SpanRef}> Hello! I&apos;m{" "}<br/>

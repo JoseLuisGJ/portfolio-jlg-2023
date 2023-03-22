@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 
 import Head from "next/head";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import {ScrollSmoother} from "gsap/dist/ScrollSmoother.min.js";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -18,7 +19,6 @@ import figmapCoverBackground from "../../public/assets/figmap-cover-background.j
 
 
 export default function GoAigua(props) {
-  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     window.scrollTo(0, 0);
     animateUI();
@@ -26,6 +26,16 @@ export default function GoAigua(props) {
   }, []);
 
   const animateUI = () => {
+    // GSAP Scrollsmooth
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    let smoother = ScrollSmoother.create({
+      smooth: 1,
+      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
+      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
+      effects: true,
+      preventDefault: true
+    });
+    // Reveal objects on scroll
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {
         y: 50,
@@ -53,7 +63,7 @@ export default function GoAigua(props) {
         <link rel="preload" href="/assets/goaigua-mockups-3.png" as="image" />
         <link rel="preload" href="/assets/goaigua-mockups-4.png" as="image" />
       </Head>
-      <div className={`mb-48`}>
+      <div id="smooth-content" className={`mb-48`}>
         <ProjectCover
           title="Product Design"
           subtitle="GoAigua"

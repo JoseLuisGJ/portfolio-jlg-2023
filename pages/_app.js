@@ -4,11 +4,7 @@ import { Poppins } from '@next/font/google';
 import MainHeader from '../components/mainHeader';
 import ProjectsMenu from '../components/projectsMenu';
 import {AppWrapper} from '../components/appContext';
-import gsap from "gsap";
-import {ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import {ScrollSmoother } from "gsap/dist/ScrollSmoother.min.js";
-import { SmootherContext } from "../SmootherContext";
-import { useIsomorphicLayoutEffect } from "../useIsomorphicLayoutEffect";
+
 import { useState, useEffect, useRef } from 'react';
 
 const poppins = Poppins({
@@ -25,20 +21,7 @@ function MyApp({ Component, pageProps }) {
   const childRef = useRef(null);
   const [menuItemActive, setMenuItemActive] = useState(0);
 
-  let [smoother, setSmoother] = useState();
-  useIsomorphicLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    let smoother = ScrollSmoother.create({
-      smooth: 1,
-      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
-      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
-      effects: true,
-      preventDefault: true
-    });
-
-    setSmoother(smoother);
-  }, []);
 
 
   const animateUnmountMenu = () => {
@@ -69,18 +52,16 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="José Luis González portfolio, product designer & code lover" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={poppins.className}>
+      <main id="smooth-wrapper" className={poppins.className}>
         {/* <div className='absolute z-50'>Now: {menuOpened}, before: {prevShouldRenderMenu.current}</div> */}
-      
+       
         <MainHeader menuOpened={menuOpened} setMenuOpened={setMenuOpened} siblingFunction={siblingFunction} />
         {
           menuOpened && <ProjectsMenu ref={childRef} menuOpened={menuOpened} setMenuOpened={setMenuOpened}  menuItemActive={menuItemActive} setMenuItemActive={setMenuItemActive}/>
         }
-        <SmootherContext.Provider value={smoother}>
-          <AppWrapper>
-            <Component setMenuItemActive={setMenuItemActive} {...pageProps} />
-          </AppWrapper>
-        </SmootherContext.Provider>
+        
+            <Component className="jose" setMenuItemActive={setMenuItemActive} {...pageProps} />
+        
         
       </main>
     </>
