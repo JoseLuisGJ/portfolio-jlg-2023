@@ -34,6 +34,32 @@ export default function Qatium(props) {
 
 
   const animateUI = () => {
+    let postsSection = document.querySelector('#parallax1')
+    gsap.from("[data-speed]", {
+      y: (i, el) => (1 * parseFloat(el.getAttribute("data-speed"))) * (postsSection.offsetHeight / 3),
+      ease: "none",
+      scrollTrigger: {
+        trigger:postsSection,
+        invalidateOnRefresh: true,
+        scrub: 0,
+        markers: false,
+        start: 'top bottom',
+        end: 'center center',
+      }
+    });
+    // gsap.fromTo("[data-speed]", {
+    //   y: (i, el) => 500,
+    // }, {
+    //   y: (i, el) => (-1 * parseFloat(el.getAttribute("data-speed"))) * (postsSection.offsetHeight / 3),
+    //   scrollTrigger: {
+    //     trigger:postsSection,
+    //     invalidateOnRefresh: true,
+    //     scrub: 0,
+    //     markers: false,
+    //     start: 'top bottom',
+    //     end: 'center center',
+    //   }
+    // });
     // Reveal objects on scroll
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {

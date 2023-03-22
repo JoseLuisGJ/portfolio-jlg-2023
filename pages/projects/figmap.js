@@ -88,15 +88,7 @@ export default function Figmap(props) {
             "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
         />
-        <ProjectBlock
-          type={6}
-          backgroundColor="#6A9BB1"
-          texts={[
-            "Challenges sought",
-            "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
-          ]}
-          images={[figmapCommunityList]}
-        />
+ 
         {/* Custom Figmap block  */}
         <div
           className={`relative flex justify-center overflow-hidden`}

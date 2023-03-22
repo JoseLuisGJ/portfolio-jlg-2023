@@ -130,10 +130,10 @@ export default function ProjectBlock(props) {
           case 6:
             // Image only
             return (
-              <div className="flex justify-center items-center w-full h-screen">
+              <div id="parallax1" className="flex justify-center items-center w-full h-screen">
                 <div className="relative max-w-5xl w-full h-full py-8 md:py-12 xl:py-10">
                 <Image
-                  data-speed="1.3"
+                  data-speed="1.6"
                   className="absolute top-1/2 -translate-y-1/2 left-0 z-[4]"
                   alt="Image project 1"
                   src={props.images[0]}
@@ -145,13 +145,13 @@ export default function ProjectBlock(props) {
                   src={props.images[1]}
                 />
                 <Image
-                  data-speed="1.1"
+                  data-speed="0.8"
                   className="absolute top-1/2 -translate-y-1/2 left-0 z-[2]"
                   alt="Image project 1"
                   src={props.images[2]}
                 />
                 <Image
-                  data-speed="0"
+                  data-speed="0.4"
                   className="absolute top-1/2 -translate-y-1/2 left-0 z-[1]"
                   alt="Image project 1"
                   src={props.images[3]}
