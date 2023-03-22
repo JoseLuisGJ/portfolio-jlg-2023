@@ -3,8 +3,6 @@ import { useEffect, useContext } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import {ScrollSmoother } from "gsap/dist/ScrollSmoother.min.js";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -36,15 +34,6 @@ export default function Qatium(props) {
 
 
   const animateUI = () => {
-    // GSAP Scrollsmooth
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    let smoother = ScrollSmoother.create({
-      smooth: 1,
-      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
-      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
-      effects: true,
-      preventDefault: true
-    });
     // Reveal objects on scroll
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {

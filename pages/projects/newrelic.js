@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-import {ScrollSmoother} from "gsap/dist/ScrollSmoother.min.js";
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -25,15 +23,7 @@ export default function NewRelic(props) {
   }, []);
 
   const animateUI = () => {
-    // GSAP Scrollsmooth
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    let smoother = ScrollSmoother.create({
-      smooth: 1,
-      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
-      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
-      effects: true,
-      preventDefault: true
-    });
+
     // Reveal objects on scroll
     gsap.utils.toArray(".reveal").forEach((elem) => {
       gsap.from(elem, {
@@ -132,6 +122,7 @@ export default function NewRelic(props) {
             "Driving and setting up the Figma guidelines in order to get a common way to work and use the tool for all the product designers, content designers and ux researchers with a feature centric and scalable approach.<br/><br/>Going from file and cover templates, layer naming conventions, file structure location, control version and branching, documentation, flows, handover and collaboration… to automatisation like centralised source of truth connected to Confluence, layer naming linting or synchronised documentation.",
           ]}
         />
+    
       </div>
       <ProjectFooter
         {...props}

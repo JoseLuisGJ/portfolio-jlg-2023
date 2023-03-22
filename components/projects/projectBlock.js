@@ -4,25 +4,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef, useContext } from "react";
-import { SmootherContext } from "../../SmootherContext";
-import { useIsomorphicLayoutEffect } from "../../useIsomorphicLayoutEffect";
 
 export default function ProjectBlock(props) {
   gsap.registerPlugin(ScrollTrigger);
-  const smoother = useContext(SmootherContext);
+ 
   useEffect(() => {
     // animateUI();
     return () => {};
   }, []);
 
-  useIsomorphicLayoutEffect(() => {
-    smoother && smoother.effects("[data-speed], [data-lag]", {});
-  }, [smoother]);
+
 
   const animateUI = () => {};
   return (
     <div
-      className={`relative flex overflow-hidden
+      className={`relative flex
       ${props.pushTop ? "pt-8 md:pt-28" : " "} 
       ${props.pushBottom ? "pb-20 md:pb-28" : " "}
       ${props.offsetLeft ? "justify-start" : ""}
@@ -105,7 +101,7 @@ export default function ProjectBlock(props) {
             // Title                           // Title
             // Text + Image (offseted right)   // Image (offseted left) + Text
             return (
-              <div className="md:w-[48%]">
+              <div className="md:w-[48%] mb-48">
                 <Image
                   className="h-auto w-full pb-8 md:pb-0"
                   alt="Image project 1"

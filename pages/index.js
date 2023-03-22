@@ -2,8 +2,6 @@ import Image from 'next/image';
 import GlitchBoy from '../components/home/glichBoy';
 import Head from 'next/head';
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-import {ScrollSmoother} from "gsap/dist/ScrollSmoother.min.js";
 import styles from '../styles/Home.module.css';
 import { useEffect, useRef } from 'react';
 
@@ -22,15 +20,7 @@ export default function Home() {
     }
   }, []);
   const animateUI = () => {
-    // GSAP Scrollsmooth
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    let smoother = ScrollSmoother.create({
-      smooth: 1,
-      normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
-      ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
-      effects: true,
-      preventDefault: true
-    });
+
     // Sets
     gsap.set(backgroundRef.current, {
       filter: "brightness(1)",
