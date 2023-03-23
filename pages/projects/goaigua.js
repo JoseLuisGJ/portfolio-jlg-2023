@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 
 import Head from "next/head";
-import gsap from "gsap";
+// Animations
+import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+// Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -10,6 +12,8 @@ import goaiguaCoverHero from "../../public/assets/goaigua-cover-hero.png";
 import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
 import goaiguaMockupDesktopMobil from "../../public/assets/goaigua-mockup-desktop-mobil.png";
 import goaiguaMockup1 from "../../public/assets/goaigua-mockups-1.png";
+import goaiguaResponsive1 from "../../public/assets/goaigua-responsive-1.png";
+import goaiguaResponsive2 from "../../public/assets/goaigua-responsive-2.png";
 import goaiguaMockup2 from "../../public/assets/goaigua-mockups-2.png";
 import goaiguaMockup3 from "../../public/assets/goaigua-mockups-3.png";
 import goaiguaMockup4 from "../../public/assets/goaigua-mockups-4.png";
@@ -24,21 +28,8 @@ export default function GoAigua(props) {
   }, []);
 
   const animateUI = () => {
-    // Reveal objects on scroll
-    gsap.utils.toArray(".reveal").forEach((elem) => {
-      gsap.from(elem, {
-        y: 50,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top 75%",
-          end: "top top",
-          scrub: false,
-          markers: false,
-          toeggleActions: "play pause resume pause",
-        },
-      });
-    });
+    parallaxBlockImages(".parallax-block-1")
+    revealWhenScroll();
   };
 
   return (
@@ -66,13 +57,20 @@ export default function GoAigua(props) {
           type={1}
           invertTextColor
           backgroundColor="#DFE4EB"
-          images={[goaiguaMockupDesktopMobil]}
+         
           texts={[
             "The product",
             "Idrica is leading the digital transformation of the water industry, delivering services and the technological solution GoAigua to manage the entire water cycle.",
             "This software suit lets the expert users to manage  vertical areas like water leaks, water quality, billing, meter insights, digital twin, work orders, customer portal among others..",
           ]}
         />
+        <ProjectBlock
+          className="parallax-block-1"
+          type={6}
+          backgroundColor="#DFE4EB"
+          images={[goaiguaResponsive1, goaiguaResponsive2]}
+        />
+        
         <ProjectBlock
           type={4}
           invertTextColor
