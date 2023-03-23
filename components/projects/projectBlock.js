@@ -101,13 +101,22 @@ export default function ProjectBlock(props) {
             // Title                           // Title
             // Text + Image (offseted right)   // Image (offseted left) + Text
             return (
-              <div className="md:w-[48%] mb-48">
-                <Image
-                  className="h-auto w-full pb-8 md:pb-0"
-                  alt="Image project 1"
-                  src={props.images[0]}
-                />
-                <div className="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 px-8 md:px-0 w-full max-w-5xl">
+              <div className={`${props.className} flex  ${props.offsetLeft ? "justify-start" : "justify-end"} w-full mb-48 h-screen`}>
+            <div className="relative md:w-[48%]">
+                {
+                  props.images.map((image, index) => (
+                    <Image
+                      key={index}
+                      data-speed={index * 0.4}
+                      className={`absolute top-1/2 -translate-y-1/2 left-0 z-[${index+1}]`}
+                      alt={`Image project ${index + 1}`}
+                      src={image}
+                    />
+                  ))
+                }
+              </div>
+               
+                <div className="md:absolute z-10 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 px-8 md:px-0 w-full max-w-5xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
                     {/* Empty column */}
 
@@ -130,32 +139,19 @@ export default function ProjectBlock(props) {
           case 6:
             // Image only
             return (
-              <div id="parallax1" className="flex justify-center items-center w-full h-screen">
+              <div className={`${props.className} flex justify-center items-center w-full h-screen`}>
                 <div className="relative max-w-5xl w-full h-full py-8 md:py-12 xl:py-10">
-                <Image
-                  data-speed="1.6"
-                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[4]"
-                  alt="Image project 1"
-                  src={props.images[0]}
-                />
-                <Image
-                  data-speed="1.2"
-                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[3]"
-                  alt="Image project 1"
-                  src={props.images[1]}
-                />
-                <Image
-                  data-speed="0.8"
-                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[2]"
-                  alt="Image project 1"
-                  src={props.images[2]}
-                />
-                <Image
-                  data-speed="0.4"
-                  className="absolute top-1/2 -translate-y-1/2 left-0 z-[1]"
-                  alt="Image project 1"
-                  src={props.images[3]}
-                />
+                {
+                  props.images.map((image, index) => (
+                    <Image
+                      key={index}
+                      data-speed={index * 0.4}
+                      className={`absolute top-1/2 -translate-y-1/2 left-0 z-[${index+1}]`}
+                      alt={`Image project ${index + 1}`}
+                      src={image}
+                    />
+                  ))
+                }
                 </div>
               </div>
             );

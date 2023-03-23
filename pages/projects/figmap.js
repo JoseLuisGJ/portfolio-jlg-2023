@@ -2,7 +2,9 @@ import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Head from "next/head";
-import gsap from "gsap";
+// Animations
+import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+// Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -26,21 +28,7 @@ export default function Figmap(props) {
   }, []);
 
   const animateUI = () => {
-    // Reveal objects on scroll
-    gsap.utils.toArray(".reveal").forEach((elem) => {
-      gsap.from(elem, {
-        y: 50,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top 75%",
-          end: "top top",
-          scrub: false,
-          markers: false,
-          toeggleActions: "play pause resume pause",
-        },
-      });
-    });
+    revealWhenScroll();
   };
 
   return (

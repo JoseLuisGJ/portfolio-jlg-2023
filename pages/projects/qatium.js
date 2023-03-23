@@ -1,8 +1,10 @@
+// React
 import { useEffect, useContext } from "react";
-
-import Image from "next/image";
+// NextJS
 import Head from "next/head";
-import gsap from "gsap";
+// Animations
+import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+// Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
@@ -15,15 +17,16 @@ import qatiumMockup1 from "../../public/assets/qatium-mockup-1.png";
 import qatiumMockup2 from "../../public/assets/qatium-mockup-2.png";
 import qatiumMockup3 from "../../public/assets/qatium-mockup-3.png";
 import qatiumDsTokens from "../../public/assets/qatium-ds-tokens.png";
-import qatiumDsComponents from "../../public/assets/qatium-ds-components.png";
+import qatiumDsTokens1 from "../../public/assets/qatium-ds-tokens-1.png";
+import qatiumDsTokens2 from "../../public/assets/qatium-ds-tokens-2.png";
+import qatiumDsTokens3 from "../../public/assets/qatium-ds-tokens-3.png";
+import qatiumDsTokens4 from "../../public/assets/qatium-ds-tokens-4.png";
 import qatiumDsComponents1 from "../../public/assets/qatium-ds-components-1.png";
 import qatiumDsComponents2 from "../../public/assets/qatium-ds-components-2.png";
 import qatiumDsComponents3 from "../../public/assets/qatium-ds-components-3.png";
 import qatiumDsComponents4 from "../../public/assets/qatium-ds-components-4.png";
 import qatiumRoadmap from "../../public/assets/qatium-roadmap.png";
 import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
-
-
 
 export default function Qatium(props) {
   useEffect(() => {    
@@ -34,47 +37,9 @@ export default function Qatium(props) {
 
 
   const animateUI = () => {
-    let postsSection = document.querySelector('#parallax1')
-    gsap.from("[data-speed]", {
-      y: (i, el) => (1 * parseFloat(el.getAttribute("data-speed"))) * (postsSection.offsetHeight / 3),
-      ease: "none",
-      scrollTrigger: {
-        trigger:postsSection,
-        invalidateOnRefresh: true,
-        scrub: 0,
-        markers: false,
-        start: 'top bottom',
-        end: 'center center',
-      }
-    });
-    // gsap.fromTo("[data-speed]", {
-    //   y: (i, el) => 500,
-    // }, {
-    //   y: (i, el) => (-1 * parseFloat(el.getAttribute("data-speed"))) * (postsSection.offsetHeight / 3),
-    //   scrollTrigger: {
-    //     trigger:postsSection,
-    //     invalidateOnRefresh: true,
-    //     scrub: 0,
-    //     markers: false,
-    //     start: 'top bottom',
-    //     end: 'center center',
-    //   }
-    // });
-    // Reveal objects on scroll
-    gsap.utils.toArray(".reveal").forEach((elem) => {
-      gsap.from(elem, {
-        y: 50,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top 75%",
-          end: "top top",
-          scrub: false,
-          markers: false,
-          toeggleActions: "play pause resume pause",
-        },
-      });
-    });
+    parallaxBlockImages(".parallax-block-1");
+    parallaxBlockImages(".parallax-block-2");
+    revealWhenScroll();
   };
 
   return (
@@ -147,23 +112,20 @@ export default function Qatium(props) {
           images={[qatiumMockup3]}
         />
         <ProjectBlock
+          className="parallax-block-2"
           pushTop
           pushBottom
           offsetLeft
           type={5}
           backgroundColor="#3C3B59"
-          images={[qatiumDsTokens]}
+          images={[qatiumDsTokens1,qatiumDsTokens2,qatiumDsTokens3,qatiumDsTokens4]}
           texts={[
             "Qube Design System ",
             "Definition and implementation of the Design System for design and dev teams managing documentation, design tokens, components, assets, layouts and typography. ",
           ]}
         />
-        {/* <ProjectBlock
-          type={2}
-          backgroundColor="#22222E"
-          images={[qatiumDsComponents]}
-        /> */}
         <ProjectBlock
+          className="parallax-block-1"
           type={6}
           backgroundColor="#22222E"
           images={[qatiumDsComponents1,qatiumDsComponents2,qatiumDsComponents3,qatiumDsComponents4]}
