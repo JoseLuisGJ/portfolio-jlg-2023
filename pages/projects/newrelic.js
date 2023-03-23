@@ -20,8 +20,6 @@ import newrelicNavigation1 from "../../public/assets/newrelic-navigation-1.png";
 import newrelicNavigation2 from "../../public/assets/newrelic-navigation-2.png";
 import newrelicNavigation3 from "../../public/assets/newrelic-navigation-3.png";
 import newrelicNavigation4 from "../../public/assets/newrelic-navigation-4.png";
-import newrelicNavigation5 from "../../public/assets/newrelic-navigation-5.png";
-import newrelicNavigation6 from "../../public/assets/newrelic-navigation-6.png";
 import newrelicHomepage1 from "../../public/assets/newrelic-homepage-1.png";
 import newrelicHomepage2 from "../../public/assets/newrelic-homepage-2.png";
 import newrelicHomepage3 from "../../public/assets/newrelic-homepage-3.png";
@@ -115,7 +113,7 @@ export default function NewRelic(props) {
           type={5}
           className="parallax-block-2"
           backgroundColor="#00344A"
-          images={[newrelicNavigation1, newrelicNavigation2, newrelicNavigation3, newrelicNavigation4, newrelicNavigation5, newrelicNavigation6]}
+          images={[newrelicNavigation1, newrelicNavigation4, newrelicNavigation2, newrelicNavigation3 ]}
           texts={[
             "Navigation revamp",
             "As a part of the team who revamped the new product navigation I was working on the initial research, early concepts and interactive probe of concepts which ended up conforming the new left navigation which was launched together with the new company rebranding.<br/><br/>The challenge was to find the most scalable approach for the plenty of verticals and solutions that the product has and be useful not only for advanced users but also for newbie ones and let customisation for those who need to make their own space based on their user profiling, SRE, developers, DevOps…",

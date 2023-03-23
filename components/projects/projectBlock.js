@@ -108,7 +108,7 @@ export default function ProjectBlock(props) {
                     <Image
                       key={index}
                       data-speed={index * 0.4}
-                      className={`absolute top-1/2 -translate-y-1/2 left-0 z-[${index+1}]`}
+                      className={`absolute top-1/2 -translate-y-1/2 left-0 z-[7]  `}
                       alt={`Image project ${index + 1}`}
                       src={image}
                     />
