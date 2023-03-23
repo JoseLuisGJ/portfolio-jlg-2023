@@ -64,7 +64,7 @@ export default function GoAigua(props) {
         <link rel="preload" href="/assets/goaigua-aigua-ds-components-4.png" as="image" />
         <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
       </Head>
-      <div id="smooth-content" className={`mb-48`}>
+      <div className={`mb-48`}>
         <ProjectCover
           title="Product Design"
           subtitle="GoAigua"

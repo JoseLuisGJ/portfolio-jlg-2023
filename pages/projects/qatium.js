@@ -62,7 +62,7 @@ export default function Qatium(props) {
         <link rel="preload" href="/assets/qatium-roadmap.png" as="image" />
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
       </Head>
-      <div id="smooth-content" className={`mb-48 `}>
+      <div className={`mb-48 `}>
         <ProjectCover
           title="Product Design"
           subtitle="Qatium"

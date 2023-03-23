@@ -17,7 +17,7 @@ const ProjectsMenu = (props,ref) => {
     useEffect(() => {
        // When start unmounting animation
         const transitionAnimationStart = async () => {
-            console.log('transitionAnimationStart');
+            // console.log('transitionAnimationStart');
             setIsTransitioning(true);
             gsap.to(".menuItem", {
                 y: 20,
@@ -35,7 +35,7 @@ const ProjectsMenu = (props,ref) => {
         };
         // When finish unmounting animation
         const transitionAnimationEnd = () => {
-            console.log('transitionAnimationEnd');
+            // console.log('transitionAnimationEnd');
             gsap.to('.menuWrapper', {
                 opacity: 0,
                 duration: 0.4,

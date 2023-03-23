@@ -69,8 +69,6 @@ export default function NewRelic(props) {
         <link rel="preload" href="/assets/newrelic-navigation-2.png" as="image" />
         <link rel="preload" href="/assets/newrelic-navigation-3.png" as="image" />
         <link rel="preload" href="/assets/newrelic-navigation-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-5.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-6.png" as="image" />
         <link rel="preload" href="/assets/newrelic-homepage-1.png" as="image" />
         <link rel="preload" href="/assets/newrelic-homepage-2.png" as="image" />
         <link rel="preload" href="/assets/newrelic-homepage-3.png" as="image" />
@@ -87,7 +85,7 @@ export default function NewRelic(props) {
         <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
 
       </Head>
-      <div id="smooth-content" className={`mb-48`} >
+      <div className={`mb-48`} >
         <ProjectCover
           title="Product Design"
           subtitle="New Relic"

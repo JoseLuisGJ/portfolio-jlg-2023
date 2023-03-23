@@ -49,10 +49,10 @@ export default function ProjectCover(props) {
           <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
         </div>
         <div ref={imageRef} className='basis-4/6 flex flex-col justify-center'>
-          <Image  className='' alt='Project hero image' src={props.heroImage} />
+          <Image priority className='' alt='Project hero image' src={props.heroImage} />
         </div>
       </div>
-      <Image fill className='object-cover z-[1]' src={props.backgroundImage} alt='Project background image' />
+      <Image priority fill className='object-cover z-[1]' src={props.backgroundImage} alt='Project background image' />
     </div>
   );
 }

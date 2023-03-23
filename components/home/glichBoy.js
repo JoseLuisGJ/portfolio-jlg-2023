@@ -67,9 +67,7 @@ export default function GlitchBoy() {
         });
         material2 = new THREE.MeshBasicMaterial({
             wireframe: true,
-            color: 0x9B817C,
-            roughness: 0.288,
-            metalness:0.529
+            color: 0x9B817C
         });
 
         ball = new THREE.Mesh(geometry, material);
@@ -127,19 +125,17 @@ export default function GlitchBoy() {
 
     const start = () => {
         gsap.from(mountRef.current, { duration: 2, opacity: 0, delay: 0.1 });
-        console.log("start");
         setTimeout(startGlitch, 5000);
         if (!frameId) {
             frameId = requestAnimationFrame(animate);
         }
     };
     const stop = () => {
-        console.log("stop");
+        // console.log("stop");
         cancelAnimationFrame(frameId);
     };
 
     const postprocessing = () => {
-        console.log("postprocessing");
         composer = new EffectComposer(renderer);
         renderPass = new RenderPass(scene, camera);
         composer.addPass(renderPass);
@@ -178,8 +174,10 @@ export default function GlitchBoy() {
         setTimeout(stopGlitch, 600);
 
         if (ball.material == material) {
+            console.log('%c🤖 Code mode', 'color: white; background: black');
             ball.material = material2;
         } else {
+            console.log('%c🎨 Design mode', 'color: black; background: #EEEEEE');
             ball.material = material;
         }
         glitchEffect.mode = 2;

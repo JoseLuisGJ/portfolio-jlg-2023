@@ -9,6 +9,12 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // React
 import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/Home.module.css';
+// Images import
+import twitterIcon from '../public/assets/twitter-icon.svg';
+import linkedinIcon from '../public/assets/linkdin-icon.svg';
+import githubIcon from '../public/assets/github-icon.svg';
+import emailIcon from '../public/assets/email-icon.svg';
+import mediumIcon from '../public/assets/medium-icon.svg';
 
 export default function Home() {
 
@@ -155,27 +161,27 @@ export default function Home() {
               <ul className="flex justify-center py-5 ">
                 <li className="mr-6">
                   <a href='mailto:hola@joseluis.design' target="_blank" rel="noreferrer">
-                    <Image className='' src="/assets/email-icon.svg" width={29} height={21} alt="email" />
+                    <Image className='' src={emailIcon} alt="email" />
                   </a>
                 </li>
                 <li className="mr-6">
                   <a href='https://www.linkedin.com/in/joseluisgj/' target="_blank" rel="noreferrer">
-                    <Image className='' src="/assets/linkdin-icon.svg" width={21} height={21} alt="Linkdin" />
+                    <Image className='' src={linkedinIcon} alt="Linkdin" />
                   </a>
                 </li>
                 <li className="mr-6">
                   <a href='https://twitter.com/jose_luis_gj' target="_blank" rel="noreferrer">
-                    <Image className='' src="/assets/twitter-icon.svg" width={27} height={21} alt="Twitter" />
+                    <Image className='' src={twitterIcon} alt="Twitter" />
                   </a>
                 </li>
                 <li className="mr-6">
                   <a href='https://github.com/ergum' target="_blank" rel="noreferrer">
-                    <Image className='' src="/assets/github-icon.svg" width={22} height={21} alt="Github" />
+                    <Image className='' src={githubIcon} alt="Github" />
                   </a>
                 </li>
                 <li className="mr-6">
                   <a href='https://medium.com/@joseluisgj' target="_blank" rel="noreferrer">
-                    <Image className='' src="/assets/medium-icon.svg" width={21} height={21} alt="Medium" />
+                    <Image className='' src={mediumIcon} alt="Medium" />
                   </a>
                 </li>
 
