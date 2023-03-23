@@ -42,6 +42,7 @@ export default function Figmap(props) {
         <link rel="preload" href="/assets/figmap-icon-like.png" as="image" />
         <link rel="preload" href="/assets/figmap-icon-installs.png" as="image" />
         <link rel="preload" href="/assets/figmap-icon-mau.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
       </Head>
       <div id="smooth-content" className={`mb-48`}>
         <ProjectCover

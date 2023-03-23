@@ -16,7 +16,6 @@ import qatiumIllustration2 from "../../public/assets/qatium-illustration-2.png";
 import qatiumMockup1 from "../../public/assets/qatium-mockup-1.png";
 import qatiumMockup2 from "../../public/assets/qatium-mockup-2.png";
 import qatiumMockup3 from "../../public/assets/qatium-mockup-3.png";
-import qatiumDsTokens from "../../public/assets/qatium-ds-tokens.png";
 import qatiumDsTokens1 from "../../public/assets/qatium-ds-tokens-1.png";
 import qatiumDsTokens2 from "../../public/assets/qatium-ds-tokens-2.png";
 import qatiumDsTokens3 from "../../public/assets/qatium-ds-tokens-3.png";
@@ -52,9 +51,16 @@ export default function Qatium(props) {
         <link rel="preload" href="/assets/qatium-mockup-1.png" as="image" />
         <link rel="preload" href="/assets/qatium-mockup-2.png" as="image" />
         <link rel="preload" href="/assets/qatium-mockup-3.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-tokens.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-components.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-tokens-1.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-tokens-2.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-tokens-3.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-tokens-4.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-components-1.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-components-2.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-components-3.png" as="image" />
+        <link rel="preload" href="/assets/qatium-ds-components-4.png" as="image" />
         <link rel="preload" href="/assets/qatium-roadmap.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
       </Head>
       <div id="smooth-content" className={`mb-48 `}>
         <ProjectCover
@@ -77,7 +83,6 @@ export default function Qatium(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
           type={3}
           backgroundColor="#22222E"
           images={[qatiumIllustration2]}
@@ -87,7 +92,6 @@ export default function Qatium(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
           type={2}
           backgroundColor="#22222E"
           images={[qatiumMockup1]}
@@ -106,15 +110,12 @@ export default function Qatium(props) {
           images={[qatiumMockup2]}
         />
         <ProjectBlock
-          pushBottom
           type={2}
           backgroundColor="#22222E"
           images={[qatiumMockup3]}
         />
         <ProjectBlock
           className="parallax-block-2"
-          pushTop
-          pushBottom
           offsetLeft
           type={5}
           backgroundColor="#3C3B59"
@@ -131,8 +132,6 @@ export default function Qatium(props) {
           images={[qatiumDsComponents1,qatiumDsComponents2,qatiumDsComponents3,qatiumDsComponents4]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
           reverse
           type={3}
           backgroundColor="#3C3B59"

@@ -10,13 +10,20 @@ import ProjectFooter from "../../components/projects/projectFooter";
 // Images import
 import goaiguaCoverHero from "../../public/assets/goaigua-cover-hero.png";
 import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
-import goaiguaMockupDesktopMobil from "../../public/assets/goaigua-mockup-desktop-mobil.png";
-import goaiguaMockup1 from "../../public/assets/goaigua-mockups-1.png";
 import goaiguaResponsive1 from "../../public/assets/goaigua-responsive-1.png";
 import goaiguaResponsive2 from "../../public/assets/goaigua-responsive-2.png";
-import goaiguaMockup2 from "../../public/assets/goaigua-mockups-2.png";
-import goaiguaMockup3 from "../../public/assets/goaigua-mockups-3.png";
-import goaiguaMockup4 from "../../public/assets/goaigua-mockups-4.png";
+import goaiguaEars1 from "../../public/assets/goaigua-ears-1.png";
+import goaiguaEars2 from "../../public/assets/goaigua-ears-2.png";
+import goaiguaEars3 from "../../public/assets/goaigua-ears-3.png";
+import goaiguaPlatform1 from "../../public/assets/goaigua-platform-1.png";
+import goaiguaPlatform2 from "../../public/assets/goaigua-platform-2.png";
+import goaiguaAiguaDs1 from "../../public/assets/goaigua-aigua-ds-1.png";
+import goaiguaAiguaDs2 from "../../public/assets/goaigua-aigua-ds-2.png";
+import goaiguaAiguaDs3 from "../../public/assets/goaigua-aigua-ds-3.png";
+import goaiguaAiguaDsComponents1 from "../../public/assets/goaigua-aigua-ds-components-1.png";
+import goaiguaAiguaDsComponents2 from "../../public/assets/goaigua-aigua-ds-components-2.png";
+import goaiguaAiguaDsComponents3 from "../../public/assets/goaigua-aigua-ds-components-3.png";
+import goaiguaAiguaDsComponents4 from "../../public/assets/goaigua-aigua-ds-components-4.png";
 import figmapCoverBackground from "../../public/assets/figmap-cover-background.jpg";
 
 
@@ -29,6 +36,10 @@ export default function GoAigua(props) {
 
   const animateUI = () => {
     parallaxBlockImages(".parallax-block-1")
+    parallaxBlockImages(".parallax-block-2")
+    parallaxBlockImages(".parallax-block-3")
+    parallaxBlockImages(".parallax-block-4")
+    parallaxBlockImages(".parallax-block-5")
     revealWhenScroll();
   };
 
@@ -37,11 +48,21 @@ export default function GoAigua(props) {
       <Head>
         <link rel="preload" href="/assets/goaigua-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
-        <link rel="preload" href="/assets/goaigua-mockup-desktop-mobil.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-mockups-1.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-mockups-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-mockups-3.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-mockups-4.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-responsive-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-responsive-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-ears-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-ears-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-ears-3.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-platform-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-platform-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-1.png" as="image" /> 
+        <link rel="preload" href="/assets/goaigua-aigua-ds-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-3.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-components-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-components-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-components-3.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-aigua-ds-components-4.png" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
       </Head>
       <div id="smooth-content" className={`mb-48`}>
         <ProjectCover
@@ -81,38 +102,40 @@ export default function GoAigua(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
+        
           offsetLeft
           type={5}
+          className="parallax-block-2"
           backgroundColor="#284879"
-          images={[goaiguaMockup1]}
+          images={[goaiguaEars1, goaiguaEars2, goaiguaEars3]}
           texts={[
             "From individual contributor to management ",
             "My role as a Principal Designer and UX engineer was to work side by side with each individual product team and marketing to deliver tailored solutions aiming for a common experience for the final users.<br/>Once the platform got traction I was in charge of consolidating the first dedicated product design team of the company. Mentoring and setting up the guidelines on design wise.",
           ]}
         />
         <ProjectBlock
-          type={2}
+          type={6}
+          className="parallax-block-3"
           backgroundColor="#DFE4EB"
-          images={[goaiguaMockup2]}
+          images={[goaiguaPlatform1, goaiguaPlatform2]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
+      
           offsetRight
           type={5}
+          className="parallax-block-4"
           backgroundColor="#284879"
-          images={[goaiguaMockup3]}
+          images={[goaiguaAiguaDs1, goaiguaAiguaDs2, goaiguaAiguaDs3]}
           texts={[
             "Aigua Design System ",
             "Making of a horizontal design system based on Atomic Design approach for all the platform products. Consolidation of all interaction patterns, design tokens, layouts, components and CSS architecture. ",
           ]}
         />
         <ProjectBlock
-          type={2}
+          type={6}
+          className="parallax-block-5"
           backgroundColor="#DFE4EB"
-          images={[goaiguaMockup4]}
+          images={[goaiguaAiguaDsComponents1, goaiguaAiguaDsComponents2, goaiguaAiguaDsComponents3, goaiguaAiguaDsComponents4]}
         />
       </div>
       <ProjectFooter

@@ -101,8 +101,8 @@ export default function ProjectBlock(props) {
             // Title                           // Title
             // Text + Image (offseted right)   // Image (offseted left) + Text
             return (
-              <div className={`${props.className} flex  ${props.offsetLeft ? "justify-start" : "justify-end"} w-full mb-48 h-screen`}>
-            <div className="relative md:w-[48%]">
+              <div className={`${props.className} flex flex-col md:flex-row  ${props.offsetLeft ? "justify-start" : "justify-end"} w-full mb-48 h-auto `}>
+            <div className="relative h-screen w-full md:w-[48%]">
                 {
                   props.images.map((image, index) => (
                     <Image
@@ -116,7 +116,7 @@ export default function ProjectBlock(props) {
                 }
               </div>
                
-                <div className="md:absolute z-10 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 px-8 md:px-0 w-full max-w-5xl">
+                <div className="relative md:absolute z-10 md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 px-8 md:px-0 w-full max-w-5xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
                     {/* Empty column */}
 
@@ -140,7 +140,7 @@ export default function ProjectBlock(props) {
             // Image only
             return (
               <div className={`${props.className} flex justify-center items-center w-full h-screen`}>
-                <div className="relative max-w-5xl w-full h-full py-8 md:py-12 xl:py-10">
+                <div className="relative max-w-5xl w-full py-8 md:py-12 xl:py-10">
                 {
                   props.images.map((image, index) => (
                     <Image

@@ -60,11 +60,34 @@ export default function NewRelic(props) {
       <Head>
         <link rel="preload" href="/assets/newrelic-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
-        <link rel="preload" href="/assets/newrelic-isomockups-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-isomockups-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-isomockups-3.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-isomockups-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-figma-workflow.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-3.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-4.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-5.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-6.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-entity-7.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-3.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-4.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-5.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-navigation-6.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-homepage-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-homepage-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-homepage-3.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-homepage-4.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-homepage-5.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-capabilities-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-capabilities-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-capabilities-3.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-capabilities-4.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-capabilities-5.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-figma-workflow-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-figma-workflow-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-figma-workflow-3.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
+
       </Head>
       <div id="smooth-content" className={`mb-48`} >
         <ProjectCover
@@ -77,8 +100,6 @@ export default function NewRelic(props) {
           url="www.newrelic.com"
         />
         <ProjectBlock
-          pushTop
-          pushBottom
           offsetLeft
           type={5}
           className="parallax-block-1"
@@ -90,8 +111,6 @@ export default function NewRelic(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
           offsetRight
           type={5}
           className="parallax-block-2"
@@ -103,8 +122,6 @@ export default function NewRelic(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
           offsetLeft
           type={5}
           className="parallax-block-3"
@@ -116,8 +133,6 @@ export default function NewRelic(props) {
           ]}
         />
         <ProjectBlock
-          pushTop
-          pushBottom
           offsetRight
           type={5}
           className="parallax-block-4"
@@ -129,8 +144,6 @@ export default function NewRelic(props) {
           ]}
         />
          <ProjectBlock
-          pushTop
-          pushBottom
           offsetLeft
           type={5}
           className="parallax-block-5"

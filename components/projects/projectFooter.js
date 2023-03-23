@@ -17,7 +17,7 @@ export default function ProjectFooter(props) {
   };
 
   return (
-    <a onClick={handleClick}  className={`fixed bottom-0 w-full ${isTransitioning ? "z-[2]" : "z-[-1]"} no-underline transition-all ease-in-out duration-[${animationDuration}ms] block overflow-hidden ${isTransitioning ? "h-full" : "h-48"}`} href="#">
+    <a onClick={handleClick}  className={`fixed bottom-0 w-full ${isTransitioning ? "z-50" : "z-[-1]"} no-underline transition-all ease-in-out duration-[${animationDuration}ms] block overflow-hidden ${isTransitioning ? "h-full" : "h-48"}`} href="#">
       <div className='relative flex justify-center align-middle h-full overflow-hidden'  style={{backgroundColor: props.backgroundColor}} >
         <div className={`flex flex-col p-8 lg:p-0 justify-center z-[3] text-center pointer-events-none transition-all duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
           <h2 className='text-4xl mb-1'>{props.title}</h2>
