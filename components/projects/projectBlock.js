@@ -1,9 +1,7 @@
-import styles from "../../styles/Projects.module.css";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import { useEffect, useRef, useContext } from "react";
+import { useEffect } from "react";
 
 export default function ProjectBlock(props) {
   gsap.registerPlugin(ScrollTrigger);

@@ -3,8 +3,6 @@ import Head from "next/head";
 import { Poppins } from "@next/font/google";
 import MainHeader from "../components/mainHeader";
 import ProjectsMenu from "../components/projectsMenu";
-import { AppWrapper } from "../components/appContext";
-
 import { useState, useEffect, useRef } from "react";
 
 const poppins = Poppins({
@@ -55,7 +53,6 @@ function MyApp({ Component, pageProps }) {
           />
         )}
         <Component
-          className="jose"
           setMenuItemActive={setMenuItemActive}
           {...pageProps}
         />

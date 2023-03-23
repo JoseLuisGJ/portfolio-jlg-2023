@@ -8,7 +8,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // React
 import { useEffect, useRef, useState } from 'react';
-import styles from '../styles/Home.module.css';
 // Images import
 import twitterIcon from '../public/assets/twitter-icon.svg';
 import linkedinIcon from '../public/assets/linkdin-icon.svg';
@@ -192,7 +191,7 @@ export default function Home() {
         </div>
 
       </div>
-      <div ref={backgroundRef} className={styles.background}></div>
+      <div ref={backgroundRef} className="fixed w-screen h-screen z-0 top-0 left-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#9B817C] to-[#473941]"></div>
     </>
   );
 }
