@@ -136,7 +136,9 @@ export default function Home() {
           <div ref={glitchBoyRef} className={`fixed z-[2] h-screen w-screen`}>
             <GlitchBoy />
           </div>
-          <h2 ref={h2Ref} className='absolute top-48 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>Product<br/>designer &<br/> Code lover
+          <h2 ref={h2Ref} className='absolute top-48 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>
+            <span className='hidden md:block'>Product<br/>designer &<br/> Code lover</span>
+            <span className='block md:hidden'>Product designer<br/>& Code lover</span>
           </h2>
           <a ref={arrowRef} href='#about' className='absolute z-[8] bottom-32 md:bottom-6 left-1/2 transform -translate-x-1/2' ><Image className='' src="/assets/down-arrow.svg" width={31} height={31} alt="Down arrow" /></a>
         </div>
