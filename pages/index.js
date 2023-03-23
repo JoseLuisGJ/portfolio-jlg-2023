@@ -138,7 +138,7 @@ export default function Home() {
           </h1>
           <div className=' absolute z-[5] h-screen w-screen'>
           </div>
-          <div ref={glitchBoyRef} className={`fixed z-[2] h-screen w-screen`}>
+          <div ref={glitchBoyRef} className={`fixed z-[2] h-full w-screen`}>
             <GlitchBoy />
           </div>
           <h2 ref={h2Ref} className='absolute top-48 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]'>
