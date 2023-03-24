@@ -37,6 +37,8 @@ function MyApp({ Component, pageProps }) {
       setMenuItemActive(3);
     } else if (router.asPath === "/projects/figmap") {
       setMenuItemActive(4);
+    } else if (router.asPath === "/projects/globalomnium") {
+      setMenuItemActive(5);
     }
   }, [router.isReady, router.query]);
 

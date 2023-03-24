@@ -12,10 +12,10 @@ export default function MainHeader(props) {
   return (
     <nav className='fixed top-6 left-7 z-30 w-full' >
       <a className='absolute right-16' href='#' onClick={toggleClickMenu }>
-        <div className=" space-y-2 ">
-          <span className={`block h-0.5 ${props.menuOpened ? 'w-0':'w-8'} bg-white transition-all ease-out duration-[300ms]`}></span>
-          <span className={`block h-0.5 ${props.menuOpened ? 'w-8':'w-8'} bg-white`}></span>
-          <span className={`block h-0.5 ${props.menuOpened ? 'w-0':'w-5'} bg-white transition-all ease-out duration-[300ms]`}></span>
+        <div className="space-y-2">
+          <span className={`block h-0.5 shadow-[0_2px_4px_1px_rgba(0,0,0,0.08)] ${props.menuOpened ? 'w-0':'w-8'} bg-white transition-all ease-out duration-[300ms]`}></span>
+          <span className={`block h-0.5 shadow-[0_2px_4px_1px_rgba(0,0,0,0.08)] ${props.menuOpened ? 'w-8':'w-8'} bg-white`}></span>
+          <span className={`block h-0.5 shadow-[0_2px_4px_1px_rgba(0,0,0,0.08)] ${props.menuOpened ? 'w-0':'w-5'} bg-white transition-all ease-out duration-[300ms]`}></span>
         </div>
       </a>
     </nav>

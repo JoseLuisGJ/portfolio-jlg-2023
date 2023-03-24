@@ -142,7 +142,7 @@ const ProjectsMenu = (props,ref) => {
     return (
         <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen z-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#9B817C] to-[#473941]'>
             <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-40'>
-                <ul className='space-y-4 text-6xl -translate-y-6'>
+                <ul className='space-y-4 text-5xl md:text-6xl -translate-y-6'>
                     <li className='menuItem mb-12'>
                         <Link className={`text-2xl no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/">Home</Link>
                     </li>
@@ -158,6 +158,9 @@ const ProjectsMenu = (props,ref) => {
                     <li className='menuItem'>
                         <Link onMouseEnter={() => showBackground('.imageBackground4')} onMouseLeave={() => hiddeBackground('.imageBackground4')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 4 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
                     </li>
+                    <li className='menuItem'>
+                        <Link onMouseEnter={() => showBackground('.imageBackground5')} onMouseLeave={() => hiddeBackground('.imageBackground5')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 5 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/globalomnium">Global Omnium</Link>
+                    </li>
                 </ul>
             </div>
 
@@ -165,6 +168,7 @@ const ProjectsMenu = (props,ref) => {
             <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project background image' />
             <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project background image' />
             <Image fill className='imageBackground4 object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project background image' />
+            <Image fill className='imageBackground5 object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project background image' />
         </div>
     );
 }

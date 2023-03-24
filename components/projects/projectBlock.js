@@ -136,8 +136,9 @@ export default function ProjectBlock(props) {
 
           case 6:
             // Image only
+            
             return (
-              <div className={`${props.className} flex justify-center items-center w-full h-[65vh] md:h-screen`}>
+              <div className={`${props.className} flex justify-center items-center w-full ${props.bigHeight ? "h-screen md:h-[240vh]" : "h-[65vh] md:h-screen"} `}>
                 <div className="relative max-w-5xl w-full py-8 md:py-12 xl:py-10">
                 {
                   props.images.map((image, index) => (
@@ -153,6 +154,33 @@ export default function ProjectBlock(props) {
                 </div>
               </div>
             );
+            case 7:
+              // Parallax image 2 ways
+              const wrapperStyle = {
+                perspective: '190px',
+              };
+
+              const contStyle ={
+                transform: 'rotateX(3deg) rotateY(360deg)',
+                transformStyle: 'preserve-3d'
+              }
+              return (
+                <div className={`${props.className}  flex justify-center items-center w-full overflow-hidden ${props.bigHeight ? "h-screen md:h-[240vh]" : "h-[65vh] md:h-screen"} ` } style={wrapperStyle}>
+                  <div className="relative w-full " style={contStyle}>
+                  {
+                    props.images.map((image, index) => (
+                      <Image
+                        key={index}
+                        data-speed={index * 0.4}
+                        className={`absolute top-1/2 -translate-y-1/2 left-0 z-[${index+1}]`}
+                        alt={`Image project ${index + 1}`}
+                        src={image}
+                      />
+                    ))
+                  }
+                  </div>
+                </div>
+              );
 
           default:
             return null;

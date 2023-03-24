@@ -17,8 +17,7 @@ import figmapIconFigma from "../../public/assets/figmap-icon-figma.png";
 import figmapIconLike from "../../public/assets/figmap-icon-like.png";
 import figmapIconInstalls from "../../public/assets/figmap-icon-installs.png";
 import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
-import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
-
+import globalOmniumCoverBackground from "../../public/assets/global-omnium-cover-background.jpg";
 
 export default function Figmap(props) {
   useEffect(() => {
@@ -42,7 +41,7 @@ export default function Figmap(props) {
         <link rel="preload" href="/assets/figmap-icon-like.png" as="image" />
         <link rel="preload" href="/assets/figmap-icon-installs.png" as="image" />
         <link rel="preload" href="/assets/figmap-icon-mau.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
+        <link rel="preload" href="/assets/global-omnium-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
@@ -144,9 +143,9 @@ export default function Figmap(props) {
       <ProjectFooter
         {...props}
         backgroundColor="#22222E"
-        backgroundImage={newrelicCoverBackground}
-        title="New Relic"
-        url="newrelic"
+        backgroundImage={globalOmniumCoverBackground}
+        title="Global Omnium"
+        url="globalomnium"
       />
     </>
   );
