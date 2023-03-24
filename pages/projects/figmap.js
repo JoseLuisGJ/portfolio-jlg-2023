@@ -52,7 +52,7 @@ export default function Figmap(props) {
           client="Side project"
           heroImage={figmapCoverHero}
           backgroundImage={figmapCoverBackground}
-          url="www.figmap.com"
+          url="bit.ly/3ZgsYgJ"
         />
         <ProjectBlock
           type={1}
