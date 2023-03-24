@@ -46,7 +46,7 @@ export default function Figmap(props) {
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
-          title="Figma Plugin"
+          title="Product"
           subtitle="Figmap"
           role="UX Designer/Engineer"
           client="Side project"
@@ -60,8 +60,8 @@ export default function Figmap(props) {
           backgroundColor="#DFE4EB"
           texts={[
             "The product",
-            "As a part of a side project, Figmap is a Figma plugin which aims to solve the user problem when designers need to deal with maps and markers visualisations within Figma.",
-            "There are few similar options out there but this one brings not also the capability of drawing custom visual maps but also manage map markers manually or in a bulk process fetching real data.",
+            "Made as a side project, Figmap is a Figma plugin which aims to solve the user problem when designers need to deal with maps and markers visualizations within Figma.",
+            "There are few similar options out there but this one brings not only the capability of drawing custom visual maps but also manage map markers manually or in a bulk process fetching real data.",
           ]}
         />
         <ProjectBlock
@@ -74,7 +74,7 @@ export default function Figmap(props) {
           images={[figmapLogosComp]}
           texts={[
             "Challenges sought",
-            "As I like to do working on side projects, I was practicing and playing around on how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
+            "As I like to do working on side projects, I was learning, practicing and playing around few still uncharted subjects such a how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
         />
  

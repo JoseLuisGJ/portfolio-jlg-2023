@@ -40,16 +40,16 @@ export default function ProjectCover(props) {
   return (
     <div className='relative flex justify-center'>
       <div ref={wrapperRef} className='relative opacity-0 flex flex-col-reverse md:flex-row h-screen p-8 xl:p-0 justify-center z-[2] max-w-5xl'>
-        <div className='basis-2/6 flex flex-col justify-center'>
+        <div className='basis-1/5 flex flex-col justify-center'>
           <h1 ref={titleRef}  className='text-4xl font-bold'>{props.title}</h1>
           <h2 ref={subtitleRef} className='text-2xl font-light mb-9'>{props.subtitle}</h2>
           <h3 ref={roleTitleRef} className='font-bold text-lg'>Role</h3>
-          <span ref={roleRef} className='text-lg font-light mb-3'>{props.role}</span>
+          <span ref={roleRef} dangerouslySetInnerHTML={{ __html: props.role }}  className='text-lg font-light mb-3'></span>
           <h3 ref={clientTitleRef} className='font-bold text-lg'>Client</h3>
           <span ref={clientRef} className='text-lg font-light mb-9'>{props.client}</span>
           <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
         </div>
-        <div ref={imageRef} className='basis-4/6 flex flex-col justify-center'>
+        <div ref={imageRef} className='basis-4/5 flex flex-col justify-center'>
           <Image priority className='' alt='Project hero image' src={props.heroImage} />
         </div>
       </div>

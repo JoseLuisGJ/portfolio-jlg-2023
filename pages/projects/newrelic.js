@@ -87,13 +87,24 @@ export default function NewRelic(props) {
       </Head>
       <div className={`mb-48`} >
         <ProjectCover
-          title="Product Design"
-          subtitle="New Relic"
+          title="Product"
+          subtitle="New Relic One"
           role="Senior Product Designer"
           client="New Relic"
           heroImage={newrelicCoverHero}
           backgroundImage={newrelicCoverBackground}
           url="www.newrelic.com"
+        />
+        <ProjectBlock
+          type={1}
+          pushTop
+          pushBottom
+          backgroundColor="#161C22"
+          texts={[
+            "The product",
+            "New Relic is the observability leader product where the most of the Developers, DevOps, SRE and Business manager rely on. Self definied as the all-in-one observability solution to leverage engineering data to create a more perfect software.",
+            "It let them monitor, debug, and improve their entire stack. Measuring performance getting analytics and getting useful insights throughout the full software developing lifecycle. ",
+          ]}
         />
         <ProjectBlock
           offsetLeft
@@ -103,7 +114,7 @@ export default function NewRelic(props) {
           images={[newrelicEntity1, newrelicEntity2, newrelicEntity3, newrelicEntity4, newrelicEntity5, newrelicEntity6, newrelicEntity7]}
           texts={[
             "Entity foundations",
-            "Unifying and consolidating the storytelling of entities as an artifact which emits and/or receives data represented visually as an hexagon around the whole product.<br/><br/>The high density view or honeycomb aims to show in a more visual way your entities and stand out the most relevant metrics and issues that can affect your system entity health.<br/><br/>Flattering the cognitive load for non advanced users introducing the concept of entity and system health to make it more human readable for those entities which are non performing properly or have deviations, having security issues, alarms alerting, and much more. Converging different sources that can affect it in just one concept.",
+            "Unifying and consolidating the storytelling of entities as an artifact which emits and/or receives data represented visually as an hexagon shape around the whole product.<br/><br/>The high density view or honeycomb aims to show in a more visual way your entities and stand out the most relevant metrics and issues that can affect your system entity health.<br/><br/>Decreasing the cognitive load for non advanced users introducing the concept of entity and system health to make it more human understandable for those entities which are non performing properly or have deviations, having security issues, alarms alerting, and much more. Converging different sources that can affect it in just one concept.",
           ]}
         />
         <ProjectBlock
@@ -125,7 +136,7 @@ export default function NewRelic(props) {
           images={[newrelicHomepage1, newrelicHomepage2, newrelicHomepage3, newrelicHomepage4, newrelicHomepage5]}
           texts={[
             "Homepage concept",
-            "Design lead for the new product homepage in order to guide the users on what to do next based on user profiling, user maturity and data ingested.This project was kicked of making a design sprint were we realized that users need to be hand holded when they land into the product instead of overwhelming them with paygates. MPVs were tested and validated with user interviews.<br/><br/>It was a crossteam endeavor where overstability, platform and growth teams were coordinated to obtain a scalable solution which could cover the different user needs on different user states and journeys, aiming for first ingest data, then use the different capabilities and last improve the observability coverage of the users.",
+            "Design lead for the new product homepage in order to guide the users on what to do next based on user profiling, user maturity and data ingested. This project was kicked off making a design sprint where we realized that users need to be hand holded when they land into the product instead of overwhelming them with paygates. MPVs were tested and validated with user interviews.<br/><br/>It was a crossteam endeavor where observability, platform and growth teams were coordinated to obtain a scalable solution which could cover the different user needs on different user states and journeys, aiming to first ingest data, then use the different capabilities and last improve the observability coverage of the system.",
           ]}
         />
         <ProjectBlock
@@ -147,7 +158,7 @@ export default function NewRelic(props) {
           images={[newrelicFigmaWorkflow1,newrelicFigmaWorkflow2,newrelicFigmaWorkflow3]}
           texts={[
             "Figma standards",
-            "Driving and setting up the Figma guidelines in order to get a common way to work and use the tool for all the product designers, content designers and ux researchers with a feature centric and scalable approach.<br/><br/>Going from file and cover templates, layer naming conventions, file structure location, control version and branching, documentation, flows, handover and collaboration… to automatisation like centralised source of truth connected to Confluence, layer naming linting or synchronised documentation.",
+            "Driving and supporting the DesignOps team in order to set up the Figma guidelines to get a common way to work and use the tool for all the product designers composed of around 120 people, content designers and ux researchers with a feature centric and scalable approach.<br/><br/>Going from file and cover templates, layer naming conventions, file structure location, control version and branching, documentation, flows, handover and collaboration… to automatisation like centralized source of truth connected to Confluence, layer naming linting or synchronized documentation.",
           ]}
         />
     

@@ -66,9 +66,9 @@ export default function GoAigua(props) {
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
-          title="Product Design"
+          title="Product"
           subtitle="GoAigua"
-          role="Principal Prodouct Designer"
+          role="Principal Product Designer<br/>UX Engineer"
           client="Idrica"
           heroImage={goaiguaCoverHero}
           backgroundImage={goaiguaCoverBackground}
@@ -82,7 +82,7 @@ export default function GoAigua(props) {
           texts={[
             "The product",
             "Idrica is leading the digital transformation of the water industry, delivering services and the technological solution GoAigua to manage the entire water cycle.",
-            "This software suit lets the expert users to manage  vertical areas like water leaks, water quality, billing, meter insights, digital twin, work orders, customer portal among others..",
+            "This software suite lets the expert users to manage  vertical areas like water leaks, water quality, billing, meter insights, digital twin, work orders, customer portal among others.",
           ]}
         />
         <ProjectBlock
@@ -97,8 +97,8 @@ export default function GoAigua(props) {
           invertTextColor
           backgroundColor="#ffffff"
           texts={[
-            "Building a robust software suit",
-            "The company had several isolated water solutions which were gathered and unified and a centralizad water platform compound by different verticals. The challenge as a main designer was to give consistency and a common experience to all the platform, managing technical boundaries, inconsistent user interfaces and setting up common patterns.",
+            "Building a consistent and scalable platform",
+            "The company had several isolated water solutions which were gathered and unified and a centralized water platform compound by different verticals. The challenge as a main designer was to give consistency and a common experience to all the platform, managing technical boundaries, inconsistent user interfaces and setting up common patterns",
           ]}
         />
         <ProjectBlock
@@ -110,7 +110,7 @@ export default function GoAigua(props) {
           images={[goaiguaEars1, goaiguaEars2, goaiguaEars3]}
           texts={[
             "From individual contributor to management ",
-            "My role as a Principal Designer and UX engineer was to work side by side with each individual product team and marketing to deliver tailored solutions aiming for a common experience for the final users.<br/>Once the platform got traction I was in charge of consolidating the first dedicated product design team of the company. Mentoring and setting up the guidelines on design wise.",
+            "My role as a Principal Product Designer and UX engineer was to work side by side with each individual product team and marketing to deliver tailored solutions aiming for a common experience for the final users.<br/><br/>Once the platform got traction I was in charge of consolidating the first dedicated product design team of the company. Mentoring and setting up the guidelines on design wise.",
           ]}
         />
         <ProjectBlock
