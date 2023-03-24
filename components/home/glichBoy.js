@@ -36,6 +36,8 @@ export default function GlitchBoy() {
     let noise;
     let clock = new THREE.Clock();
     let radius = 180;
+    let timerStartGlitch;
+    let timerStopGlitch;
 
 
     // Called just once the component is mounted
@@ -125,13 +127,14 @@ export default function GlitchBoy() {
 
     const start = () => {
         gsap.from(mountRef.current, { duration: 2, opacity: 0, delay: 0.1 });
-        setTimeout(startGlitch, 5000);
+        timerStartGlitch = setTimeout(startGlitch, 5000);
         if (!frameId) {
             frameId = requestAnimationFrame(animate);
         }
     };
     const stop = () => {
-        // console.log("stop");
+        clearTimeout(timerStartGlitch);
+        clearTimeout(timerStopGlitch);
         cancelAnimationFrame(frameId);
     };
 
@@ -171,7 +174,7 @@ export default function GlitchBoy() {
     }
 
     const startGlitch = () => {
-        setTimeout(stopGlitch, 600);
+        timerStopGlitch = setTimeout(stopGlitch, 600);
 
         if (ball.material == material) {
             console.log('%c🤖 Code mode', 'color: white; background: black');
@@ -184,7 +187,7 @@ export default function GlitchBoy() {
     }
 
     const stopGlitch = () => {
-        setTimeout(startGlitch, 5000);
+        timerStartGlitch = setTimeout(startGlitch, 5000);
         glitchEffect.mode = 0;
     }
 

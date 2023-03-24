@@ -154,7 +154,6 @@ export default function NewRelic(props) {
       </div>
       <ProjectFooter
         {...props}
-        idProject="2"
         backgroundColor="#22222E"
         backgroundImage={qatiumCoverBackground}
         title="Qatium"

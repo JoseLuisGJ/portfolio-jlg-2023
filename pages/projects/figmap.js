@@ -143,7 +143,6 @@ export default function Figmap(props) {
       </div>
       <ProjectFooter
         {...props}
-        idProject="1"
         backgroundColor="#22222E"
         backgroundImage={newrelicCoverBackground}
         title="New Relic"
