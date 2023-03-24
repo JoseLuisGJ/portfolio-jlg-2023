@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 export default function ProjectCover(props) {
 
+  const wrapperRef = useRef(null)
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const roleTitleRef = useRef(null);
@@ -25,7 +26,7 @@ export default function ProjectCover(props) {
     const overlap = ">-0.4";
     const ease = "power2.out";
     var tl = gsap.timeline({defaults: {duration: duration, ease: ease}});
-   
+    tl.to(wrapperRef.current, {opacity:1, delay:0, duration:0.1});
     tl.from(titleRef.current, {y: 50, opacity:0, delay:0.5});
     tl.from(subtitleRef.current, {y: 50, opacity:0},overlap); 
     tl.from(roleTitleRef.current, {y: 50, opacity:0},overlap);
@@ -38,7 +39,7 @@ export default function ProjectCover(props) {
 
   return (
     <div className='relative flex justify-center'>
-      <div className='relative flex flex-col-reverse md:flex-row h-screen p-8 xl:p-0 justify-center z-[2] max-w-5xl'>
+      <div ref={wrapperRef} className='relative opacity-0 flex flex-col-reverse md:flex-row h-screen p-8 xl:p-0 justify-center z-[2] max-w-5xl'>
         <div className='basis-2/6 flex flex-col justify-center'>
           <h1 ref={titleRef}  className='text-4xl font-bold'>{props.title}</h1>
           <h2 ref={subtitleRef} className='text-2xl font-light mb-9'>{props.subtitle}</h2>
