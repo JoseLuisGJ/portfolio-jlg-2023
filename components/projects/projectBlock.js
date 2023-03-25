@@ -42,7 +42,7 @@ export default function ProjectBlock(props) {
                 {props.images && (
                   <Image
                     className="mx-auto max-w-xl w-full relative z-10 top-24 -mt-16 reveal"
-                    alt="Image project 1"
+                    alt="Image project"
                     src={props.images[0]}
                   />
                 )}
@@ -54,7 +54,7 @@ export default function ProjectBlock(props) {
               <div className="max-w-5xl py-8 md:py-12 xl:py-10 w-full">
                 <Image
                   className="mx-auto reveal"
-                  alt="Image project 1"
+                  alt="Image project"
                   src={props.images[0]}
                 />
               </div>
@@ -79,7 +79,7 @@ export default function ProjectBlock(props) {
 
                   <Image
                     className="relative mx-auto"
-                    alt="Image project 1"
+                    alt="Image project"
                     src={props.images[0]}
                   />
                 </div>

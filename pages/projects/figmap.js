@@ -90,7 +90,7 @@ export default function Figmap(props) {
                 <Image
                   className="pb-8"
                   src={figmapIconFigma}
-                  alt="Like icon"
+                  alt="Figma icon"
                   width={54}
                   height={54}
                 />
@@ -112,7 +112,7 @@ export default function Figmap(props) {
                 <Image
                   className="pb-8"
                   src={figmapIconInstalls}
-                  alt="Like icon"
+                  alt="Installs icon"
                   width={54}
                   height={54}
                 />
@@ -123,7 +123,7 @@ export default function Figmap(props) {
                 <Image
                   className="pb-8"
                   src={figmapIconMau}
-                  alt="Like icon"
+                  alt="MAU icon"
                   width={54}
                   height={54}
                 />
@@ -134,7 +134,7 @@ export default function Figmap(props) {
 
             <Image
               className="mx-auto relative reveal"
-              alt="Image project 1"
+              alt="Image project"
               src={figmapCommunityList}
               width={1111}
               height={586}

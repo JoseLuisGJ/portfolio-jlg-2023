@@ -170,13 +170,13 @@ const ProjectsMenu = (props,ref) => {
                 </ul>
             </div>
 
-            <Image fill className='imageBackground1 object-cover opacity-0 z-[1]' src={`/assets/newrelic-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground4 object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground5 object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground6 object-cover opacity-0 z-[6]' src={`/assets/muchosol-cover-background.jpg`} alt='Project background image' />
-            <Image fill className='imageBackground7 object-cover opacity-0 z-[7]' src={`/assets/energy-system-cover-background.jpg`} alt='Project background image' />
+            <Image fill className='imageBackground1 object-cover opacity-0 z-[1]' src={`/assets/newrelic-cover-background.jpg`} alt='Project New Relic background image' />
+            <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project Qatium background image' />
+            <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project Goaigua background image' />
+            <Image fill className='imageBackground4 object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project Figmap background image' />
+            <Image fill className='imageBackground5 object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project Global Omnium background image' />
+            <Image fill className='imageBackground6 object-cover opacity-0 z-[6]' src={`/assets/muchosol-cover-background.jpg`} alt='Project Muchosol background image' />
+            <Image fill className='imageBackground7 object-cover opacity-0 z-[7]' src={`/assets/energy-system-cover-background.jpg`} alt='Project Energy System background image' />
         </div>
     );
 }
