@@ -58,6 +58,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>José Luis González - Portfolio - Product Designer and Code Lover</title>
         <meta name="description" content="José Luis González Jiménez portfolio, product designer, UX engineer, frontend developer. Last projects and use cases working on former companies like New Relic, Qatium, Idrica, GoAigua, Nectar Estudio "/>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="language" content="English"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={poppins.className}>
