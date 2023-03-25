@@ -39,6 +39,8 @@ function MyApp({ Component, pageProps }) {
       setMenuItemActive(4);
     } else if (router.asPath === "/projects/globalomnium") {
       setMenuItemActive(5);
+    } else if (router.asPath === "/projects/muchosol") {
+      setMenuItemActive(6);
     }
   }, [router.isReady, router.query]);
 

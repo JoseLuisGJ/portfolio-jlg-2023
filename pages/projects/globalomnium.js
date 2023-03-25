@@ -31,7 +31,7 @@ import globalOmniumLauncher4 from "../../public/assets/global-omnium-launcher-4.
 import globalOmniumExpo from "../../public/assets/global-omnium-expo.png";
 import globalOmniumApp1 from "../../public/assets/global-omnium-app-1.png";
 import globalOmniumApp2 from "../../public/assets/global-omnium-app-2.png";
-import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
+import muchosolCoverBackground from "../../public/assets/muchosol-cover-background.jpg";
 
 export default function GlobalOmnium(props) {
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function GlobalOmnium(props) {
         <link rel="preload" href="/assets/global-omnium-app-1.png" as="image"/>
         <link rel="preload" href="/assets/global-omnium-app-2.png" as="image"/>
 
-        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
@@ -171,9 +171,9 @@ export default function GlobalOmnium(props) {
       <ProjectFooter
         {...props}
         backgroundColor="#22222E"
-        backgroundImage={newrelicCoverBackground}
-        title="New Relic"
-        url="newrelic"
+        backgroundImage={muchosolCoverBackground}
+        title="Muchosol"
+        url="muchosol"
       />
     </>
   );

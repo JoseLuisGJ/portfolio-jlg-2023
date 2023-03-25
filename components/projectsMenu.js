@@ -161,6 +161,9 @@ const ProjectsMenu = (props,ref) => {
                     <li className='menuItem'>
                         <Link onMouseEnter={() => showBackground('.imageBackground5')} onMouseLeave={() => hiddeBackground('.imageBackground5')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 5 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/globalomnium">Global Omnium</Link>
                     </li>
+                    <li className='menuItem'>
+                        <Link onMouseEnter={() => showBackground('.imageBackground6')} onMouseLeave={() => hiddeBackground('.imageBackground6')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 6 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/muchosol">Muchosol</Link>
+                    </li>
                 </ul>
             </div>
 
@@ -169,6 +172,7 @@ const ProjectsMenu = (props,ref) => {
             <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project background image' />
             <Image fill className='imageBackground4 object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project background image' />
             <Image fill className='imageBackground5 object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project background image' />
+            <Image fill className='imageBackground6 object-cover opacity-0 z-[5]' src={`/assets/muchosol-cover-background.jpg`} alt='Project background image' />
         </div>
     );
 }

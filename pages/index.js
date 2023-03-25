@@ -118,21 +118,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link
-          rel="preload"
-          href="/assets/qatium-cover-background.jpg"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/assets/goaigua-cover-background.jpg"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/assets/figmap-cover-background.jpg"
-          as="image"
-        />
+        <link rel="preload" href="/assets/newrelic-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/global-omnium-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/muchosol-background.jpg" as="image"/>
       </Head>
       <div className="w-full overflow-x-hidden">
         <div className="relative h-screen w-full flex items-end justify-center">
