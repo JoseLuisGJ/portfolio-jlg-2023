@@ -44,6 +44,8 @@ export default function EnergySystem(props) {
   return (
     <>
       <Head>
+      <title>José Luis González - Portfolio - Energy System</title>
+        <meta name="description" content="Projects and use cases working at Publips Serviceplan for Energy System as a UX/UI Designer and Frontend Developer"/>
         <link rel="preload" href="/assets/energy-system-cover-hero.png" as="image"/>
         <link rel="preload" href="/assets/energy-system-omnium-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/energy-system-homepage.png" as="image"/>

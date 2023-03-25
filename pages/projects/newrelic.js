@@ -56,6 +56,8 @@ export default function NewRelic(props) {
   return (
     <>
       <Head>
+        <title>José Luis González - Portfolio - New Relic</title>
+        <meta name="description" content="Projects and use cases working at New Relic as a Senior Product Designer"/>
         <link rel="preload" href="/assets/newrelic-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
         <link rel="preload" href="/assets/newrelic-entity-1.png" as="image" />

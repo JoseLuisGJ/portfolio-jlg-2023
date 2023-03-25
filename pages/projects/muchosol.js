@@ -35,6 +35,8 @@ export default function Muchosol(props) {
   return (
     <>
       <Head>
+      <title>José Luis González - Portfolio - Muchosol</title>
+        <meta name="description" content="Projects and use cases working at Avantio for Muchosol as a Principal Product Designer"/>
         <link rel="preload" href="/assets/muchosol-cover-hero.png" as="image"/>
         <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/muchosol-homepage.png" as="image"/>

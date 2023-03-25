@@ -44,6 +44,8 @@ export default function Qatium(props) {
   return (
     <>
       <Head>
+      <title>José Luis González - Portfolio - Qatium</title>
+        <meta name="description" content="Projects and use cases working at Qatium as a Head of design and UX Engineer"/>
         <link rel="preload" href="/assets/qatium-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
         <link rel="preload" href="/assets/qatium-illustration-1.png" as="image" />

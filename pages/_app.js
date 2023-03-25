@@ -56,11 +56,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>José Luis González | Portfolio</title>
-        <meta
-          name="description"
-          content="José Luis González Jiménez portfolio, product designer & code lover"
-        />
+        <title>José Luis González - Portfolio - Product Designer and Code Lover</title>
+        <meta name="description" content="José Luis González Jiménez portfolio, product designer, UX engineer, frontend developer. Last projects and use cases working on former companies like New Relic, Qatium, Idrica, GoAigua, Nectar Estudio "/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={poppins.className}>

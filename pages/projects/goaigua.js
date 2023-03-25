@@ -46,6 +46,8 @@ export default function GoAigua(props) {
   return (
     <>
       <Head>
+      <title>José Luis González - Portfolio - Goaigua</title>
+        <meta name="description" content="Projects and use cases working at Idrica making Goaigua as a Principal Product Designer and UX Engineer"/>
         <link rel="preload" href="/assets/goaigua-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
         <link rel="preload" href="/assets/goaigua-responsive-1.png" as="image" />
