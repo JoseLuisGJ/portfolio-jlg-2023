@@ -41,6 +41,8 @@ function MyApp({ Component, pageProps }) {
       setMenuItemActive(5);
     } else if (router.asPath === "/projects/muchosol") {
       setMenuItemActive(6);
+    } else if (router.asPath === "/projects/energysystem") {
+      setMenuItemActive(7);
     }
   }, [router.isReady, router.query]);
 

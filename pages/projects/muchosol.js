@@ -17,7 +17,7 @@ import MuchosolIsometric1 from "../../public/assets/muchosol-isometric-1.png";
 import MuchosolIsometric2 from "../../public/assets/muchosol-isometric-2.png";
 import MuchosolIsometric3 from "../../public/assets/muchosol-isometric-3.png";
 import MuchosolIsometric4 from "../../public/assets/muchosol-isometric-4.png";
-import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
+import energysystemCoverBackground from "../../public/assets/energy-system-cover-background.jpg";
 
 export default function Muchosol(props) {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Muchosol(props) {
         <link rel="preload" href="/assets/muchosol-isometric-2.png" as="image"/>
         <link rel="preload" href="/assets/muchosol-isometric-3.png" as="image"/>
         <link rel="preload" href="/assets/muchosol-isometric-4.png" as="image"/>
-        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
@@ -98,9 +98,9 @@ export default function Muchosol(props) {
       <ProjectFooter
         {...props}
         backgroundColor="#22222E"
-        backgroundImage={newrelicCoverBackground}
-        title="New Relic"
-        url="newrelic"
+        backgroundImage={energysystemCoverBackground}
+        title="Energy System"
+        url="energysystem"
       />
     </>
   );
