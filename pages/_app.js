@@ -61,6 +61,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="robots" content="index, follow"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="language" content="English"/>
+        <meta property="og:title" content="José Luis González - Portfolio - Product Designer and Code Lover"/>
+        <meta property="og:site_name" content="Jose Luis González | Portfolio"/>
+        <meta property="og:url" content="https://www.joseluis.design"/>
+        <meta property="og:description" content="José Luis González Jiménez portfolio, product designer, UX engineer, frontend developer. Last projects and use cases working on former companies like New Relic, Qatium, Idrica, GoAigua, Nectar Estudio "/>
+        <meta property="og:type" content="profile"/>
+        <meta property="og:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og_image.jpg"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={poppins.className}>
