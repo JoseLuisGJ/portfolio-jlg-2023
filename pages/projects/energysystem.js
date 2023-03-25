@@ -74,9 +74,9 @@ export default function EnergySystem(props) {
           backgroundColor="#DFE4EB"
           images={[energySystemHomepage]}
           texts={[
-            "Corporate Web & Virtual Office",
-            "Aguas de Valencia group renewed in 2015 their corporate identity and at the same time all their digital channels as website, virtual office and launched the mobile APP management to facilitate clients with their connected services",
-            "It is a unified platform where to access corporate information and client services focusing on user experience and usability using the latest technology.",
+            "Web",
+            "Energy System breaks into the mobile market with 3 really powerful devices. The spanish brand creates a promotional website showing the stories of 3 spaniards working abroad doing incredible things.",
+            "The website focuses on the user experience and advanced micro-interactions to promote this new technology and dynamism that conveys the brand with its new product.",
           ]}
         />
         <ProjectBlock
