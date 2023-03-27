@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='-r @newrelic/next' next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_OPTIONS='-r @newrelic/next' next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@newrelic/next": "^0.4.0",
     "@next/font": "^13.2.4",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
@@ -16,6 +17,7 @@
     "gsap": "^3.11.3",
     "i": "^0.3.7",
     "install": "^0.13.0",
+    "newrelic": "^9.14.1",
     "next": "^13.2.4",
     "npm": "^9.1.2",
     "postprocessing": "^6.29.1",
