@@ -34,10 +34,9 @@ export default function EnergySystem(props) {
 
   const animateUI = () => {
     parallaxBlockImages(".parallax-block-1");
+  
     parallaxBlockImages(".parallax-block-2");
-    parallaxBlockImages(".parallax-block-3");
-    parallaxBlockImages(".parallax-block-4");
-    parallaxTwoDirections(".parallax-block-5");
+    parallaxTwoDirections(".parallax-block-3");
     revealWhenScroll();
   };
 
@@ -47,7 +46,7 @@ export default function EnergySystem(props) {
       <title>José Luis González - Portfolio - Energy System</title>
         <meta name="description" content="Projects and use cases working at Publips Serviceplan for Energy System as a UX/UI Designer and Frontend Developer"/>
         <link rel="preload" href="/assets/energy-system-cover-hero.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-omnium-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
@@ -79,7 +78,7 @@ export default function EnergySystem(props) {
           images={[energySystemIso1, energySystemIso2, energySystemIso3]}
         />
         <ProjectBlock
-          className="parallax-block-5"
+          className="parallax-block-3"
           type={7}
           backgroundColor="#303030"
           images={[
@@ -91,7 +90,7 @@ export default function EnergySystem(props) {
           invertTextColor
           offsetLeft
           type={5}
-          className="parallax-block-4"
+          className="parallax-block-2"
           backgroundColor="#52CEBA"
           images={[
             energySystemWebIso1,

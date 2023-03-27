@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
       </Head>
-      <Script beforeInteractive src="newrelic.agent.js" />
+      <Script beforeInteractive src="/newrelic.agent.js" />
 
       <main className={poppins.className}>
         <MainHeader
