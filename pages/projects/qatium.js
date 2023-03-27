@@ -48,21 +48,6 @@ export default function Qatium(props) {
         <meta name="description" content="Projects and use cases working at Qatium as a Head of design and UX Engineer"/>
         <link rel="preload" href="/assets/qatium-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
-        <link rel="preload" href="/assets/qatium-illustration-1.png" as="image" />
-        <link rel="preload" href="/assets/qatium-illustration-2.png" as="image" />
-        <link rel="preload" href="/assets/qatium-mockup-1.png" as="image" />
-        <link rel="preload" href="/assets/qatium-mockup-2.png" as="image" />
-        <link rel="preload" href="/assets/qatium-mockup-3.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-tokens-1.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-tokens-2.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-tokens-3.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-tokens-4.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-components-1.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-components-2.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-components-3.png" as="image" />
-        <link rel="preload" href="/assets/qatium-ds-components-4.png" as="image" />
-        <link rel="preload" href="/assets/qatium-roadmap.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48 `}>
         <ProjectCover

@@ -60,31 +60,6 @@ export default function NewRelic(props) {
         <meta name="description" content="Projects and use cases working at New Relic as a Senior Product Designer"/>
         <link rel="preload" href="/assets/newrelic-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-3.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-5.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-6.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-entity-7.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-3.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-navigation-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-homepage-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-homepage-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-homepage-3.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-homepage-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-homepage-5.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-capabilities-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-capabilities-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-capabilities-3.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-capabilities-4.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-capabilities-5.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-figma-workflow-1.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-figma-workflow-2.png" as="image" />
-        <link rel="preload" href="/assets/newrelic-figma-workflow-3.png" as="image" />
-        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
 
       </Head>
       <div className={`mb-48`} >

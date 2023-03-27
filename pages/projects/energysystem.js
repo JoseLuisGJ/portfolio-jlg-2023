@@ -48,16 +48,6 @@ export default function EnergySystem(props) {
         <meta name="description" content="Projects and use cases working at Publips Serviceplan for Energy System as a UX/UI Designer and Frontend Developer"/>
         <link rel="preload" href="/assets/energy-system-cover-hero.png" as="image"/>
         <link rel="preload" href="/assets/energy-system-omnium-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/energy-system-homepage.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-iso-1.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-iso-2.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-iso-3.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-app-1.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-app-2.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-webiso-1.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-webiso-2.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-webiso-3.png" as="image"/>
-        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover

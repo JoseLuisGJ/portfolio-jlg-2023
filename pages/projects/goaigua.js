@@ -50,21 +50,6 @@ export default function GoAigua(props) {
         <meta name="description" content="Projects and use cases working at Idrica making Goaigua as a Principal Product Designer and UX Engineer"/>
         <link rel="preload" href="/assets/goaigua-cover-hero.png" as="image" />
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
-        <link rel="preload" href="/assets/goaigua-responsive-1.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-responsive-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-ears-1.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-ears-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-ears-3.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-platform-1.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-platform-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-1.png" as="image" /> 
-        <link rel="preload" href="/assets/goaigua-aigua-ds-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-3.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-components-1.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-components-2.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-components-3.png" as="image" />
-        <link rel="preload" href="/assets/goaigua-aigua-ds-components-4.png" as="image" />
-        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48`}>
         <ProjectCover

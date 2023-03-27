@@ -39,15 +39,6 @@ export default function Muchosol(props) {
         <meta name="description" content="Projects and use cases working at Avantio for Muchosol as a Principal Product Designer"/>
         <link rel="preload" href="/assets/muchosol-cover-hero.png" as="image"/>
         <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/muchosol-homepage.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-web-1.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-web-2.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-web-3.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-isometric-1.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-isometric-2.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-isometric-3.png" as="image"/>
-        <link rel="preload" href="/assets/muchosol-isometric-4.png" as="image"/>
-        <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover

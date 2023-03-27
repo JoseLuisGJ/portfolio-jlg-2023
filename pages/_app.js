@@ -69,6 +69,14 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="profile"/>
         <meta property="og:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og_image.jpg"/>
         <link rel="icon" href="favicon.ico" />
+
+        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/global-omnium-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
+        <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
       </Head>
       <Script beforeInteractive src="newrelic.agent.js" />
 

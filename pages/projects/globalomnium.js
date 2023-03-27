@@ -56,25 +56,6 @@ export default function GlobalOmnium(props) {
         <meta name="description" content="Projects and use cases working at Global Omnium as a Principal Product Designer and UX Engineer"/>
         <link rel="preload" href="/assets/global-omnium-cover-hero.png" as="image"/>
         <link rel="preload" href="/assets/global-omnium-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-homepage.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-web-1.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-web-2.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-web-3.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-illustration-1.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-illustration-2.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-illustration-3.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-app-iso-1.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-app-iso-2.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-app-iso-3.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-launcher-1.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-launcher-2.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-launcher-3.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-launcher-4.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-expo.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-app-1.png" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-app-2.png" as="image"/>
-
-        <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
