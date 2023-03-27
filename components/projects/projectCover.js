@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import ProjectBlock from "./projectBlock";
 
 export default function ProjectCover(props) {
 
@@ -49,8 +50,22 @@ export default function ProjectCover(props) {
           <span ref={clientRef} className='text-lg font-light mb-9'>{props.client}</span>
           <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
         </div>
-        <div ref={imageRef} className={`${props.smallHeroImage ? "basis-3/5" : "basis-4/5"} flex flex-col justify-center`}>
-          <Image priority placeholder="blur" className='' alt='Project hero image' src={props.heroImage} />
+        <div ref={imageRef} className={`${props.className} ${props.smallHeroImage ? "basis-3/5" : "basis-4/5"} flex flex-col justify-center w-full`}>
+          <Image priority placeholder="blur" className={`${props.heroImages ? "opacity-0" : ""}`} alt='Project hero image' src={props.heroImage} />
+          {
+           props.heroImages &&  props.heroImages.map((image, index) => (
+              <Image
+                key={index}
+                direction={index==0 ? "null": 
+                index===1 ? "left":
+                index===2 ? "right":
+                "top"}
+                className={`absolute top-1/2 -translate-y-1/2 left-0 z-[${index+1}] w-full h-auto`}
+                alt={`Image project ${index + 1}`}
+                src={image}
+              />
+            ))
+          }         
         </div>
       </div>
       <Image priority placeholder="blur" fill className='object-cover z-[1]' src={props.backgroundImage} alt='Project background image' />

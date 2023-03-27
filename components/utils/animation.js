@@ -1,6 +1,20 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-// import CSSPlugin from 'gsap/CSSPlugin';
+
+const revealFromCenter = (target) => {
+  let obj = document.querySelector(target);
+  // CSSPlugin.defaultTransformPerspective = 1200;
+  return gsap.from(`${target} img`, {
+    x: (i, el) => (el.getAttribute("direction")==="left" ? 100: 
+                   el.getAttribute("direction")==="right" ? -100:
+                   0),
+    y: (i, el) => (el.getAttribute("direction")==="top" ? 100: 0),
+    opacity: 0,
+    ease: "Power2.easeOut",
+    duration: 1.2,
+    delay: 0.8,
+  });
+};
 
 const parallaxBlockImages = (target) => {
     let obj = document.querySelector(target);
@@ -52,4 +66,4 @@ const revealWhenScroll = () => {
   });
 };
 
-export { parallaxBlockImages, parallaxTwoDirections, revealWhenScroll };
+export { parallaxBlockImages, parallaxTwoDirections, revealWhenScroll, revealFromCenter };

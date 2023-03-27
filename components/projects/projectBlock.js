@@ -182,6 +182,8 @@ export default function ProjectBlock(props) {
                 </div>
               );
 
+      
+
           default:
             return null;
         }

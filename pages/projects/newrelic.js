@@ -1,13 +1,17 @@
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 // Animations
-import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+import {parallaxBlockImages,revealWhenScroll, revealFromCenter} from "../../components/utils/animation";
 // Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 // Images import
 import newrelicCoverHero from "../../public/assets/newrelic-cover-hero.png";
+import newrelicCoverHero1 from "../../public/assets/newrelic-cover-hero-1.png";
+import newrelicCoverHero2 from "../../public/assets/newrelic-cover-hero-2.png";
+import newrelicCoverHero3 from "../../public/assets/newrelic-cover-hero-3.png";
+
 import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
 import newrelicEntity1 from "../../public/assets/newrelic-entity-1.png";
 import newrelicEntity2 from "../../public/assets/newrelic-entity-2.png";
@@ -45,6 +49,7 @@ export default function NewRelic(props) {
   }, []);
 
   const animateUI = () => {
+    revealFromCenter(".reveal-hero-1");
     parallaxBlockImages(".parallax-block-1");
     parallaxBlockImages(".parallax-block-2");
     parallaxBlockImages(".parallax-block-3");
@@ -58,7 +63,9 @@ export default function NewRelic(props) {
       <Head>
         <title>José Luis González - Portfolio - New Relic</title>
         <meta name="description" content="Projects and use cases working at New Relic as a Senior Product Designer"/>
-        <link rel="preload" href="/assets/newrelic-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-cover-hero-1.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-cover-hero-2.png" as="image" />
+        <link rel="preload" href="/assets/newrelic-cover-hero-3.png" as="image" />
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image" />
 
       </Head>
@@ -69,6 +76,8 @@ export default function NewRelic(props) {
           role="Senior Product Designer"
           client="New Relic"
           heroImage={newrelicCoverHero}
+          heroImages={[newrelicCoverHero1, newrelicCoverHero2, newrelicCoverHero3]}
+          className="reveal-hero-1"
           backgroundImage={newrelicCoverBackground}
           url="www.newrelic.com"
         />

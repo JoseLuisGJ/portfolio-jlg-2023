@@ -3,13 +3,17 @@ import { useEffect, useContext } from "react";
 // NextJS
 import Head from "next/head";
 // Animations
-import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+import {parallaxBlockImages,revealWhenScroll, revealFromCenter} from "../../components/utils/animation";
 // Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 // Images import
 import qatiumCoverHero from "../../public/assets/qatium-cover-hero.png";
+import qatiumCoverHero1 from "../../public/assets/qatium-cover-hero-1.png";
+import qatiumCoverHero2 from "../../public/assets/qatium-cover-hero-2.png";
+import qatiumCoverHero3 from "../../public/assets/qatium-cover-hero-3.png";
+import qatiumCoverHero4 from "../../public/assets/qatium-cover-hero-4.png";
 import qatiumCoverBackground from "../../public/assets/qatium-cover-background.jpg";
 import qatiumIllustration1 from "../../public/assets/qatium-illustration-1.png";
 import qatiumIllustration2 from "../../public/assets/qatium-illustration-2.png";
@@ -36,6 +40,7 @@ export default function Qatium(props) {
 
 
   const animateUI = () => {
+    revealFromCenter(".reveal-hero-1");
     parallaxBlockImages(".parallax-block-1");
     parallaxBlockImages(".parallax-block-2");
     revealWhenScroll();
@@ -46,7 +51,10 @@ export default function Qatium(props) {
       <Head>
       <title>José Luis González - Portfolio - Qatium</title>
         <meta name="description" content="Projects and use cases working at Qatium as a Head of design and UX Engineer"/>
-        <link rel="preload" href="/assets/qatium-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-hero-1.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-hero-2.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-hero-3.png" as="image" />
+        <link rel="preload" href="/assets/qatium-cover-hero-4.png" as="image" />
         <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48 `}>
@@ -56,6 +64,8 @@ export default function Qatium(props) {
           role="Head of design<br/>UX engineer"
           client="Qatium"
           heroImage={qatiumCoverHero}
+          heroImages={[qatiumCoverHero1, qatiumCoverHero2, qatiumCoverHero3,qatiumCoverHero4]}
+          className="reveal-hero-1"
           backgroundImage={qatiumCoverBackground}
           url="www.qatium.com"
         />

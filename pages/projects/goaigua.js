@@ -2,13 +2,16 @@ import { useEffect, useRef } from "react";
 
 import Head from "next/head";
 // Animations
-import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+import {parallaxBlockImages,revealWhenScroll,revealFromCenter} from "../../components/utils/animation";
 // Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 // Images import
 import goaiguaCoverHero from "../../public/assets/goaigua-cover-hero.png";
+import goaiguaCoverHero1 from "../../public/assets/goaigua-cover-hero-1.png";
+import goaiguaCoverHero2 from "../../public/assets/goaigua-cover-hero-2.png";
+import goaiguaCoverHero3 from "../../public/assets/goaigua-cover-hero-3.png";
 import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
 import goaiguaResponsive1 from "../../public/assets/goaigua-responsive-1.png";
 import goaiguaResponsive2 from "../../public/assets/goaigua-responsive-2.png";
@@ -35,6 +38,7 @@ export default function GoAigua(props) {
   }, []);
 
   const animateUI = () => {
+    revealFromCenter(".reveal-hero-1");
     parallaxBlockImages(".parallax-block-1")
     parallaxBlockImages(".parallax-block-2")
     parallaxBlockImages(".parallax-block-3")
@@ -48,7 +52,9 @@ export default function GoAigua(props) {
       <Head>
       <title>José Luis González - Portfolio - Goaigua</title>
         <meta name="description" content="Projects and use cases working at Idrica making Goaigua as a Principal Product Designer and UX Engineer"/>
-        <link rel="preload" href="/assets/goaigua-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-hero-1.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-hero-2.png" as="image" />
+        <link rel="preload" href="/assets/goaigua-cover-hero-3.png" as="image" />
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48`}>
@@ -58,6 +64,8 @@ export default function GoAigua(props) {
           role="Principal Product Designer<br/>UX Engineer"
           client="Idrica"
           heroImage={goaiguaCoverHero}
+          heroImages={[goaiguaCoverHero1, goaiguaCoverHero2, goaiguaCoverHero3]}
+          className="reveal-hero-1"
           backgroundImage={goaiguaCoverBackground}
           url="www.idrica.com"
         />

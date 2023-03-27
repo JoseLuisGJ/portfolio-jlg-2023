@@ -3,13 +3,17 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
 // Animations
-import {parallaxBlockImages,revealWhenScroll} from "../../components/utils/animation";
+import {revealWhenScroll,revealFromCenter} from "../../components/utils/animation";
 // Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
 import ProjectFooter from "../../components/projects/projectFooter";
 // Images import
 import figmapCoverHero from "../../public/assets/figmap-cover-hero.png";
+import figmapCoverHero1 from "../../public/assets/figmap-cover-hero-1.png";
+import figmapCoverHero2 from "../../public/assets/figmap-cover-hero-2.png";
+import figmapCoverHero3 from "../../public/assets/figmap-cover-hero-3.png";
+
 import figmapCoverBackground from "../../public/assets/figmap-cover-background.jpg";
 import figmapLogosComp from "../../public/assets/figmap-logos-comp.png";
 import figmapCommunityList from "../../public/assets/figmap-community-list.png";
@@ -27,6 +31,7 @@ export default function Figmap(props) {
   }, []);
 
   const animateUI = () => {
+    revealFromCenter(".reveal-hero-1");
     revealWhenScroll();
   };
 
@@ -35,7 +40,9 @@ export default function Figmap(props) {
       <Head>
       <title>José Luis González - Portfolio - Figmap</title>
         <meta name="description" content="Side project making the Figmap plugin for Figmap"/>
-        <link rel="preload" href="/assets/figmap-cover-hero.png" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-hero-1.png" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-hero-2.png" as="image" />
+        <link rel="preload" href="/assets/figmap-cover-hero-3.png" as="image" />
         <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
       </Head>
       <div className={`mb-48`}>
@@ -45,6 +52,8 @@ export default function Figmap(props) {
           role="UX Designer/Engineer"
           client="Side project"
           heroImage={figmapCoverHero}
+          heroImages={[figmapCoverHero1, figmapCoverHero2, figmapCoverHero3]}
+          className="reveal-hero-1"
           backgroundImage={figmapCoverBackground}
           url="bit.ly/3ZgsYgJ"
         />
