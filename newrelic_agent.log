@@ -259,3 +259,13 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12706,"time":"2023-03-27T15:04:24.126Z","msg":"Starting initial 1000ms harvest."}
 {"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12707,"time":"2023-03-27T15:04:24.666Z","msg":"Starting initial 1000ms harvest."}
 {"v":0,"level":50,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12707,"time":"2023-03-27T15:09:24.800Z","msg":"Agent endpoint metric_data returned 503 status. Retaining data for next harvest.","component":"collector_api"}
+{"v":0,"level":50,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12707,"time":"2023-03-27T15:22:24.785Z","msg":"Agent endpoint metric_data returned 503 status. Retaining data for next harvest.","component":"collector_api"}
+{"v":0,"level":50,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12707,"time":"2023-03-27T15:26:24.796Z","msg":"Agent endpoint metric_data returned 503 status. Retaining data for next harvest.","component":"collector_api"}
+{"v":0,"level":50,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":12707,"time":"2023-03-27T15:30:24.819Z","msg":"Agent endpoint metric_data returned 503 status. Retaining data for next harvest.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.950Z","msg":"Using New Relic for Node.js. Agent version: 9.14.1; Node version: v19.8.1."}
+{"v":0,"level":40,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.953Z","msg":"New Relic for Node.js 9.14.1 has not been tested on Node.js v19.8.1. Please update the agent or downgrade your version of Node.js"}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.984Z","msg":"Using LegacyContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.986Z","msg":"Adding destroy hook to clean up unresolved promises.","component":"async_hooks"}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.996Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.999Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"joses-macbook-pro.home","pid":13280,"time":"2023-03-27T15:34:34.999Z","msg":"Agent state changed from starting to connecting."}
