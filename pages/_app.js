@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://www.joseluis.design"/>
         <meta property="og:description" content="José Luis González Jiménez portfolio, product designer, UX engineer, frontend developer. Last projects and use cases working on former companies like New Relic, Qatium, Idrica, GoAigua, Nectar Estudio "/>
         <meta property="og:type" content="profile"/>
-        <meta property="og:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og_image.jpg"/>
+        <meta property="og:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og-image.jpg"/>
         <link rel="icon" href="favicon.ico" />
 
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
