@@ -140,7 +140,7 @@ const ProjectsMenu = (props,ref) => {
     }
 
     return (
-        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen z-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#9B817C] to-[#473941]'>
+        <div className='menuWrapper fixed flex justify-center align-middle top-0 left-0 w-screen h-screen z-20 gradient-background'>
             <div className='flex flex-col p-8 lg:p-0 justify-center text-center z-40'>
                 <ul className='space-y-2 md:space-y-4 text-4xl md:text-6xl -translate-y-6'>
                     <li className='menuItem mb-6 md:mb-12'>

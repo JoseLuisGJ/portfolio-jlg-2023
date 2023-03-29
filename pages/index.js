@@ -139,7 +139,7 @@ export default function Home() {
           </div>
           <h2
             ref={h2Ref}
-            className="absolute opacity-0 top-48 md:top-[70%] left-6 md:left-[calc(50%+6rem)] lg:left-[calc(50%+8rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]"
+            className="absolute opacity-0 top-48 md:top-[70%] left-6 md:left-[calc(50%+8rem)] lg:left-[calc(50%+10rem)] text-2xl lg:text-3xl font-thin z-[2] md:z-[1]"
           >
             <span className="hidden md:block">
               Product
@@ -304,7 +304,7 @@ export default function Home() {
       </div>
       <div
         ref={backgroundRef}
-        className="fixed w-screen h-screen z-0 top-0 left-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#9B817C] to-[#473941]"
+        className="fixed w-screen h-screen z-0 top-0 left-0 gradient-background "
       ></div>
     </>
   );

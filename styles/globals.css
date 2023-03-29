@@ -26,6 +26,10 @@ a {
   /* box-sizing: border-box; */
 }
 
+.gradient-background{
+  background: radial-gradient(46.58% 96.05% at 58.99% 51.89%, #550937 0%, #1A105B 100%)
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     /* color-scheme: dark; */

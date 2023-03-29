@@ -44,6 +44,7 @@ export default function GlitchBoy() {
   let radius = 180;
   let timerStartGlitch;
   let timerStopGlitch;
+  let sprite;
 
   // Called just once the component is mounted
   useEffect(() => {
@@ -65,21 +66,27 @@ export default function GlitchBoy() {
     noise = ImprovedNoise();
 
     material = new THREE.MeshPhongMaterial({
-      emissive: 0x9b817c,
-      emissiveIntensity: 0.4,
-      shininess: 0,
+      color: 0xFF1AEC,
+      emissive: 0x000000,
+      specular: 0xffffff,
+      emissiveIntensity: 0,
+      shininess: 8,
+      opacity:1,
+      transparent: true
     });
     material2 = new THREE.MeshBasicMaterial({
       wireframe: true,
-      color: 0x9b817c,
+      color: 0x7046A9,
     });
+    
+
 
     ball = new THREE.Mesh(geometry, material);
     // Lights
-    light = new THREE.DirectionalLight(0x3228b0, 0.2);
-    light2 = light.clone();
-    light3 = new THREE.HemisphereLight(0xffab5b, 0x0c056d, 0.3);
-    light.position.set(200, 300, 400);
+    light = new THREE.DirectionalLight(0xFF1AEC, 0.2); // redish
+    light2 = new THREE.DirectionalLight(0x1A40FF, 0.1); // bluish
+    light3 = new THREE.HemisphereLight(0xFF1AEC, 0x1A40FF, 0.2);
+    light.position.set(400, 300, 400);
     light2.position.set(-200, 300, 400);
     light3.position.set(200, 300, 400);
     scene.add(light);
@@ -92,8 +99,8 @@ export default function GlitchBoy() {
       map: spriteMap,
       color: 0xffffff,
     });
-    let sprite = new THREE.Sprite(spriteMaterial);
-    sprite.scale.set(135, 90, 1);
+    sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(120, 95, 1); 
     scene.add(sprite);
     sprite.position.x = 0;
     sprite.position.y = -15;
@@ -128,14 +135,35 @@ export default function GlitchBoy() {
   }, []);
 
   const start = () => {
-    gsap.from(mountRef.current, { 
+    gsap.from(sprite.position, { 
         duration: 1, 
-        opacity: 0, 
-        scale:0.8, 
-        y:100, 
+        y:-30, 
         delay: 0.4,
         ease: "power2.out" 
     });
+     gsap.from(sprite.scale, { 
+        duration: 1, 
+        x:100, 
+        y:75,
+        delay: 0.4,
+        ease: "power2.out" 
+    });
+     gsap.from(sprite.material, { 
+        duration: 1, 
+        opacity:0, 
+        delay: 0.4
+    });
+     gsap.from(ball.position, { 
+        duration: 1, 
+        y:-200, 
+        delay: 0.8
+    });
+      gsap.from(ball.material, { 
+        duration: 1, 
+        opacity:0, 
+        delay: 1
+    });
+    // gsap.to(sprite.position, { duration: 1, x: 300 });
     timerStartGlitch = setTimeout(startGlitch, 5000);
     if (!frameId) {
       frameId = requestAnimationFrame(animate);
