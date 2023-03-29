@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "NODE_OPTIONS='-r @newrelic/next' NODE_OPTIONS=--require=elastic-apm-node/start-next.js next start",
     "lint": "next lint"
-   
   },
   "dependencies": {
     "@newrelic/next": "^0.4.0",

@@ -156,17 +156,10 @@ export default function ProjectBlock(props) {
             );
             case 7:
               // Parallax image 2 ways
-              const wrapperStyle = {
-                perspective: '190px',
-              };
-
-              const contStyle ={
-                transform: 'rotateX(3deg) rotateY(360deg)',
-                transformStyle: 'preserve-3d'
-              }
+            
               return (
-                <div className={`${props.className}  flex justify-center items-center w-full overflow-hidden ${props.bigHeight ? "h-screen md:h-[240vh]" : "h-[65vh] md:h-screen"} ` } style={wrapperStyle}>
-                  <div className="relative w-full " style={contStyle}>
+                <div className={`${props.className}  flex justify-center items-center w-full overflow-hidden  ${props.bigHeight ? "h-screen md:h-[240vh]" : "h-[65vh] md:h-screen"} ` }>
+                  <div className="relative w-full -rotate-12 -translate-y-32 md:translate-y-0 scale-125 md:scale-100">
                   {
                     props.images.map((image, index) => (
                       <Image

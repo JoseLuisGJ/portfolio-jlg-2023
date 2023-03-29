@@ -36,7 +36,7 @@ const parallaxTwoDirections = (target) => {
   let obj = document.querySelector(target);
   // CSSPlugin.defaultTransformPerspective = 1200;
   return gsap.to(`${target} img`, {
-    y: (i, el) => (i==0 ? (obj.offsetWidth / 4): (obj.offsetWidth / 4)*-4),
+    y: (i, el) => (i==0 ? (obj.offsetWidth / 3): (obj.offsetWidth / 4)*-1),
     ease: "none",
     scrollTrigger: {
       trigger: obj,
