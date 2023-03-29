@@ -30,6 +30,12 @@ a {
   background: radial-gradient(46.58% 96.05% at 58.99% 51.89%, #550937 0%, #1A105B 100%)
 }
 
+.hide-back {
+  backface-visibility: hidden; /* add to fix webkit bug jitter */
+  transform: perspective(1000px); /* add to fix webkit bug jitter */
+  will-change: transform;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     /* color-scheme: dark; */

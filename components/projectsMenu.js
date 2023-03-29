@@ -3,6 +3,8 @@ import Link from 'next/link'
 import gsap from "gsap";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react';
+import { browserName } from 'react-device-detect';
+
 
 const ProjectsMenu = (props,ref) => {
 
@@ -116,17 +118,23 @@ const ProjectsMenu = (props,ref) => {
         menuItemHovered = elem;
         if (!isTransitioning) {
             gsap.fromTo(menuItemHovered, {
-                opacity: 0
+                opacity: 0,
             }, {
                 duration: 0.3,
                 opacity: 1,
             });
-            gsap.fromTo(menuItemHovered, {
-                scale: 1.2
-            }, {
-                scale: 1,
-                duration: 5
-            });
+            // Flicker effect on Chrome
+            if(browserName !== "Chrome"){
+                gsap.fromTo(menuItemHovered, {
+                    scale: 1.2,
+                    rotation: 0.01
+                }, {
+                    scale: 1,
+                    rotation: 0.01,
+                    duration: 5
+                });
+            }
+           
         }
 
     }
@@ -170,13 +178,13 @@ const ProjectsMenu = (props,ref) => {
                 </ul>
             </div>
 
-            <Image fill className='imageBackground1 object-cover opacity-0 z-[1]' src={`/assets/newrelic-cover-background.jpg`} alt='Project New Relic background image' />
-            <Image fill className='imageBackground2 object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project Qatium background image' />
-            <Image fill className='imageBackground3 object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project Goaigua background image' />
-            <Image fill className='imageBackground4 object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project Figmap background image' />
-            <Image fill className='imageBackground5 object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project Global Omnium background image' />
-            <Image fill className='imageBackground6 object-cover opacity-0 z-[6]' src={`/assets/muchosol-cover-background.jpg`} alt='Project Muchosol background image' />
-            <Image fill className='imageBackground7 object-cover opacity-0 z-[7]' src={`/assets/energy-system-cover-background.jpg`} alt='Project Energy System background image' />
+            <Image fill className='imageBackground1 hide-back object-cover opacity-0 z-[1]' src={`/assets/newrelic-cover-background.jpg`} alt='Project New Relic background image' />
+            <Image fill className='imageBackground2 hide-back object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project Qatium background image' />
+            <Image fill className='imageBackground3 hide-back object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project Goaigua background image' />
+            <Image fill className='imageBackground4 hide-back object-cover opacity-0 z-[4]' src={`/assets/figmap-cover-background.jpg`} alt='Project Figmap background image' />
+            <Image fill className='imageBackground5 hide-back object-cover opacity-0 z-[5]' src={`/assets/global-omnium-cover-background.jpg`} alt='Project Global Omnium background image' />
+            <Image fill className='imageBackground6 hide-back object-cover opacity-0 z-[6]' src={`/assets/muchosol-cover-background.jpg`} alt='Project Muchosol background image' />
+            <Image fill className='imageBackground7 hide-back object-cover opacity-0 z-[7]' src={`/assets/energy-system-cover-background.jpg`} alt='Project Energy System background image' />
         </div>
     );
 }
