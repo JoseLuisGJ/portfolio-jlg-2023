@@ -56,7 +56,7 @@ export default function EnergySystem(props) {
           client="Energy System"
           heroImage={energySystemCoverHero}
           backgroundImage={energySystemCoverBackground}
-          url="www.hacencosasincreibles.com"
+          // url="www.hacencosasincreibles.com"
           smallHeroImage
         />
         <ProjectBlock

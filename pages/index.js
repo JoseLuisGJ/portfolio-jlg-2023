@@ -178,12 +178,12 @@ export default function Home() {
             <h3 className="text-center text-2xl lg:text-3xl font-extralight py-5 reveal">
              Over <b>20 years</b> of design experience,
               based in <b>Valencia</b>. 
-              {/* Nowadays I work as a{" "}
+              Nowadays I work as a{" "}
               <b>Senior UX Designer/Engineer</b> at{" "}
               <a href="http://www.elastic.co" target="_blank" rel="noreferrer">
                 Elastic
               </a>
-              , making useful and delightful developer tools. */}
+              , making useful and delightful developer tools.
             </h3>
             <p className="text-center  text-lg lg:text-xl py-5 font-extralight reveal">
               Formerly{" "}

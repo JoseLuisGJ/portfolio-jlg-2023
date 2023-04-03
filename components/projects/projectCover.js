@@ -48,7 +48,9 @@ export default function ProjectCover(props) {
           <span ref={roleRef} dangerouslySetInnerHTML={{ __html: props.role }}  className='text-lg font-light mb-3'></span>
           <h3 ref={clientTitleRef} className='font-bold text-lg'>Client</h3>
           <span ref={clientRef} className='text-lg font-light mb-9'>{props.client}</span>
-          <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
+          {
+            props.url &&  <a ref={urlRef} href={`http://${props.url}`} target='_blank' rel="noreferrer">{props.url}</a>
+          }
         </div>
         <div ref={imageRef} className={`${props.className} ${props.smallHeroImage ? "basis-3/5" : "basis-4/5"} flex flex-col justify-center w-full overflow-hidden`}>
           <Image priority placeholder="blur" className={`${props.heroImages ? "opacity-0" : ""}`} alt='Project hero image' src={props.heroImage} />
