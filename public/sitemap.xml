@@ -1,50 +1,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-      <loc>https://joseluis.design/</loc>
+      <loc>https://www.joseluis.design</loc>
       <lastmod>2023-03-25</lastmod>
-      <priority>1.0</priority>
-      <changefreq>monthly</changefreq>
   </url>
   <url>
-      <loc>https://joseluis.design/projects/newrelic</loc>
+      <loc>https://www.joseluis.design/projects/newrelic</loc>
       <lastmod>2023-03-25</lastmod>
-      <priority>0.8</priority>
-      <changefreq>monthly</changefreq>
   </url>
     <url>
-      <loc>https://joseluis.design/projects/qatium</loc>
+      <loc>https://www.joseluis.design/projects/qatium</loc>
       <lastmod>2023-03-25</lastmod>
-       <priority>0.7</priority>
-       <changefreq>monthly</changefreq>
   </url>
     <url>
-      <loc>https://joseluis.design/projects/goaigua</loc>
+      <loc>https://www.joseluis.design/projects/goaigua</loc>
       <lastmod>2023-03-25</lastmod>
-       <priority>0.6</priority>
-       <changefreq>monthly</changefreq>
   </url>
     <url>
-      <loc>https://joseluis.design/projects/figmap</loc>
+      <loc>https://www.joseluis.design/projects/figmap</loc>
       <lastmod>2023-03-25</lastmod>
-       <priority>0.5</priority>
-       <changefreq>monthly</changefreq>
+    <url>
+      <loc>https://www.joseluis.design/projects/globalomnium</loc>
+      <lastmod>2023-03-25</lastmod>
   </url>
     <url>
-      <loc>https://joseluis.design/projects/globalomnium</loc>
+      <loc>https://www.joseluis.design/projects/muchosol</loc>
       <lastmod>2023-03-25</lastmod>
-       <priority>0.4</priority>
-       <changefreq>monthly</changefreq>
   </url>
     <url>
-      <loc>https://joseluis.design/projects/muchosol</loc>
+      <loc>https://www.joseluis.design/projects/energysystem</loc>
       <lastmod>2023-03-25</lastmod>
-       <priority>0.3</priority>
-       <changefreq>monthly</changefreq>
-  </url>
-    <url>
-      <loc>https://joseluis.design/projects/energysystem</loc>
-      <lastmod>2023-03-25</lastmod>
-       <priority>0.2</priority>
-       <changefreq>monthly</changefreq>
   </url>
 </urlset>
