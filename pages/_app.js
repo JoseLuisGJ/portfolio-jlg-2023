@@ -6,6 +6,10 @@ import MainHeader from "../components/mainHeader";
 import ProjectsMenu from "../components/projectsMenu";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -102,6 +106,8 @@ function MyApp({ Component, pageProps }) {
         <Component
           {...pageProps}
         />
+        <Analytics />
+        <SpeedInsights />
       </main>
     </>
   );
