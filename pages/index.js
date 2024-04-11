@@ -281,7 +281,7 @@ export default function Home() {
                 </li>
                 <li className="mr-6">
                   <a
-                    href="https://github.com/ergum"
+                    href="https://github.com/JoseLuisGJ"
                     target="_blank"
                     rel="noreferrer"
                   >
