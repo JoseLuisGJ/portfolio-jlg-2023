@@ -1,9 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 
 import Image from "next/image";
 import Head from "next/head";
 // Animations
-import {revealWhenScroll,revealFromCenter} from "../../components/utils/animation";
+import {
+  revealWhenScroll,
+  revealFromCenter,
+} from "../../components/utils/animation";
 // Project building blocks
 import ProjectCover from "../../components/projects/projectCover";
 import ProjectBlock from "../../components/projects/projectBlock";
@@ -24,9 +28,13 @@ import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
 import globalOmniumCoverBackground from "../../public/assets/global-omnium-cover-background.jpg";
 
 export default function Figmap(props) {
+  const [pluginLikes,setPluginLikes] = useState(5);
+  const [pluginUniqueRuns,setPluginUniqueRuns] = useState(5);
   useEffect(() => {
     window.scrollTo(0, 0);
     animateUI();
+    getPluginStats();
+
     return () => {};
   }, []);
 
@@ -35,15 +43,36 @@ export default function Figmap(props) {
     revealWhenScroll();
   };
 
+  const getPluginStats = async () => {
+    try {
+      const response = await axios.get(
+        "https://www.figma.com/api/feed/plugins?sort_by=all_time&tags=figmap&pagination=null&editor_type=all&category=null&include_tags=true"
+      );
+      const data = await response.json();
+      console.log("Data:", response.data);
+      setPluginUniqueRuns(data.meta.resources[0].unique_run_count);
+      setPluginLikes(data.meta.resources[0].like_count);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <>
       <Head>
-      <title>José Luis González - Portfolio - Figmap</title>
-        <meta name="description" content="Side project making the Figmap plugin for Figmap"/>
+        <title>José Luis González - Portfolio - Figmap</title>
+        <meta
+          name="description"
+          content="Side project making the Figmap plugin for Figmap"
+        />
         <link rel="preload" href="/assets/figmap-cover-hero-1.png" as="image" />
         <link rel="preload" href="/assets/figmap-cover-hero-2.png" as="image" />
         <link rel="preload" href="/assets/figmap-cover-hero-3.png" as="image" />
-        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image" />
+        <link
+          rel="preload"
+          href="/assets/figmap-cover-background.jpg"
+          as="image"
+        />
       </Head>
       <div className={`mb-48`}>
         <ProjectCover
@@ -80,7 +109,7 @@ export default function Figmap(props) {
             "As I like to do working on side projects, I was learning, practicing and playing around few still uncharted subjects such a how to use Figma API, Mapbox API, React Hooks and Typescript and measuring all the product analytics as I explain in this <a href='https://medium.com/design-bootcamp/how-to-get-analytics-and-observe-your-figma-plugin-behavior-7ca522fc8238' target='_blank'>article.</a>",
           ]}
         />
- 
+
         {/* Custom Figmap block  */}
         <div
           className={`relative flex justify-center overflow-hidden`}
@@ -97,7 +126,9 @@ export default function Figmap(props) {
                   height={54}
                 />
                 <h4 className="text-2xl md:text-4xl font-bold">Works on</h4>
-                <h6 className="text-lg md:text-2xl font-regular">Figma & FigJam</h6>
+                <h6 className="text-lg md:text-2xl font-regular">
+                  Figma & FigJam
+                </h6>
               </div>
               <div className="flex flex-col items-center text-white">
                 <Image
@@ -107,7 +138,7 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">441</h4>
+                <h4 className="text-2xl md:text-4xl font-bold">{pluginLikes}</h4>
                 <h6 className="text-lg md:text-2xl font-regular">Likes</h6>
               </div>
               <div className="flex flex-col items-center text-white">
@@ -118,7 +149,7 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">+110k</h4>
+                <h4 className="text-2xl md:text-4xl font-bold">{pluginUniqueRuns}</h4>
                 <h6 className="text-lg md:text-2xl font-regular">Used by</h6>
               </div>
               <div className="flex flex-col items-center text-white">
