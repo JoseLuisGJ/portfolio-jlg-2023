@@ -28,8 +28,8 @@ import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
 import globalOmniumCoverBackground from "../../public/assets/global-omnium-cover-background.jpg";
 
 export default function Figmap(props) {
-  const [pluginLikes,setPluginLikes] = useState(5);
-  const [pluginUniqueRuns,setPluginUniqueRuns] = useState(5);
+  const [pluginLikes,setPluginLikes] = useState(714);
+  const [pluginUniqueRuns,setPluginUniqueRuns] = useState(150);
   useEffect(() => {
     window.scrollTo(0, 0);
     animateUI();
@@ -149,8 +149,8 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">{pluginUniqueRuns}</h4>
-                <h6 className="text-lg md:text-2xl font-regular">Used by</h6>
+                <h4 className="text-2xl md:text-4xl font-bold">{pluginUniqueRuns}k</h4>
+                <h6 className="text-lg md:text-2xl font-regular">Users</h6>
               </div>
               <div className="flex flex-col items-center text-white">
                 <Image
