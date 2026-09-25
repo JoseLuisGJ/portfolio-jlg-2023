@@ -41,8 +41,6 @@ import elasticFigma4 from "../../public/assets/elastic-figma-4.png";
 import elasticFigma5 from "../../public/assets/elastic-figma-5.png";
 import elasticFigma6 from "../../public/assets/elastic-figma-6.png";
 
-import newRelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
-
 export default function Elastic(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -169,13 +167,7 @@ export default function Elastic(props) {
        
        
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#0F192B"
-        backgroundImage={newRelicCoverBackground}
-        title="New Relic"
-        url="newrelic"
-      />
+      <ProjectFooter />
     </>
   );
 }

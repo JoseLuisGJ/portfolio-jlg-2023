@@ -4,10 +4,10 @@ import Script from "next/script";
 import { Poppins } from "@next/font/google";
 import MainHeader from "../components/mainHeader";
 import ProjectsMenu from "../components/projectsMenu";
-import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { getEnabledProjects } from "../data/projects";
 
 
 
@@ -21,37 +21,11 @@ function MyApp({ Component, pageProps }) {
   const [menuOpened, setMenuOpened] = useState(false);
   const prevShouldRenderMenu = useRef();
   const childRef = useRef(null);
-  const [menuItemActive, setMenuItemActive] = useState(0);
-  const router = useRouter();
 
   useEffect(() => {
     prevShouldRenderMenu.current = menuOpened;
   }, [menuOpened]);
 
-
-
-  useEffect(() => {
-    if(!router.isReady) return;
-    if (router.asPath === "/") {
-      setMenuItemActive(0);
-    } else if (router.asPath === "/projects/elastic") {
-      setMenuItemActive(1);
-    } else if (router.asPath === "/projects/newrelic") {
-      setMenuItemActive(2);
-    } else if (router.asPath === "/projects/qatium") {
-      setMenuItemActive(3);
-    } else if (router.asPath === "/projects/goaigua") {
-      setMenuItemActive(4);
-    } else if (router.asPath === "/projects/figmap") {
-      setMenuItemActive(5);
-    } else if (router.asPath === "/projects/globalomnium") {
-      setMenuItemActive(6);
-    } else if (router.asPath === "/projects/muchosol") {
-      setMenuItemActive(7);
-    } else if (router.asPath === "/projects/energysystem") {
-      setMenuItemActive(8);
-    }
-  }, [router.isReady, router.query]);
 
 
   const siblingFunction = () => {
@@ -81,14 +55,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og-image.jpg"/>
         <link rel="icon" href="favicon.ico" />
 
-        <link rel="preload" href="/assets/elastic-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/figmap-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/global-omnium-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/muchosol-cover-background.jpg" as="image"/>
-        <link rel="preload" href="/assets/energy-system-cover-background.jpg" as="image"/>
+        {getEnabledProjects().map((project) => (
+          <link key={project.slug} rel="preload" href={project.backgroundImage.src} as="image"/>
+        ))}
       </Head>
       <Script beforeInteractive src="/newrelic.agent.js" />
 
@@ -103,7 +72,6 @@ function MyApp({ Component, pageProps }) {
             ref={childRef}
             menuOpened={menuOpened}
             setMenuOpened={setMenuOpened}
-            menuItemActive={menuItemActive}
           />
         )}
         <Component

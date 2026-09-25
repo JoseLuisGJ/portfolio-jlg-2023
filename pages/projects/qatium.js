@@ -29,8 +29,6 @@ import qatiumDsComponents2 from "../../public/assets/qatium-ds-components-2.png"
 import qatiumDsComponents3 from "../../public/assets/qatium-ds-components-3.png";
 import qatiumDsComponents4 from "../../public/assets/qatium-ds-components-4.png";
 import qatiumRoadmap from "../../public/assets/qatium-roadmap.png";
-import goaiguaCoverBackground from "../../public/assets/goaigua-cover-background.jpg";
-
 export default function Qatium(props) {
   useEffect(() => {    
     window.scrollTo(0, 0);
@@ -139,13 +137,7 @@ export default function Qatium(props) {
           ]}
         />
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={goaiguaCoverBackground}
-        title="GoAigua"
-        url="goaigua"
-      />
+      <ProjectFooter />
     </>
   );
 }

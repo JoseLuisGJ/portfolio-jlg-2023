@@ -31,8 +31,6 @@ import globalOmniumLauncher4 from "../../public/assets/global-omnium-launcher-4.
 import globalOmniumExpo from "../../public/assets/global-omnium-expo.png";
 import globalOmniumApp1 from "../../public/assets/global-omnium-app-1.png";
 import globalOmniumApp2 from "../../public/assets/global-omnium-app-2.png";
-import muchosolCoverBackground from "../../public/assets/muchosol-cover-background.jpg";
-
 export default function GlobalOmnium(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -151,13 +149,7 @@ export default function GlobalOmnium(props) {
           ]}
         />
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={muchosolCoverBackground}
-        title="Muchosol"
-        url="muchosol"
-      />
+      <ProjectFooter />
     </>
   );
 }

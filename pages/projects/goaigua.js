@@ -27,9 +27,6 @@ import goaiguaAiguaDsComponents1 from "../../public/assets/goaigua-aigua-ds-comp
 import goaiguaAiguaDsComponents2 from "../../public/assets/goaigua-aigua-ds-components-2.png";
 import goaiguaAiguaDsComponents3 from "../../public/assets/goaigua-aigua-ds-components-3.png";
 import goaiguaAiguaDsComponents4 from "../../public/assets/goaigua-aigua-ds-components-4.png";
-import figmapCoverBackground from "../../public/assets/figmap-cover-background.jpg";
-
-
 export default function GoAigua(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -133,13 +130,7 @@ export default function GoAigua(props) {
           images={[goaiguaAiguaDsComponents1, goaiguaAiguaDsComponents2, goaiguaAiguaDsComponents3, goaiguaAiguaDsComponents4]}
         />
       </div>
-      <ProjectFooter
-       {...props}
-        backgroundColor="#22222E"
-        backgroundImage={figmapCoverBackground}
-        title="Figmap"
-        url="figmap"
-      />
+      <ProjectFooter />
     </>
   );
 }
