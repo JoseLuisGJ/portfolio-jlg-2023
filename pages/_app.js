@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         <title>José Luis González - Portfolio - Product Designer and Code Lover</title>
         <meta name="description" content="José Luis González Jiménez portfolio, product designer, UX engineer, frontend developer. Last projects and use cases working on former companies like New Relic, Qatium, Idrica, GoAigua, Nectar Estudio "/>
         <meta name="robots" content="index, follow"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="language" content="English"/>
         <meta property="og:title" content="José Luis González - Portfolio - Product Designer and Code Lover"/>
         <meta property="og:site_name" content="Jose Luis González | Portfolio"/>
