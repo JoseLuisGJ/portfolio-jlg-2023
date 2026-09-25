@@ -23,8 +23,6 @@ import energySystemApp2 from "../../public/assets/energy-system-app-2.png";
 import energySystemWebIso1 from "../../public/assets/energy-system-webiso-1.png";
 import energySystemWebIso2 from "../../public/assets/energy-system-webiso-2.png";
 import energySystemWebIso3 from "../../public/assets/energy-system-webiso-3.png";
-import newrelicCoverBackground from "../../public/assets/newrelic-cover-background.jpg";
-
 export default function EnergySystem(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -103,13 +101,7 @@ export default function EnergySystem(props) {
           ]}
         />
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={newrelicCoverBackground}
-        title="New Relic"
-        url="newrelic"
-      />
+      <ProjectFooter />
     </>
   );
 }

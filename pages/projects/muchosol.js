@@ -17,8 +17,6 @@ import MuchosolIsometric1 from "../../public/assets/muchosol-isometric-1.png";
 import MuchosolIsometric2 from "../../public/assets/muchosol-isometric-2.png";
 import MuchosolIsometric3 from "../../public/assets/muchosol-isometric-3.png";
 import MuchosolIsometric4 from "../../public/assets/muchosol-isometric-4.png";
-import energysystemCoverBackground from "../../public/assets/energy-system-cover-background.jpg";
-
 export default function Muchosol(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -88,13 +86,7 @@ export default function Muchosol(props) {
           ]}
         />
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={energysystemCoverBackground}
-        title="Energy System"
-        url="energysystem"
-      />
+      <ProjectFooter />
     </>
   );
 }

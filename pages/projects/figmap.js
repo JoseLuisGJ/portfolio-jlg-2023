@@ -25,8 +25,6 @@ import figmapIconFigma from "../../public/assets/figmap-icon-figma.png";
 import figmapIconLike from "../../public/assets/figmap-icon-like.png";
 import figmapIconInstalls from "../../public/assets/figmap-icon-installs.png";
 import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
-import globalOmniumCoverBackground from "../../public/assets/global-omnium-cover-background.jpg";
-
 export default function Figmap(props) {
   const [pluginLikes,setPluginLikes] = useState(714);
   const [pluginUniqueRuns,setPluginUniqueRuns] = useState(150);
@@ -175,13 +173,7 @@ export default function Figmap(props) {
           </div>
         </div>
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={globalOmniumCoverBackground}
-        title="Global Omnium"
-        url="globalomnium"
-      />
+      <ProjectFooter />
     </>
   );
 }

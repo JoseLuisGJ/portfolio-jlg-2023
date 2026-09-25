@@ -38,8 +38,6 @@ import newrelicFigmaWorkflow1 from "../../public/assets/newrelic-figma-workflow-
 import newrelicFigmaWorkflow2 from "../../public/assets/newrelic-figma-workflow-2.png";
 import newrelicFigmaWorkflow3 from "../../public/assets/newrelic-figma-workflow-3.png";
 
-import qatiumCoverBackground from "../../public/assets/qatium-cover-background.jpg";
-
 export default function NewRelic(props) {
   useEffect(() => {
     // scroll to top on page load
@@ -149,13 +147,7 @@ export default function NewRelic(props) {
         />
     
       </div>
-      <ProjectFooter
-        {...props}
-        backgroundColor="#22222E"
-        backgroundImage={qatiumCoverBackground}
-        title="Qatium"
-        url="qatium"
-      />
+      <ProjectFooter />
     </>
   );
 }

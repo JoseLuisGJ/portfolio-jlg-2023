@@ -2,6 +2,9 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "NODE_OPTIONS='-r @newrelic/next' NODE_OPTIONS=--require=elastic-apm-node/start-next.js next dev",
     "build": "next build",
@@ -24,10 +27,10 @@
     "newrelic": "^9.14.1",
     "next": "^13.2.4",
     "npm": "^9.1.2",
-    "postprocessing": "^6.29.1",
-    "react": "^18.2.0",
+    "postprocessing": "6.34.3",
+    "react": "18.2.0",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^18.2.0",
+    "react-dom": "18.2.0",
     "three": "^0.146.0"
   },
   "devDependencies": {
