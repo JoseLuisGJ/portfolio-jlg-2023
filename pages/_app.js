@@ -34,20 +34,22 @@ function MyApp({ Component, pageProps }) {
     if(!router.isReady) return;
     if (router.asPath === "/") {
       setMenuItemActive(0);
-    } else if (router.asPath === "/projects/newrelic") {
+    } else if (router.asPath === "/projects/elastic") {
       setMenuItemActive(1);
-    } else if (router.asPath === "/projects/qatium") {
+    } else if (router.asPath === "/projects/newrelic") {
       setMenuItemActive(2);
-    } else if (router.asPath === "/projects/goaigua") {
+    } else if (router.asPath === "/projects/qatium") {
       setMenuItemActive(3);
-    } else if (router.asPath === "/projects/figmap") {
+    } else if (router.asPath === "/projects/goaigua") {
       setMenuItemActive(4);
-    } else if (router.asPath === "/projects/globalomnium") {
+    } else if (router.asPath === "/projects/figmap") {
       setMenuItemActive(5);
-    } else if (router.asPath === "/projects/muchosol") {
+    } else if (router.asPath === "/projects/globalomnium") {
       setMenuItemActive(6);
-    } else if (router.asPath === "/projects/energysystem") {
+    } else if (router.asPath === "/projects/muchosol") {
       setMenuItemActive(7);
+    } else if (router.asPath === "/projects/energysystem") {
+      setMenuItemActive(8);
     }
   }, [router.isReady, router.query]);
 
@@ -79,6 +81,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:image" content="https://www.joseluis.design/jose-luis-gonzalez-portfolio-og-image.jpg"/>
         <link rel="icon" href="favicon.ico" />
 
+        <link rel="preload" href="/assets/elastic-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/newrelic-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/qatium-cover-background.jpg" as="image"/>
         <link rel="preload" href="/assets/goaigua-cover-background.jpg" as="image"/>

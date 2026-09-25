@@ -155,29 +155,33 @@ const ProjectsMenu = (props,ref) => {
                         <Link className={`text-xl md:text-2xl no-underline hover:opacity-100 ${props.menuItemActive == 0 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/">Home</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 1 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/newrelic">New Relic</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground8')} onMouseLeave={() => hiddeBackground('.imageBackground8')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 1 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/elastic">Elastic</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 2 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/qatium">Qatium</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground1')} onMouseLeave={() => hiddeBackground('.imageBackground1')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 2 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/newrelic">New Relic</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 3 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/goaigua">GoAigua</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground2')} onMouseLeave={() => hiddeBackground('.imageBackground2')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 3 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/qatium">Qatium</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground4')} onMouseLeave={() => hiddeBackground('.imageBackground4')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 4 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground3')} onMouseLeave={() => hiddeBackground('.imageBackground3')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 4 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/goaigua">GoAigua</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground5')} onMouseLeave={() => hiddeBackground('.imageBackground5')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 5 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/globalomnium">Global Omnium</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground4')} onMouseLeave={() => hiddeBackground('.imageBackground4')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 5 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/figmap">Figmap</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground6')} onMouseLeave={() => hiddeBackground('.imageBackground6')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 6 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/muchosol">Muchosol</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground5')} onMouseLeave={() => hiddeBackground('.imageBackground5')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 6 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/globalomnium">Global Omnium</Link>
                     </li>
                     <li className='menuItem'>
-                        <Link onMouseEnter={() => showBackground('.imageBackground7')} onMouseLeave={() => hiddeBackground('.imageBackground7')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 7 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/energysystem">Energy System</Link>
+                        <Link onMouseEnter={() => showBackground('.imageBackground6')} onMouseLeave={() => hiddeBackground('.imageBackground6')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 7 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/muchosol">Muchosol</Link>
+                    </li>
+                    <li className='menuItem'>
+                        <Link onMouseEnter={() => showBackground('.imageBackground7')} onMouseLeave={() => hiddeBackground('.imageBackground7')} className={`no-underline hover:opacity-100 ${props.menuItemActive == 8 ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/projects/energysystem">Energy System</Link>
                     </li>
                 </ul>
             </div>
 
+            <Image fill className='imageBackground8 hide-back object-cover opacity-0 z-[8]' src={`/assets/elastic-cover-background.jpg`} alt='Project Elastic background image' />
             <Image fill className='imageBackground1 hide-back object-cover opacity-0 z-[1]' src={`/assets/newrelic-cover-background.jpg`} alt='Project New Relic background image' />
             <Image fill className='imageBackground2 hide-back object-cover opacity-0 z-[2]' src={`/assets/qatium-cover-background.jpg`} alt='Project Qatium background image' />
             <Image fill className='imageBackground3 hide-back object-cover opacity-0 z-[3]' src={`/assets/goaigua-cover-background.jpg`} alt='Project Goaigua background image' />
