@@ -4,12 +4,15 @@ import gsap from "gsap";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import { browserName } from 'react-device-detect';
-import { getEnabledProjects } from '../data/projects';
+import { getVisibleProjects } from '../data/projects';
+import { usePrivateAccess } from './privateAccess';
 
 
 const ProjectsMenu = (props,ref) => {
 
     const router = useRouter();
+    const unlocked = usePrivateAccess();
+    const visibleProjects = getVisibleProjects(unlocked);
     const [isTransitioning, setIsTransitioning] = useState(false);
    
     let menuItemHovered = null;
@@ -155,7 +158,7 @@ const ProjectsMenu = (props,ref) => {
                     <li className='menuItem mb-6 md:mb-12'>
                         <Link className={`text-xl md:text-2xl no-underline hover:opacity-100 ${router.pathname === "/" ? "opacity-100 pointer-events-none" : "opacity-70"}`} href="/">Home</Link>
                     </li>
-                    {getEnabledProjects().map((project) => (
+                    {visibleProjects.map((project) => (
                         <li className='menuItem' key={project.slug}>
                             <Link onMouseEnter={() => showBackground(`.project-bg-${project.slug}`)} onMouseLeave={() => hiddeBackground(`.project-bg-${project.slug}`)} className={`no-underline hover:opacity-100 ${router.pathname === `/projects/${project.slug}` ? "opacity-100 pointer-events-none" : "opacity-70"}`} href={`/projects/${project.slug}`}>{project.title}</Link>
                         </li>
@@ -163,7 +166,7 @@ const ProjectsMenu = (props,ref) => {
                 </ul>
             </div>
 
-            {getEnabledProjects().map((project, index) => (
+            {visibleProjects.map((project, index) => (
                 <Image key={project.slug} fill style={{ zIndex: index + 1 }} className={`project-bg-${project.slug} hide-back object-cover opacity-0`} src={project.backgroundImage} alt={`Project ${project.title} background image`} />
             ))}
         </div>

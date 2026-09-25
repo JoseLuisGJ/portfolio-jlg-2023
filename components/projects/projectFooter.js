@@ -2,13 +2,15 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { getNextProject } from '../../data/projects';
+import { usePrivateAccess } from '../privateAccess';
 
 export default function ProjectFooter() {
   const animationDuration = 1000;
   const router = useRouter();
+  const unlocked = usePrivateAccess();
   const [isTransitioning, setIsTransitioning] = useState(false);
   const slug = router.pathname.replace(/^\/projects\//, "");
-  const nextProject = getNextProject(slug);
+  const nextProject = getNextProject(slug, unlocked);
 
   if (!nextProject) return null;
 

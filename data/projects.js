@@ -1,84 +1,101 @@
-import elasticCoverBackground from "../public/assets/elastic-cover-background.jpg";
-import newrelicCoverBackground from "../public/assets/newrelic-cover-background.jpg";
-import qatiumCoverBackground from "../public/assets/qatium-cover-background.jpg";
-import goaiguaCoverBackground from "../public/assets/goaigua-cover-background.jpg";
-import figmapCoverBackground from "../public/assets/figmap-cover-background.jpg";
-import globalOmniumCoverBackground from "../public/assets/global-omnium-cover-background.jpg";
-import muchosolCoverBackground from "../public/assets/muchosol-cover-background.jpg";
-import energySystemCoverBackground from "../public/assets/energy-system-cover-background.jpg";
-
 // Order is the menu order and the "next project" sequence.
-// Set enabled to false to hide a project from both.
+// enabled: false hides a project completely.
+// isPrivate: true hides it until someone opens /view/<PRIVATE_ACCESS_TOKEN>.
 const projects = [
   {
     slug: "elastic",
     title: "Elastic",
-    enabled: false,
+    enabled: true,
+    isPrivate: true,
+    assetPrefix: "elastic-",
     backgroundColor: "#22222E",
-    backgroundImage: elasticCoverBackground,
+    backgroundImage: "/assets/elastic-cover-background.jpg",
   },
   {
     slug: "newrelic",
     title: "New Relic",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#0F192B",
-    backgroundImage: newrelicCoverBackground,
+    backgroundImage: "/assets/newrelic-cover-background.jpg",
   },
   {
     slug: "qatium",
     title: "Qatium",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: qatiumCoverBackground,
+    backgroundImage: "/assets/qatium-cover-background.jpg",
   },
   {
     slug: "goaigua",
     title: "GoAigua",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: goaiguaCoverBackground,
+    backgroundImage: "/assets/goaigua-cover-background.jpg",
   },
   {
     slug: "figmap",
     title: "Figmap",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: figmapCoverBackground,
+    backgroundImage: "/assets/figmap-cover-background.jpg",
   },
   {
     slug: "globalomnium",
     title: "Global Omnium",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: globalOmniumCoverBackground,
+    backgroundImage: "/assets/global-omnium-cover-background.jpg",
   },
   {
     slug: "muchosol",
     title: "Muchosol",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: muchosolCoverBackground,
+    backgroundImage: "/assets/muchosol-cover-background.jpg",
   },
   {
     slug: "energysystem",
     title: "Energy System",
     enabled: true,
+    isPrivate: false,
     backgroundColor: "#22222E",
-    backgroundImage: energySystemCoverBackground,
+    backgroundImage: "/assets/energy-system-cover-background.jpg",
   },
 ];
 
-export function getEnabledProjects() {
-  return projects.filter((project) => project.enabled);
+export function isProjectVisible(project, unlocked) {
+  if (!project.enabled) return false;
+  if (project.isPrivate && !unlocked) return false;
+  return true;
 }
 
-export function getNextProject(slug) {
+export function getVisibleProjects(unlocked) {
+  return projects.filter((project) => isProjectVisible(project, unlocked));
+}
+
+export function getEnabledProjects() {
+  return getVisibleProjects(false);
+}
+
+export function getPrivateProjects() {
+  return projects.filter((project) => project.enabled && project.isPrivate);
+}
+
+export function getNextProject(slug, unlocked) {
   const currentIndex = projects.findIndex((project) => project.slug === slug);
   if (currentIndex === -1) return null;
 
   for (let step = 1; step <= projects.length; step += 1) {
     const candidate = projects[(currentIndex + step) % projects.length];
-    if (candidate.enabled && candidate.slug !== slug) return candidate;
+    if (isProjectVisible(candidate, unlocked) && candidate.slug !== slug) {
+      return candidate;
+    }
   }
 
   return null;
