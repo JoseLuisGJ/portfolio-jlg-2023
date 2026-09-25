@@ -65,12 +65,12 @@ export default function Home() {
     gsap.fromTo(
       h1Ref.current,
       { duration: 0.8, opacity: 0, x: 90 },
-      { opacity: 1, x: 0, delay: 0.7 }
+      { opacity: 1, x: 0, delay: 0.7 },
     );
     gsap.fromTo(
       h2Ref.current,
       { duration: 0.8, opacity: 0, x: -90 },
-      { opacity: 1, x: 0, delay: 1.2 }
+      { opacity: 1, x: 0, delay: 1.2 },
     );
 
     gsap.to(arrowContentRef.current, {
@@ -176,9 +176,8 @@ export default function Home() {
               About me
             </h1>
             <h3 className="text-center text-2xl lg:text-3xl font-extralight py-5 reveal">
-             Over <b>20 years</b> of design experience,
-              based in <b>Valencia</b>. 
-              Nowadays I work as a{" "}
+              Over <b>20 years</b> of design experience, based in{" "}
+              <b>Valencia</b>. Nowadays I work as a{" "}
               <b>Senior UX Designer/Engineer</b> at{" "}
               <a href="http://www.elastic.co" target="_blank" rel="noreferrer">
                 Elastic
@@ -222,32 +221,26 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base lg:text-lg font-extralight py-5 reveal">
               <div>
-                Huge design thinking and people first advocate, product designer
-                and code lover which means that I like to make interactive
-                artifacts either using design tools or coding with front end
-                languages to solve complex user problems.
+                I&apos;ve always moved between design and coding, building
+                digital products and solving problems using either design tools
+                or front-end code — and I genuinely enjoy connecting both sides
+                whenever it&apos;s possible, useful, and necessary.
+                <br />
+                <br />I like working on complex products, simplifying the
+                experience for technical users; in recent years, that&apos;s
+                mostly meant solving problems for software and water engineers..
+              </div>
+              <div>
+                AI makes this hybrid workflow faster and more accessible than
+                ever for everyone, which is why an agile approach matters more
+                than it used to: design and code are merging more and more, but
+                a solid foundation is still essential as a guardrail for getting
+                the right outcomes.
                 <br />
                 <br />
                 My strong visual and experiential mindset comes from co-founding
-                and working for digital design agencies in the past.
-              </div>
-              <div>
-                Teaching was also and important part of my career leading the {" "}
-                <a
-                  href="https://www.esat.es/estudios/postgrado-especializado-en-diseno-y-desarrollo-web-front-end/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ID3 post degree
-                </a>
-             
-                {" "} and teaching UX/UI and frontend for 12 years. Sharing knowledge
-                with the future generations.
-                <br />
-                <br />
-                That’s why I also really enjoy mentoring people, promoting design
-                methodologies, improving team relationships and making bridges
-                between design and engineering.
+                and working at digital design agencies in the past, and from
+                teaching UX/UI and front-end development to the next generation.
               </div>
             </div>
             <div>
