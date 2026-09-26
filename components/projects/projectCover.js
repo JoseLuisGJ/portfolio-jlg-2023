@@ -27,6 +27,25 @@ export default function ProjectCover(props) {
 
     animateUI();
 
+    const placeArrow = () => {
+      const arrow = arrowRef.current;
+      const text = titleRef.current?.parentElement;
+      const cover = coverRef.current;
+      if (!arrow || !text || !cover) return;
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        arrow.style.top = "";
+        arrow.style.bottom = "";
+        return;
+      }
+      const textTop = text.getBoundingClientRect().top - cover.getBoundingClientRect().top;
+      arrow.style.bottom = "auto";
+      arrow.style.top = `${textTop - arrow.offsetHeight - 16}px`;
+    };
+    placeArrow();
+    window.addEventListener("resize", placeArrow);
+    const observer = new ResizeObserver(placeArrow);
+    observer.observe(coverRef.current);
+
     gsap.set(arrowContentRef.current, { opacity: 0, y: -50 });
     const intro = gsap.to(arrowContentRef.current, {
       duration: 1.5,
@@ -49,6 +68,8 @@ export default function ProjectCover(props) {
       : null;
 
     return () => {
+      window.removeEventListener("resize", placeArrow);
+      observer.disconnect();
       intro.kill();
       fade?.scrollTrigger?.kill();
       fade?.kill();
@@ -107,7 +128,7 @@ export default function ProjectCover(props) {
       <a
         ref={arrowRef}
         href="#project-next"
-        className="absolute z-[8] bottom-32 md:bottom-6 left-1/2 transform -translate-x-1/2"
+        className="absolute z-[8] bottom-32 md:bottom-6 md:top-auto left-1/2 transform -translate-x-1/2"
       >
         <div className="block" ref={arrowContentRef}>
           <Image

@@ -72,8 +72,8 @@ export default function Elastic(props) {
       </Head>
       <div className={`mb-48`} >
         <ProjectCover
-          title="Product Design"
-          subtitle="Elastic"
+          title="Product"
+          subtitle="Elasticsearch, Kibana & EUI."
           role="Senior UX Designer/Engineer"
           client="Elastic"
           heroImage={elasticCoverHero}
