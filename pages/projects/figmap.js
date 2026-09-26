@@ -82,7 +82,7 @@ export default function Figmap(props) {
           heroImages={[figmapCoverHero1, figmapCoverHero2, figmapCoverHero3]}
           className="reveal-hero-1"
           backgroundImage={figmapCoverBackground}
-          url="bit.ly/3ZgsYgJ"
+          url="www.figmap.app"
         />
         <ProjectBlock
           type={1}
