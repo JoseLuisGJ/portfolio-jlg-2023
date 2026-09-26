@@ -65,12 +65,12 @@ export default function Home() {
     gsap.fromTo(
       h1Ref.current,
       { duration: 0.8, opacity: 0, x: 90 },
-      { opacity: 1, x: 0, delay: 0.7 }
+      { opacity: 1, x: 0, delay: 0.7 },
     );
     gsap.fromTo(
       h2Ref.current,
       { duration: 0.8, opacity: 0, x: -90 },
-      { opacity: 1, x: 0, delay: 1.2 }
+      { opacity: 1, x: 0, delay: 1.2 },
     );
 
     gsap.to(arrowContentRef.current, {
@@ -176,9 +176,8 @@ export default function Home() {
               About me
             </h1>
             <h3 className="text-center text-2xl lg:text-3xl font-extralight py-5 reveal">
-             Over <b>20 years</b> of design experience,
-              based in <b>Valencia</b>. 
-              Nowadays I work as a{" "}
+              Over <b>20 years</b> of design experience, based in{" "}
+              <b>Valencia</b>. Nowadays I work as a{" "}
               <b>Senior UX Designer/Engineer</b> at{" "}
               <a href="http://www.elastic.co" target="_blank" rel="noreferrer">
                 Elastic
@@ -222,32 +221,31 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base lg:text-lg font-extralight py-5 reveal">
               <div>
-                Huge design thinking and people first advocate, product designer
-                and code lover which means that I like to make interactive
-                artifacts either using design tools or coding with front end
-                languages to solve complex user problems.
+                I&apos;ve always been moving between design and code, building
+                digital products and solving problems using either design tools
+                or front-end implementations. I genuinely enjoy connecting both
+                sides whenever it&apos;s possible, useful, and necessary.
                 <br />
                 <br />
-                My strong visual and experiential mindset comes from co-founding
-                and working for digital design agencies in the past.
+                My path has taken me from founding a digital agency and a
+                startup, to teaching and leading a UX/UI and front-end
+                development degree to the next generation, to working at big
+                tech companies. Along the way, I&apos;ve kept building on that
+                same hybrid foundation.
               </div>
               <div>
-                Teaching was also and important part of my career leading the {" "}
-                <a
-                  href="https://www.esat.es/estudios/postgrado-especializado-en-diseno-y-desarrollo-web-front-end/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ID3 post degree
-                </a>
-             
-                {" "} and teaching UX/UI and frontend for 12 years. Sharing knowledge
-                with the future generations.
+                I like working on complex products, simplifying the experience
+                for technical users; in recent years, that&apos;s mostly meant
+                solving problems for software and water engineers. AI now makes
+                this hybrid workflow even faster and more accessible for
+                everyone, which is why an agile approach matters more than ever.
                 <br />
                 <br />
-                That’s why I also really enjoy mentoring people, promoting design
-                methodologies, improving team relationships and making bridges
-                between design and engineering.
+                Design and code are merging more and more, that&apos;s why a
+                solid foundation is still essential as a guardrail for the right
+                outcomes. Outside of work, I enjoy time with my family, running
+                along the river park, tinkering with home automation, and
+                playing electric drums.
               </div>
             </div>
             <div>
