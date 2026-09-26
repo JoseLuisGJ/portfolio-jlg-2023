@@ -26,8 +26,8 @@ import figmapIconLike from "../../public/assets/figmap-icon-like.png";
 import figmapIconInstalls from "../../public/assets/figmap-icon-installs.png";
 import figmapIconMau from "../../public/assets/figmap-icon-mau.png";
 export default function Figmap(props) {
-  const [pluginLikes,setPluginLikes] = useState(714);
-  const [pluginUniqueRuns,setPluginUniqueRuns] = useState(150);
+  const [pluginLikes,setPluginLikes] = useState(1.5);
+  const [pluginUniqueRuns,setPluginUniqueRuns] = useState(261);
   useEffect(() => {
     window.scrollTo(0, 0);
     animateUI();
@@ -125,7 +125,7 @@ export default function Figmap(props) {
                 />
                 <h4 className="text-2xl md:text-4xl font-bold">Works on</h4>
                 <h6 className="text-lg md:text-2xl font-regular">
-                  Figma & FigJam
+                  Figma, FigJam, Slides and Buzz.
                 </h6>
               </div>
               <div className="flex flex-col items-center text-white">
@@ -136,7 +136,7 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">{pluginLikes}</h4>
+                <h4 className="text-2xl md:text-4xl font-bold">{pluginLikes}k</h4>
                 <h6 className="text-lg md:text-2xl font-regular">Likes</h6>
               </div>
               <div className="flex flex-col items-center text-white">
@@ -158,7 +158,7 @@ export default function Figmap(props) {
                   width={54}
                   height={54}
                 />
-                <h4 className="text-2xl md:text-4xl font-bold">15k</h4>
+                <h4 className="text-2xl md:text-4xl font-bold">10k</h4>
                 <h6 className="text-lg md:text-2xl font-regular">MAU</h6>
               </div>
             </div>
