@@ -75,7 +75,7 @@ export default function Figmap(props) {
       <div className={`mb-48`}>
         <ProjectCover
           title="Product"
-          subtitle="Figmap"
+          subtitle="Figmap plugin"
           role="UX Designer/Engineer"
           client="Side project"
           heroImage={figmapCoverHero}
@@ -124,7 +124,7 @@ export default function Figmap(props) {
                   height={54}
                 />
                 <h4 className="text-2xl md:text-4xl font-bold">Works on</h4>
-                <h6 className="text-lg md:text-2xl font-regular">
+                <h6 className="text-lg md:text-2xl font-regular text-center">
                   Figma, FigJam, Slides and Buzz.
                 </h6>
               </div>
